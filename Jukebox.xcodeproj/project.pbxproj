@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		846B1D201EE7549C00EB8FCD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B1D1F1EE7549C00EB8FCD /* Alamofire.framework */; };
+		846B1D231EE754A500EB8FCD /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B1D211EE754A500EB8FCD /* Nimble.framework */; };
+		846B1D241EE754A500EB8FCD /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B1D221EE754A500EB8FCD /* Quick.framework */; };
+		846B1D261EE754B800EB8FCD /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 846B1D1F1EE7549C00EB8FCD /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		846B1D281EE754C500EB8FCD /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 846B1D211EE754A500EB8FCD /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		846B1D291EE754C500EB8FCD /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 846B1D221EE754A500EB8FCD /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84E217F11EE74CE000B17813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E217F01EE74CE000B17813 /* AppDelegate.swift */; };
 		84E217F31EE74CE000B17813 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E217F21EE74CE000B17813 /* ViewController.swift */; };
 		84E217F61EE74CE000B17813 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E217F41EE74CE000B17813 /* Main.storyboard */; };
@@ -33,7 +39,34 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		846B1D251EE754A900EB8FCD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				846B1D261EE754B800EB8FCD /* Alamofire.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846B1D271EE754BC00EB8FCD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				846B1D281EE754C500EB8FCD /* Nimble.framework in CopyFiles */,
+				846B1D291EE754C500EB8FCD /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		846B1D1F1EE7549C00EB8FCD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		846B1D211EE754A500EB8FCD /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		846B1D221EE754A500EB8FCD /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		84E217ED1EE74CE000B17813 /* Jukebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jukebox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E217F01EE74CE000B17813 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84E217F21EE74CE000B17813 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846B1D201EE7549C00EB8FCD /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846B1D231EE754A500EB8FCD /* Nimble.framework in Frameworks */,
+				846B1D241EE754A500EB8FCD /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +110,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		846B1D1E1EE7549C00EB8FCD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				846B1D211EE754A500EB8FCD /* Nimble.framework */,
+				846B1D221EE754A500EB8FCD /* Quick.framework */,
+				846B1D1F1EE7549C00EB8FCD /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84E217E41EE74CE000B17813 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +127,7 @@
 				84E218041EE74CE000B17813 /* JukeboxTests */,
 				84E2180F1EE74CE000B17813 /* JukeboxUITests */,
 				84E217EE1EE74CE000B17813 /* Products */,
+				846B1D1E1EE7549C00EB8FCD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +182,7 @@
 				84E217E91EE74CE000B17813 /* Sources */,
 				84E217EA1EE74CE000B17813 /* Frameworks */,
 				84E217EB1EE74CE000B17813 /* Resources */,
+				846B1D251EE754A900EB8FCD /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -152,6 +200,7 @@
 				84E217FD1EE74CE000B17813 /* Sources */,
 				84E217FE1EE74CE000B17813 /* Frameworks */,
 				84E217FF1EE74CE000B17813 /* Resources */,
+				846B1D271EE754BC00EB8FCD /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -416,6 +465,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XJMMPU957Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Jukebox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.acprogram.Jukebox;
@@ -429,6 +482,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XJMMPU957Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Jukebox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.acprogram.Jukebox;
@@ -443,6 +500,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = XJMMPU957Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = JukeboxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.acprogram.JukeboxTests;
@@ -458,6 +519,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = XJMMPU957Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = JukeboxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.acprogram.JukeboxTests;
@@ -514,6 +579,7 @@
 				84E218171EE74CE000B17813 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84E218181EE74CE000B17813 /* Build configuration list for PBXNativeTarget "JukeboxTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +588,7 @@
 				84E2181A1EE74CE000B17813 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84E2181B1EE74CE000B17813 /* Build configuration list for PBXNativeTarget "JukeboxUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +597,7 @@
 				84E2181D1EE74CE000B17813 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
