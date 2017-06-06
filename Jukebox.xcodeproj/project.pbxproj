@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84E217F11EE74CE000B17813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E217F01EE74CE000B17813 /* AppDelegate.swift */; };
+		84E217F31EE74CE000B17813 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E217F21EE74CE000B17813 /* ViewController.swift */; };
+		84E217F61EE74CE000B17813 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E217F41EE74CE000B17813 /* Main.storyboard */; };
+		84E217F81EE74CE000B17813 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E217F71EE74CE000B17813 /* Assets.xcassets */; };
+		84E217FB1EE74CE000B17813 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E217F91EE74CE000B17813 /* LaunchScreen.storyboard */; };
+		84E218061EE74CE000B17813 /* JukeboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E218051EE74CE000B17813 /* JukeboxTests.swift */; };
+		84E218111EE74CE000B17813 /* JukeboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E218101EE74CE000B17813 /* JukeboxUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84E218021EE74CE000B17813 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84E217E51EE74CE000B17813 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84E217EC1EE74CE000B17813;
+			remoteInfo = Jukebox;
+		};
+		84E2180D1EE74CE000B17813 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84E217E51EE74CE000B17813 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84E217EC1EE74CE000B17813;
+			remoteInfo = Jukebox;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		84E217ED1EE74CE000B17813 /* Jukebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jukebox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84E217F01EE74CE000B17813 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84E217F21EE74CE000B17813 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84E217F51EE74CE000B17813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84E217F71EE74CE000B17813 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84E217FA1EE74CE000B17813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84E217FC1EE74CE000B17813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84E218011EE74CE000B17813 /* JukeboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JukeboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84E218051EE74CE000B17813 /* JukeboxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JukeboxTests.swift; sourceTree = "<group>"; };
+		84E218071EE74CE000B17813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84E2180C1EE74CE000B17813 /* JukeboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JukeboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84E218101EE74CE000B17813 /* JukeboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JukeboxUITests.swift; sourceTree = "<group>"; };
+		84E218121EE74CE000B17813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84E217EA1EE74CE000B17813 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84E217FE1EE74CE000B17813 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84E218091EE74CE000B17813 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84E217E41EE74CE000B17813 = {
+			isa = PBXGroup;
+			children = (
+				84E217EF1EE74CE000B17813 /* Jukebox */,
+				84E218041EE74CE000B17813 /* JukeboxTests */,
+				84E2180F1EE74CE000B17813 /* JukeboxUITests */,
+				84E217EE1EE74CE000B17813 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84E217EE1EE74CE000B17813 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84E217ED1EE74CE000B17813 /* Jukebox.app */,
+				84E218011EE74CE000B17813 /* JukeboxTests.xctest */,
+				84E2180C1EE74CE000B17813 /* JukeboxUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84E217EF1EE74CE000B17813 /* Jukebox */ = {
+			isa = PBXGroup;
+			children = (
+				84E217F01EE74CE000B17813 /* AppDelegate.swift */,
+				84E217F21EE74CE000B17813 /* ViewController.swift */,
+				84E217F41EE74CE000B17813 /* Main.storyboard */,
+				84E217F71EE74CE000B17813 /* Assets.xcassets */,
+				84E217F91EE74CE000B17813 /* LaunchScreen.storyboard */,
+				84E217FC1EE74CE000B17813 /* Info.plist */,
+			);
+			path = Jukebox;
+			sourceTree = "<group>";
+		};
+		84E218041EE74CE000B17813 /* JukeboxTests */ = {
+			isa = PBXGroup;
+			children = (
+				84E218051EE74CE000B17813 /* JukeboxTests.swift */,
+				84E218071EE74CE000B17813 /* Info.plist */,
+			);
+			path = JukeboxTests;
+			sourceTree = "<group>";
+		};
+		84E2180F1EE74CE000B17813 /* JukeboxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				84E218101EE74CE000B17813 /* JukeboxUITests.swift */,
+				84E218121EE74CE000B17813 /* Info.plist */,
+			);
+			path = JukeboxUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84E217EC1EE74CE000B17813 /* Jukebox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84E218151EE74CE000B17813 /* Build configuration list for PBXNativeTarget "Jukebox" */;
+			buildPhases = (
+				84E217E91EE74CE000B17813 /* Sources */,
+				84E217EA1EE74CE000B17813 /* Frameworks */,
+				84E217EB1EE74CE000B17813 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Jukebox;
+			productName = Jukebox;
+			productReference = 84E217ED1EE74CE000B17813 /* Jukebox.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84E218001EE74CE000B17813 /* JukeboxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84E218181EE74CE000B17813 /* Build configuration list for PBXNativeTarget "JukeboxTests" */;
+			buildPhases = (
+				84E217FD1EE74CE000B17813 /* Sources */,
+				84E217FE1EE74CE000B17813 /* Frameworks */,
+				84E217FF1EE74CE000B17813 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84E218031EE74CE000B17813 /* PBXTargetDependency */,
+			);
+			name = JukeboxTests;
+			productName = JukeboxTests;
+			productReference = 84E218011EE74CE000B17813 /* JukeboxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		84E2180B1EE74CE000B17813 /* JukeboxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84E2181B1EE74CE000B17813 /* Build configuration list for PBXNativeTarget "JukeboxUITests" */;
+			buildPhases = (
+				84E218081EE74CE000B17813 /* Sources */,
+				84E218091EE74CE000B17813 /* Frameworks */,
+				84E2180A1EE74CE000B17813 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84E2180E1EE74CE000B17813 /* PBXTargetDependency */,
+			);
+			name = JukeboxUITests;
+			productName = JukeboxUITests;
+			productReference = 84E2180C1EE74CE000B17813 /* JukeboxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84E217E51EE74CE000B17813 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "SangMee Specht";
+				TargetAttributes = {
+					84E217EC1EE74CE000B17813 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = XJMMPU957Q;
+						ProvisioningStyle = Automatic;
+					};
+					84E218001EE74CE000B17813 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = XJMMPU957Q;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 84E217EC1EE74CE000B17813;
+					};
+					84E2180B1EE74CE000B17813 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = XJMMPU957Q;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 84E217EC1EE74CE000B17813;
+					};
+				};
+			};
+			buildConfigurationList = 84E217E81EE74CE000B17813 /* Build configuration list for PBXProject "Jukebox" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84E217E41EE74CE000B17813;
+			productRefGroup = 84E217EE1EE74CE000B17813 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84E217EC1EE74CE000B17813 /* Jukebox */,
+				84E218001EE74CE000B17813 /* JukeboxTests */,
+				84E2180B1EE74CE000B17813 /* JukeboxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84E217EB1EE74CE000B17813 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84E217FB1EE74CE000B17813 /* LaunchScreen.storyboard in Resources */,
+				84E217F81EE74CE000B17813 /* Assets.xcassets in Resources */,
+				84E217F61EE74CE000B17813 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84E217FF1EE74CE000B17813 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84E2180A1EE74CE000B17813 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84E217E91EE74CE000B17813 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84E217F31EE74CE000B17813 /* ViewController.swift in Sources */,
+				84E217F11EE74CE000B17813 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84E217FD1EE74CE000B17813 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84E218061EE74CE000B17813 /* JukeboxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84E218081EE74CE000B17813 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84E218111EE74CE000B17813 /* JukeboxUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84E218031EE74CE000B17813 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84E217EC1EE74CE000B17813 /* Jukebox */;
+			targetProxy = 84E218021EE74CE000B17813 /* PBXContainerItemProxy */;
+		};
+		84E2180E1EE74CE000B17813 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84E217EC1EE74CE000B17813 /* Jukebox */;
+			targetProxy = 84E2180D1EE74CE000B17813 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84E217F41EE74CE000B17813 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84E217F51EE74CE000B17813 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84E217F91EE74CE000B17813 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84E217FA1EE74CE000B17813 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84E218131EE74CE000B17813 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84E218141EE74CE000B17813 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84E218161EE74CE000B17813 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XJMMPU957Q;
+				INFOPLIST_FILE = Jukebox/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.acprogram.Jukebox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		84E218171EE74CE000B17813 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XJMMPU957Q;
+				INFOPLIST_FILE = Jukebox/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.acprogram.Jukebox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		84E218191EE74CE000B17813 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = XJMMPU957Q;
+				INFOPLIST_FILE = JukeboxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.acprogram.JukeboxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jukebox.app/Jukebox";
+			};
+			name = Debug;
+		};
+		84E2181A1EE74CE000B17813 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = XJMMPU957Q;
+				INFOPLIST_FILE = JukeboxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.acprogram.JukeboxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jukebox.app/Jukebox";
+			};
+			name = Release;
+		};
+		84E2181C1EE74CE000B17813 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = XJMMPU957Q;
+				INFOPLIST_FILE = JukeboxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.acprogram.JukeboxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Jukebox;
+			};
+			name = Debug;
+		};
+		84E2181D1EE74CE000B17813 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = XJMMPU957Q;
+				INFOPLIST_FILE = JukeboxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.acprogram.JukeboxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Jukebox;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84E217E81EE74CE000B17813 /* Build configuration list for PBXProject "Jukebox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84E218131EE74CE000B17813 /* Debug */,
+				84E218141EE74CE000B17813 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84E218151EE74CE000B17813 /* Build configuration list for PBXNativeTarget "Jukebox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84E218161EE74CE000B17813 /* Debug */,
+				84E218171EE74CE000B17813 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		84E218181EE74CE000B17813 /* Build configuration list for PBXNativeTarget "JukeboxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84E218191EE74CE000B17813 /* Debug */,
+				84E2181A1EE74CE000B17813 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		84E2181B1EE74CE000B17813 /* Build configuration list for PBXNativeTarget "JukeboxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84E2181C1EE74CE000B17813 /* Debug */,
+				84E2181D1EE74CE000B17813 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84E217E51EE74CE000B17813 /* Project object */;
+}
