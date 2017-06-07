@@ -13,6 +13,9 @@
 		846B1D261EE754B800EB8FCD /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 846B1D1F1EE7549C00EB8FCD /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		846B1D281EE754C500EB8FCD /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 846B1D211EE754A500EB8FCD /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		846B1D291EE754C500EB8FCD /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 846B1D221EE754A500EB8FCD /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		846B1D301EE8483F00EB8FCD /* TagData.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 846B1D2F1EE8483F00EB8FCD /* TagData.JSON */; };
+		846B1D321EE8487100EB8FCD /* CategoryData.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 846B1D311EE8487100EB8FCD /* CategoryData.JSON */; };
+		846B1D341EE8493F00EB8FCD /* SongData.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 846B1D331EE8493F00EB8FCD /* SongData.JSON */; };
 		84E217F11EE74CE000B17813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E217F01EE74CE000B17813 /* AppDelegate.swift */; };
 		84E217F31EE74CE000B17813 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E217F21EE74CE000B17813 /* ViewController.swift */; };
 		84E217F61EE74CE000B17813 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E217F41EE74CE000B17813 /* Main.storyboard */; };
@@ -67,6 +70,9 @@
 		846B1D1F1EE7549C00EB8FCD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		846B1D211EE754A500EB8FCD /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		846B1D221EE754A500EB8FCD /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		846B1D2F1EE8483F00EB8FCD /* TagData.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TagData.JSON; path = Data/TagData.JSON; sourceTree = "<group>"; };
+		846B1D311EE8487100EB8FCD /* CategoryData.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = CategoryData.JSON; path = Data/CategoryData.JSON; sourceTree = "<group>"; };
+		846B1D331EE8493F00EB8FCD /* SongData.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SongData.JSON; path = Data/SongData.JSON; sourceTree = "<group>"; };
 		84E217ED1EE74CE000B17813 /* Jukebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jukebox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E217F01EE74CE000B17813 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84E217F21EE74CE000B17813 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +126,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		846B1D2E1EE8481E00EB8FCD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				846B1D2F1EE8483F00EB8FCD /* TagData.JSON */,
+				846B1D311EE8487100EB8FCD /* CategoryData.JSON */,
+				846B1D331EE8493F00EB8FCD /* SongData.JSON */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		84E217E41EE74CE000B17813 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +160,7 @@
 		84E217EF1EE74CE000B17813 /* Jukebox */ = {
 			isa = PBXGroup;
 			children = (
+				846B1D2E1EE8481E00EB8FCD /* Data */,
 				84E217F01EE74CE000B17813 /* AppDelegate.swift */,
 				84E217F21EE74CE000B17813 /* ViewController.swift */,
 				84E217F41EE74CE000B17813 /* Main.storyboard */,
@@ -284,7 +301,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846B1D341EE8493F00EB8FCD /* SongData.JSON in Resources */,
+				846B1D301EE8483F00EB8FCD /* TagData.JSON in Resources */,
 				84E217FB1EE74CE000B17813 /* LaunchScreen.storyboard in Resources */,
+				846B1D321EE8487100EB8FCD /* CategoryData.JSON in Resources */,
 				84E217F81EE74CE000B17813 /* Assets.xcassets in Resources */,
 				84E217F61EE74CE000B17813 /* Main.storyboard in Resources */,
 			);

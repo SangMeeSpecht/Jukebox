@@ -1,0 +1,5 @@
+{
+    Tag(title: "Artists", id: "1"),
+    Tag(title: "Albums", id: "2"),
+    Tag(title: "Genre", id: "3")
+}
