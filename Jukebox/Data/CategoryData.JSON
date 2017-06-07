@@ -1,4 +1,10 @@
-{
-    Category(name: "Rock", id: "1", songs: [1,3]),
-    Category(name: "Rap", id: "2", songs: [2,4])
-}
+ {
+     "1": {
+         "name": "Rock",
+         "songs": [1, 3]
+     },
+     "2": {
+         "name": "Rap",
+         "songs": [2, 4]
+     }
+ }

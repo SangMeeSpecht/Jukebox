@@ -16,12 +16,19 @@
 		846B1D301EE8483F00EB8FCD /* TagData.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 846B1D2F1EE8483F00EB8FCD /* TagData.JSON */; };
 		846B1D321EE8487100EB8FCD /* CategoryData.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 846B1D311EE8487100EB8FCD /* CategoryData.JSON */; };
 		846B1D341EE8493F00EB8FCD /* SongData.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 846B1D331EE8493F00EB8FCD /* SongData.JSON */; };
+		846B1D391EE8550C00EB8FCD /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D381EE8550C00EB8FCD /* API.swift */; };
+		846B1D3B1EE8594200EB8FCD /* APISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D3A1EE8594200EB8FCD /* APISpec.swift */; };
+		846B1D3C1EE86AFE00EB8FCD /* TagData.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 846B1D2F1EE8483F00EB8FCD /* TagData.JSON */; };
+		846B1D3D1EE86F2000EB8FCD /* CategoryData.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 846B1D311EE8487100EB8FCD /* CategoryData.JSON */; };
+		846B1D3E1EE86F2000EB8FCD /* SongData.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 846B1D331EE8493F00EB8FCD /* SongData.JSON */; };
+		846B1D401EE870E000EB8FCD /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D3F1EE870E000EB8FCD /* Tag.swift */; };
+		846B1D421EE879D200EB8FCD /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B1D411EE879D200EB8FCD /* SwiftyJSON.framework */; };
+		846B1D431EE879DA00EB8FCD /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 846B1D411EE879D200EB8FCD /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84E217F11EE74CE000B17813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E217F01EE74CE000B17813 /* AppDelegate.swift */; };
 		84E217F31EE74CE000B17813 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E217F21EE74CE000B17813 /* ViewController.swift */; };
 		84E217F61EE74CE000B17813 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E217F41EE74CE000B17813 /* Main.storyboard */; };
 		84E217F81EE74CE000B17813 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E217F71EE74CE000B17813 /* Assets.xcassets */; };
 		84E217FB1EE74CE000B17813 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E217F91EE74CE000B17813 /* LaunchScreen.storyboard */; };
-		84E218061EE74CE000B17813 /* JukeboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E218051EE74CE000B17813 /* JukeboxTests.swift */; };
 		84E218111EE74CE000B17813 /* JukeboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E218101EE74CE000B17813 /* JukeboxUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +56,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				846B1D431EE879DA00EB8FCD /* SwiftyJSON.framework in CopyFiles */,
 				846B1D261EE754B800EB8FCD /* Alamofire.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +81,10 @@
 		846B1D2F1EE8483F00EB8FCD /* TagData.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TagData.JSON; path = Data/TagData.JSON; sourceTree = "<group>"; };
 		846B1D311EE8487100EB8FCD /* CategoryData.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = CategoryData.JSON; path = Data/CategoryData.JSON; sourceTree = "<group>"; };
 		846B1D331EE8493F00EB8FCD /* SongData.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SongData.JSON; path = Data/SongData.JSON; sourceTree = "<group>"; };
+		846B1D381EE8550C00EB8FCD /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = Models/API.swift; sourceTree = "<group>"; };
+		846B1D3A1EE8594200EB8FCD /* APISpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APISpec.swift; sourceTree = "<group>"; };
+		846B1D3F1EE870E000EB8FCD /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tag.swift; path = Models/Tag.swift; sourceTree = "<group>"; };
+		846B1D411EE879D200EB8FCD /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		84E217ED1EE74CE000B17813 /* Jukebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jukebox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E217F01EE74CE000B17813 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84E217F21EE74CE000B17813 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +93,6 @@
 		84E217FA1EE74CE000B17813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84E217FC1EE74CE000B17813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84E218011EE74CE000B17813 /* JukeboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JukeboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		84E218051EE74CE000B17813 /* JukeboxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JukeboxTests.swift; sourceTree = "<group>"; };
 		84E218071EE74CE000B17813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84E2180C1EE74CE000B17813 /* JukeboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JukeboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E218101EE74CE000B17813 /* JukeboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JukeboxUITests.swift; sourceTree = "<group>"; };
@@ -94,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				846B1D201EE7549C00EB8FCD /* Alamofire.framework in Frameworks */,
+				846B1D421EE879D200EB8FCD /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +131,7 @@
 		846B1D1E1EE7549C00EB8FCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				846B1D411EE879D200EB8FCD /* SwiftyJSON.framework */,
 				846B1D211EE754A500EB8FCD /* Nimble.framework */,
 				846B1D221EE754A500EB8FCD /* Quick.framework */,
 				846B1D1F1EE7549C00EB8FCD /* Alamofire.framework */,
@@ -134,6 +147,15 @@
 				846B1D331EE8493F00EB8FCD /* SongData.JSON */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		846B1D371EE854F400EB8FCD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				846B1D381EE8550C00EB8FCD /* API.swift */,
+				846B1D3F1EE870E000EB8FCD /* Tag.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		84E217E41EE74CE000B17813 = {
@@ -160,6 +182,7 @@
 		84E217EF1EE74CE000B17813 /* Jukebox */ = {
 			isa = PBXGroup;
 			children = (
+				846B1D371EE854F400EB8FCD /* Models */,
 				846B1D2E1EE8481E00EB8FCD /* Data */,
 				84E217F01EE74CE000B17813 /* AppDelegate.swift */,
 				84E217F21EE74CE000B17813 /* ViewController.swift */,
@@ -174,8 +197,8 @@
 		84E218041EE74CE000B17813 /* JukeboxTests */ = {
 			isa = PBXGroup;
 			children = (
-				84E218051EE74CE000B17813 /* JukeboxTests.swift */,
 				84E218071EE74CE000B17813 /* Info.plist */,
+				846B1D3A1EE8594200EB8FCD /* APISpec.swift */,
 			);
 			path = JukeboxTests;
 			sourceTree = "<group>";
@@ -314,6 +337,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846B1D3D1EE86F2000EB8FCD /* CategoryData.JSON in Resources */,
+				846B1D3E1EE86F2000EB8FCD /* SongData.JSON in Resources */,
+				846B1D3C1EE86AFE00EB8FCD /* TagData.JSON in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +358,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E217F31EE74CE000B17813 /* ViewController.swift in Sources */,
+				846B1D401EE870E000EB8FCD /* Tag.swift in Sources */,
+				846B1D391EE8550C00EB8FCD /* API.swift in Sources */,
 				84E217F11EE74CE000B17813 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,7 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84E218061EE74CE000B17813 /* JukeboxTests.swift in Sources */,
+				846B1D3B1EE8594200EB8FCD /* APISpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
