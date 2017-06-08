@@ -18,8 +18,7 @@ class ViewController: UIViewController {
 
     @IBAction func button(_ sender: Any) {
         let api = API()
-        api.fetchTags()
-        print("button pressed")
+        api.fetchJSON(forRoute: "/api/1/tags")
     }
 
 
