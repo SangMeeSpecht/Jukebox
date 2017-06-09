@@ -8,20 +8,19 @@
 
 import Foundation
 import SwiftyJSON
-import Alamofire
 
 class API {
 
-    func fetchData(forRoute route: String, withIDs ids: [String]? = nil) -> [DataObjectMaker] {
-        var music: [DataObjectMaker]?
+    func fetchData(forRoute route: String, withIDs ids: [String]? = nil) -> [DataObjectMaker]? {
+        var music: [DataObjectMaker] = []
         if route == "/api/1/tags" {
-            music = createTags()
+            music = createTags()!
         } else if foundMatchForCategory(withURL: route) {
-            music = createCategories()
+            music = createCategories()!
         } else if foundMatchForSong(withURL: route) {
-            music = createSongs(withIDs: ids!)
+            music = createSongs(withIDs: ids!)!
         }
-        return music!
+        return music
     }
 
     private func foundMatchForCategory(withURL URL: String) -> Bool {
@@ -68,7 +67,7 @@ class API {
         let jsonObj = retrieveData(forPath: findJSONfilePath(forPath: "CategoryData"))
         
         for (id, info) in jsonObj! {
-            categories.append(Category(name: String(describing: info["name"]), id: id, songIDs: addSongs(forID: info["songs"])!))
+            categories.append(Category(name: String(describing: info["name"]), id: id, songIDs: createSongIDlist(forID: info["songs"])!))
         }
         return categories
     }
@@ -86,7 +85,7 @@ class API {
         return songs 
     }
     
-    private func addSongs(forID songs: JSON) -> [Int]? {
+    private func createSongIDlist(forID songs: JSON) -> [Int]? {
         var songList = [Int]()
         
         for (_, song) in songs {
