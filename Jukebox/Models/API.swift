@@ -16,9 +16,41 @@ class API {
         var json: JSON?
         if route == "/api/1/tags" {
             json = retrieveData(forPath: findJSONfilePath(forPath: "TagData"))
+        } else if foundMatchForCategory(withURL: route) {
+            json = retrieveData(forPath: findJSONfilePath(forPath: "CategoryData"))
         }
         return json!
     }
+
+
+    func foundMatchForCategory(withURL URL: String) -> Bool {
+        do {
+            let regex = try NSRegularExpression(pattern: "^/api/1/category/tag/\\d{1,}", options: [])
+            let matches = regex.matches(in: URL, options: [], range: NSRange(location: 0, length: URL.utf16.count))
+            
+            if let _ = matches.first {
+                return true
+            }
+        } catch {
+            print("bad regex")
+        }
+        return false
+    }
+
+    func foundMatchForSong(withURL URL: String) -> Bool {
+        do {
+            let regex = try NSRegularExpression(pattern: "^/api/1/songs/multi[?]{0,1}(id=\\d{1,})(&id=\\d{1,}){0,}", options: [])
+            let matches = regex.matches(in: URL, options: [], range: NSRange(location: 0, length: URL.utf16.count))
+            
+            if let _ = matches.first {
+                return true
+            }
+        } catch {
+            print("bad regex")
+        }
+        return false
+    }
+    
     
     func createTags() -> [Tag]? {
         var tags: [Tag] = []
