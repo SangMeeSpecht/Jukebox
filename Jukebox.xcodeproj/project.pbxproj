@@ -26,6 +26,7 @@
 		846B1D431EE879DA00EB8FCD /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 846B1D411EE879D200EB8FCD /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		846B1D451EE8A37400EB8FCD /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D441EE8A37400EB8FCD /* Category.swift */; };
 		846B1D471EE8AD4400EB8FCD /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D461EE8AD4400EB8FCD /* Song.swift */; };
+		846B1D4B1EEAF8D400EB8FCD /* DataObjectMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D4A1EEAF8D400EB8FCD /* DataObjectMaker.swift */; };
 		84E217F11EE74CE000B17813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E217F01EE74CE000B17813 /* AppDelegate.swift */; };
 		84E217F31EE74CE000B17813 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E217F21EE74CE000B17813 /* ViewController.swift */; };
 		84E217F61EE74CE000B17813 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E217F41EE74CE000B17813 /* Main.storyboard */; };
@@ -89,6 +90,7 @@
 		846B1D411EE879D200EB8FCD /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		846B1D441EE8A37400EB8FCD /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Category.swift; path = Models/Category.swift; sourceTree = "<group>"; };
 		846B1D461EE8AD4400EB8FCD /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Song.swift; path = Models/Song.swift; sourceTree = "<group>"; };
+		846B1D4A1EEAF8D400EB8FCD /* DataObjectMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataObjectMaker.swift; path = Models/DataObjectMaker.swift; sourceTree = "<group>"; };
 		84E217ED1EE74CE000B17813 /* Jukebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jukebox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E217F01EE74CE000B17813 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84E217F21EE74CE000B17813 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				846B1D3F1EE870E000EB8FCD /* Tag.swift */,
 				846B1D441EE8A37400EB8FCD /* Category.swift */,
 				846B1D461EE8AD4400EB8FCD /* Song.swift */,
+				846B1D4A1EEAF8D400EB8FCD /* DataObjectMaker.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				846B1D471EE8AD4400EB8FCD /* Song.swift in Sources */,
 				846B1D451EE8A37400EB8FCD /* Category.swift in Sources */,
 				84E217F31EE74CE000B17813 /* ViewController.swift in Sources */,
+				846B1D4B1EEAF8D400EB8FCD /* DataObjectMaker.swift in Sources */,
 				846B1D401EE870E000EB8FCD /* Tag.swift in Sources */,
 				846B1D391EE8550C00EB8FCD /* API.swift in Sources */,
 				84E217F11EE74CE000B17813 /* AppDelegate.swift in Sources */,

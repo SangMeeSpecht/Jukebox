@@ -11,19 +11,20 @@ import SwiftyJSON
 import Alamofire
 
 class API {
-//    work in progress
-    func fetchJSON(forRoute route: String) -> JSON {
-        var json: JSON?
+
+    func fetchData(forRoute route: String, withIDs ids: [String]? = nil) -> [DataObjectMaker] {
+        var music: [DataObjectMaker]?
         if route == "/api/1/tags" {
-            json = retrieveData(forPath: findJSONfilePath(forPath: "TagData"))
+            music = createTags()
         } else if foundMatchForCategory(withURL: route) {
-            json = retrieveData(forPath: findJSONfilePath(forPath: "CategoryData"))
+            music = createCategories()
+        } else if foundMatchForSong(withURL: route) {
+            music = createSongs(withIDs: ids!)
         }
-        return json!
+        return music!
     }
 
-
-    func foundMatchForCategory(withURL URL: String) -> Bool {
+    private func foundMatchForCategory(withURL URL: String) -> Bool {
         do {
             let regex = try NSRegularExpression(pattern: "^/api/1/category/tag/\\d{1,}", options: [])
             let matches = regex.matches(in: URL, options: [], range: NSRange(location: 0, length: URL.utf16.count))
@@ -37,7 +38,7 @@ class API {
         return false
     }
 
-    func foundMatchForSong(withURL URL: String) -> Bool {
+    private func foundMatchForSong(withURL URL: String) -> Bool {
         do {
             let regex = try NSRegularExpression(pattern: "^/api/1/songs/multi[?]{0,1}(id=\\d{1,})(&id=\\d{1,}){0,}", options: [])
             let matches = regex.matches(in: URL, options: [], range: NSRange(location: 0, length: URL.utf16.count))
@@ -51,8 +52,7 @@ class API {
         return false
     }
     
-    
-    func createTags() -> [Tag]? {
+    private func createTags() -> [Tag]? {
         var tags: [Tag] = []
         let jsonObj = retrieveData(forPath: findJSONfilePath(forPath: "TagData"))
         
@@ -63,7 +63,7 @@ class API {
         return tags
     }
     
-    func createCategories() -> [Category]? {
+    private func createCategories() -> [Category]? {
         var categories: [Category] = []
         let jsonObj = retrieveData(forPath: findJSONfilePath(forPath: "CategoryData"))
         
@@ -73,12 +73,14 @@ class API {
         return categories
     }
     
-    func createSongs() -> [Song]? {
+    private func createSongs(withIDs songID: [String]) -> [Song]? {
         var songs: [Song] = []
         let jsonObj = retrieveData(forPath: findJSONfilePath(forPath: "SongData"))
         
         for (id, info) in jsonObj! {
-            songs.append(Song(name: String(describing: info["name"]), id: id, description: String(describing: info["description"]), coverURL: NSURL(string: String(describing: info["coverURL"]))! as URL))
+            if songID.contains(id) {
+                songs.append(Song(name: String(describing: info["name"]), id: id, description: String(describing: info["description"]), coverURL: NSURL(string: String(describing: info["coverURL"]))! as URL))
+            }
         }
         
         return songs 

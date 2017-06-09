@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Tag {
+class Tag: DataObjectMaker {
     let title: String?
     let id: String?
     

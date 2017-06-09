@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBAction func button(_ sender: Any) {
         let api = API()
 //        api.fetchJSON(forRoute: "/api/1/tags")
-        print(api.foundMatchForSong(withURL: "/api/1/songs/multi?id=5678&id=45"))
+        
     }
 
 

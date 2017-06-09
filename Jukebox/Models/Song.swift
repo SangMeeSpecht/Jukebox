@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Song {
+class Song: DataObjectMaker {
     let name: String?
     let id: String?
     let description: String?
