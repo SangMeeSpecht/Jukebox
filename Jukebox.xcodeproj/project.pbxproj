@@ -27,6 +27,8 @@
 		846B1D451EE8A37400EB8FCD /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D441EE8A37400EB8FCD /* Category.swift */; };
 		846B1D471EE8AD4400EB8FCD /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D461EE8AD4400EB8FCD /* Song.swift */; };
 		846B1D4B1EEAF8D400EB8FCD /* DataObjectMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D4A1EEAF8D400EB8FCD /* DataObjectMaker.swift */; };
+		846B1D4D1EEB49F800EB8FCD /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D4C1EEB49F800EB8FCD /* SongViewModel.swift */; };
+		846B1D4F1EEB4B0500EB8FCD /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D4E1EEB4B0500EB8FCD /* SongViewModel.swift */; };
 		84E217F11EE74CE000B17813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E217F01EE74CE000B17813 /* AppDelegate.swift */; };
 		84E217F31EE74CE000B17813 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E217F21EE74CE000B17813 /* ViewController.swift */; };
 		84E217F61EE74CE000B17813 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E217F41EE74CE000B17813 /* Main.storyboard */; };
@@ -91,6 +93,8 @@
 		846B1D441EE8A37400EB8FCD /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Category.swift; path = Models/Category.swift; sourceTree = "<group>"; };
 		846B1D461EE8AD4400EB8FCD /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Song.swift; path = Models/Song.swift; sourceTree = "<group>"; };
 		846B1D4A1EEAF8D400EB8FCD /* DataObjectMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataObjectMaker.swift; path = Models/DataObjectMaker.swift; sourceTree = "<group>"; };
+		846B1D4C1EEB49F800EB8FCD /* SongViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
+		846B1D4E1EEB4B0500EB8FCD /* SongViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SongViewModel.swift; path = ViewModel/SongViewModel.swift; sourceTree = "<group>"; };
 		84E217ED1EE74CE000B17813 /* Jukebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jukebox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E217F01EE74CE000B17813 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84E217F21EE74CE000B17813 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +171,14 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		846B1D501EEB4B0F00EB8FCD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				846B1D4E1EEB4B0500EB8FCD /* SongViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		84E217E41EE74CE000B17813 = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +203,7 @@
 		84E217EF1EE74CE000B17813 /* Jukebox */ = {
 			isa = PBXGroup;
 			children = (
+				846B1D501EEB4B0F00EB8FCD /* ViewModel */,
 				846B1D371EE854F400EB8FCD /* Models */,
 				846B1D2E1EE8481E00EB8FCD /* Data */,
 				84E217F01EE74CE000B17813 /* AppDelegate.swift */,
@@ -208,6 +221,7 @@
 			children = (
 				84E218071EE74CE000B17813 /* Info.plist */,
 				846B1D3A1EE8594200EB8FCD /* APISpec.swift */,
+				846B1D4C1EEB49F800EB8FCD /* SongViewModel.swift */,
 			);
 			path = JukeboxTests;
 			sourceTree = "<group>";
@@ -367,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				846B1D471EE8AD4400EB8FCD /* Song.swift in Sources */,
+				846B1D4F1EEB4B0500EB8FCD /* SongViewModel.swift in Sources */,
 				846B1D451EE8A37400EB8FCD /* Category.swift in Sources */,
 				84E217F31EE74CE000B17813 /* ViewController.swift in Sources */,
 				846B1D4B1EEAF8D400EB8FCD /* DataObjectMaker.swift in Sources */,
@@ -381,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				846B1D3B1EE8594200EB8FCD /* APISpec.swift in Sources */,
+				846B1D4D1EEB49F800EB8FCD /* SongViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -41,10 +41,10 @@ class APISpec: QuickSpec {
                 }
             }
             
-            context("when a request for no songs is made") {
-                it("returns an empty collection of songs") {
-                    let categories = APImodel?.fetchData(forRoute: "/api/1/category/tag/")
-                    expect(categories?.count).to(equal(0))
+            context("when a request for no specific songs is made") {
+                it("returns a collection of all songs") {
+                    let songs = APImodel?.fetchData(forRoute: "/api/1/songs/multi")
+                    expect(songs?.count).to(equal(4))
                 }
             }
             

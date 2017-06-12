@@ -18,7 +18,13 @@ class API {
         } else if foundMatchForCategory(withURL: route) {
             music = createCategories()!
         } else if foundMatchForSong(withURL: route) {
-            music = createSongs(withIDs: ids!)!
+            print(ids)
+            if ids == nil {
+                print("ids nil")
+                music = createSongs()!
+            } else {
+                music = createSongs(withIDs: ids!)!
+            }
         }
         return music
     }
@@ -39,7 +45,7 @@ class API {
 
     private func foundMatchForSong(withURL URL: String) -> Bool {
         do {
-            let regex = try NSRegularExpression(pattern: "^/api/1/songs/multi[?]{0,1}(id=\\d{1,})(&id=\\d{1,}){0,}", options: [])
+            let regex = try NSRegularExpression(pattern: "^/api/1/songs/multi[?]{0,1}(id=\\d{1,}){0,1}(&id=\\d{1,}){0,}", options: [])
             let matches = regex.matches(in: URL, options: [], range: NSRange(location: 0, length: URL.utf16.count))
             
             if let _ = matches.first {
@@ -72,12 +78,19 @@ class API {
         return categories
     }
     
-    private func createSongs(withIDs songID: [String]) -> [Song]? {
+    public func createSongs(withIDs songID: [String]? = nil) -> [Song]? {
         var songs: [Song] = []
         let jsonObj = retrieveData(forPath: findJSONfilePath(forPath: "SongData"))
         
+        if songID == nil {
+            for (id, info) in jsonObj! {
+                songs.append(Song(name: String(describing: info["name"]), id: id, description: String(describing: info["description"]), coverURL: NSURL(string: String(describing: info["coverURL"]))! as URL))
+            }
+            return songs
+        }
+        
         for (id, info) in jsonObj! {
-            if songID.contains(id) {
+            if (songID?.contains(id))! {
                 songs.append(Song(name: String(describing: info["name"]), id: id, description: String(describing: info["description"]), coverURL: NSURL(string: String(describing: info["coverURL"]))! as URL))
             }
         }
