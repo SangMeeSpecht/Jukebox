@@ -17,9 +17,7 @@ class ViewController: UIViewController {
 
 
     @IBAction func button(_ sender: Any) {
-        let api = API()
-////        api.fetchJSON(forRoute: "/api/1/tags")
-        api.fetchData(forRoute: "/api/1/songs/multi")
+//        TagViewModel().getTags()
     }
 
 

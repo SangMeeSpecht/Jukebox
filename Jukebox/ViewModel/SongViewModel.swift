@@ -9,9 +9,9 @@
 import Foundation
 
 class SongViewModel {
-    func APIrouteBuilder(withSongIDs ids: [Int]) {
-        var route = "/api/1/songs/multi"
-        
-        
-    }
+//    func APIrouteBuilder(withSongIDs ids: [Int]) {
+//        var route = "/api/1/songs/multi"
+//        
+//        
+//    }
 }

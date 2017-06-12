@@ -10,7 +10,6 @@ import Foundation
 import SwiftyJSON
 
 class API {
-
     func fetchData(forRoute route: String, withIDs ids: [String]? = nil) -> [DataObjectMaker]? {
         var music: [DataObjectMaker] = []
         if route == "/api/1/tags" {
@@ -18,9 +17,7 @@ class API {
         } else if foundMatchForCategory(withURL: route) {
             music = createCategories()!
         } else if foundMatchForSong(withURL: route) {
-            print(ids)
             if ids == nil {
-                print("ids nil")
                 music = createSongs()!
             } else {
                 music = createSongs(withIDs: ids!)!
