@@ -30,6 +30,12 @@ class TagViewModelSpec: QuickSpec {
                 expect(tagViewModel?.getTagTitle(at: indexPath)).to(equal("Genre"))
             }
         }
+        
+        describe("getTagID") {
+            it("returns the id based on the tag title") {
+                expect(tagViewModel?.getTagID(withTitle: "Genre")).to(equal("3"))
+            }
+        }
     }
 }
 

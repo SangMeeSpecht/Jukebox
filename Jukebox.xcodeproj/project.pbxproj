@@ -32,7 +32,12 @@
 		846B1D521EEEEA4E00EB8FCD /* TagViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D511EEEEA4E00EB8FCD /* TagViewModelSpec.swift */; };
 		846B1D561EEEEB9200EB8FCD /* TagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D551EEEEB9200EB8FCD /* TagViewModel.swift */; };
 		846B1D591EEEF72500EB8FCD /* TagTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D581EEEF72500EB8FCD /* TagTableViewController.swift */; };
-		846B1D5B1EEEF81400EB8FCD /* TagTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D5A1EEEF81400EB8FCD /* TagTableViewController.swift */; };
+		846B1D5B1EEEF81400EB8FCD /* TagTableViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D5A1EEEF81400EB8FCD /* TagTableViewControllerSpec.swift */; };
+		846B1D5D1EEF1EA200EB8FCD /* CategoryViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D5C1EEF1EA200EB8FCD /* CategoryViewModelSpec.swift */; };
+		846B1D611EEF204D00EB8FCD /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D601EEF204D00EB8FCD /* CategoryViewModel.swift */; };
+		846B1D651EEF256500EB8FCD /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D641EEF256500EB8FCD /* CategoryTableViewController.swift */; };
+		846B1D671EEF268B00EB8FCD /* CategoryTableViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D661EEF268B00EB8FCD /* CategoryTableViewControllerSpec.swift */; };
+		846B1DBA1EF3345000EB8FCD /* TagAPIdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1DB91EF3345000EB8FCD /* TagAPIdata.swift */; };
 		84E217F11EE74CE000B17813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E217F01EE74CE000B17813 /* AppDelegate.swift */; };
 		84E217F31EE74CE000B17813 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E217F21EE74CE000B17813 /* ViewController.swift */; };
 		84E217F61EE74CE000B17813 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E217F41EE74CE000B17813 /* Main.storyboard */; };
@@ -102,7 +107,12 @@
 		846B1D511EEEEA4E00EB8FCD /* TagViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagViewModelSpec.swift; sourceTree = "<group>"; };
 		846B1D551EEEEB9200EB8FCD /* TagViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagViewModel.swift; path = ViewModel/TagViewModel.swift; sourceTree = "<group>"; };
 		846B1D581EEEF72500EB8FCD /* TagTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagTableViewController.swift; path = ViewControllers/TagTableViewController.swift; sourceTree = "<group>"; };
-		846B1D5A1EEEF81400EB8FCD /* TagTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagTableViewController.swift; sourceTree = "<group>"; };
+		846B1D5A1EEEF81400EB8FCD /* TagTableViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagTableViewControllerSpec.swift; sourceTree = "<group>"; };
+		846B1D5C1EEF1EA200EB8FCD /* CategoryViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewModelSpec.swift; sourceTree = "<group>"; };
+		846B1D601EEF204D00EB8FCD /* CategoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryViewModel.swift; path = ViewModel/CategoryViewModel.swift; sourceTree = "<group>"; };
+		846B1D641EEF256500EB8FCD /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryTableViewController.swift; path = ViewControllers/CategoryTableViewController.swift; sourceTree = "<group>"; };
+		846B1D661EEF268B00EB8FCD /* CategoryTableViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewControllerSpec.swift; sourceTree = "<group>"; };
+		846B1DB91EF3345000EB8FCD /* TagAPIdata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagAPIdata.swift; sourceTree = "<group>"; };
 		84E217ED1EE74CE000B17813 /* Jukebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jukebox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E217F01EE74CE000B17813 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84E217F21EE74CE000B17813 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +173,7 @@
 				846B1D2F1EE8483F00EB8FCD /* TagData.JSON */,
 				846B1D311EE8487100EB8FCD /* CategoryData.JSON */,
 				846B1D331EE8493F00EB8FCD /* SongData.JSON */,
+				846B1DB91EF3345000EB8FCD /* TagAPIdata.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -184,6 +195,7 @@
 			children = (
 				846B1D4E1EEB4B0500EB8FCD /* SongViewModel.swift */,
 				846B1D551EEEEB9200EB8FCD /* TagViewModel.swift */,
+				846B1D601EEF204D00EB8FCD /* CategoryViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -192,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				846B1D581EEEF72500EB8FCD /* TagTableViewController.swift */,
+				846B1D641EEF256500EB8FCD /* CategoryTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -241,7 +254,9 @@
 				846B1D3A1EE8594200EB8FCD /* APISpec.swift */,
 				846B1D4C1EEB49F800EB8FCD /* SongViewModel.swift */,
 				846B1D511EEEEA4E00EB8FCD /* TagViewModelSpec.swift */,
-				846B1D5A1EEEF81400EB8FCD /* TagTableViewController.swift */,
+				846B1D5A1EEEF81400EB8FCD /* TagTableViewControllerSpec.swift */,
+				846B1D5C1EEF1EA200EB8FCD /* CategoryViewModelSpec.swift */,
+				846B1D661EEF268B00EB8FCD /* CategoryTableViewControllerSpec.swift */,
 			);
 			path = JukeboxTests;
 			sourceTree = "<group>";
@@ -403,13 +418,16 @@
 				846B1D471EE8AD4400EB8FCD /* Song.swift in Sources */,
 				846B1D4F1EEB4B0500EB8FCD /* SongViewModel.swift in Sources */,
 				846B1D591EEEF72500EB8FCD /* TagTableViewController.swift in Sources */,
+				846B1D611EEF204D00EB8FCD /* CategoryViewModel.swift in Sources */,
 				846B1D451EE8A37400EB8FCD /* Category.swift in Sources */,
 				84E217F31EE74CE000B17813 /* ViewController.swift in Sources */,
+				846B1DBA1EF3345000EB8FCD /* TagAPIdata.swift in Sources */,
 				846B1D4B1EEAF8D400EB8FCD /* DataObjectMaker.swift in Sources */,
 				846B1D561EEEEB9200EB8FCD /* TagViewModel.swift in Sources */,
 				846B1D401EE870E000EB8FCD /* Tag.swift in Sources */,
 				846B1D391EE8550C00EB8FCD /* API.swift in Sources */,
 				84E217F11EE74CE000B17813 /* AppDelegate.swift in Sources */,
+				846B1D651EEF256500EB8FCD /* CategoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +437,9 @@
 			files = (
 				846B1D3B1EE8594200EB8FCD /* APISpec.swift in Sources */,
 				846B1D4D1EEB49F800EB8FCD /* SongViewModel.swift in Sources */,
-				846B1D5B1EEEF81400EB8FCD /* TagTableViewController.swift in Sources */,
+				846B1D5D1EEF1EA200EB8FCD /* CategoryViewModelSpec.swift in Sources */,
+				846B1D5B1EEEF81400EB8FCD /* TagTableViewControllerSpec.swift in Sources */,
+				846B1D671EEF268B00EB8FCD /* CategoryTableViewControllerSpec.swift in Sources */,
 				846B1D521EEEEA4E00EB8FCD /* TagViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

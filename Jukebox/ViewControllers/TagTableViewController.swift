@@ -9,20 +9,18 @@
 import UIKit
 
 class TagTableViewController: UITableViewController {
-    var tagViewModel: TagViewModel?
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tagViewModel = TagViewModel()
-        tableView.reloadData()
-    }
+    var tagViewModel = TagViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tagViewModel.reloadTableView = { [unowned self] viewModel in
+            self.tableView.reloadData()
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return TagViewModel().getTagCount()
+        return tagViewModel.getTagCount()
     }
 
     
@@ -30,21 +28,25 @@ class TagTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Tag Cell", for: indexPath)
         
         if let tagCell = cell as? UITableViewCell {
-            let tagTitle = tagViewModel?.getTagTitle(at: indexPath)
+            let tagTitle = tagViewModel.getTagTitle(at: indexPath)
             cell.textLabel?.text = tagTitle 
         }
         
         return cell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+//
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let identifier = segue.identifier {
+//            switch identifier {
+//            case "Show Category":
+//                if let cell = sender as? UITableViewCell {
+//                    if let seguedToMVC = segue.destination as? CategoryTableViewController {
+////                        set specific tag_ids/route, change to be dynamic
+////                        seguedToMVC.tagID = tagViewModel.getTagID(withTitle: cell.textLabel?.text)
+//                    }
+//                }
+//            default: break
+//            }
+//        }
+//    }
 }

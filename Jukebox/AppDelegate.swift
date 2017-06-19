@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let parameters: Parameters = [
+            "port": 4545,
+            "protocol": "http",
+            "stubs": [
+                [
+                    "predicates": [
+                        [
+                            "equals": [
+                                "method": "GET",
+                                "path": "/api/1/tags"
+                            ]
+                        ]
+                    ],
+                    "responses": [
+                        [
+                            "is": [
+                                "body": [
+                                    "1": "Artists",
+                                    "2": "Albums",
+                                    "3": "Genre"
+                                ],
+                                "headers": [ "content-type": "application/json" ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ]
+        
+        
+        Alamofire.request("http://localhost:2525/imposters/", method: .post, parameters: parameters, encoding: JSONEncoding.default)
         return true
     }
 

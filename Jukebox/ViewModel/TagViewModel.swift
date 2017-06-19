@@ -10,33 +10,58 @@ import Foundation
 
 class TagViewModel {
     private let route = "/api/1/tags"
-    private var tags: [String]?
-    
-    init() {
-        setTagTitles()
+    private var tags: [String] = [] {
+        didSet {
+            self.reloadTableView?(self)
+        }
     }
     
-    private func setTagTitles() {
-        tags = getTagTitles()
+    init() {
+        self.setTagTitles { response in
+            self.tags = response
+        }
+    }
+    
+    private func setTagTitles(handler: @escaping ([String]) -> Void) {
+        getTagTitles { response in
+            handler(response)
+        }
     }
     
     func getTagCount() -> Int {
-        return tags!.count
+        return tags.count
     }
     
     func getTagTitle(at indexPath: IndexPath) -> String {
-        return tags![indexPath.row]
+        return tags[indexPath.row]
     }
     
-    private func getTagTitles() -> [String] {
-        let tags = API().fetchData(forRoute: route)
-        var tagNames: [String] = []
-        
-        for tag in tags! {
-            let currentTag = tag as? Tag
-            tagNames.append((currentTag?.title)!)
+//    func getTagID(withTitle title: String) -> String? {
+//        let tags = API().fetchData(forRoute: route) {response in
+//        }
+//        for tag in tags {
+//            let currentTag = tag as? Tag
+//            if currentTag?.title == title {
+//                return currentTag?.id!
+//            }
+//        }
+//        return nil
+//    }
+    
+    private func getTagTitles(handler: @escaping ([String]) -> Void) {
+        API().fetchData(forRoute: route) { response in
+            var tagNames: [String] = []
+            
+            for tag in response {
+                let currentTag = tag as? Tag
+                tagNames.append((currentTag?.title)!)
+            }
+            
+            handler(tagNames)
         }
         
-        return tagNames
+//        return tagNames
     }
+    
+        var reloadTableView: ((TagViewModel) -> ())?
 }

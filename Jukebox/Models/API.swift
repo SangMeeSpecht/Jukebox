@@ -8,12 +8,18 @@
 
 import Foundation
 import SwiftyJSON
+import Alamofire
 
 class API {
-    func fetchData(forRoute route: String, withIDs ids: [String]? = nil) -> [DataObjectMaker]? {
+//    var jsonObj: JSON?
+    var tags: [Tag]?
+    func fetchData(forRoute route: String, withIDs ids: [String]? = nil, handler: @escaping ([DataObjectMaker]) -> Void) {
+        
         var music: [DataObjectMaker] = []
         if route == "/api/1/tags" {
-            music = createTags()!
+            createTags {response in
+                handler(response) 
+            }
         } else if foundMatchForCategory(withURL: route) {
             music = createCategories()!
         } else if foundMatchForSong(withURL: route) {
@@ -23,7 +29,7 @@ class API {
                 music = createSongs(withIDs: ids!)!
             }
         }
-        return music
+//        return music
     }
 
     private func foundMatchForCategory(withURL URL: String) -> Bool {
@@ -54,15 +60,17 @@ class API {
         return false
     }
     
-    private func createTags() -> [Tag]? {
-        var tags: [Tag] = []
-        let jsonObj = retrieveData(forPath: findJSONfilePath(forPath: "TagData"))
-        
-        for (id, title) in jsonObj! {
-            tags.append(Tag(title: String(describing: title), id: id))
+    private func createTags(handler: @escaping ([Tag]) -> Void) {
+//        var jsonObj: JSON?
+        retrieveAlamofireData() { response in
+            var tags: [Tag] = []
+//            jsonObj = response
+            
+            for (id, title) in response {
+                tags.append(Tag(title: String(describing: title), id: id))
+            }
+            handler(tags)
         }
-        
-        return tags
     }
     
     private func createCategories() -> [Category]? {
@@ -116,7 +124,16 @@ class API {
         return nil
     }
     
-    private func findJSONfilePath(forPath : String) -> String {
+    
+    private func findJSONfilePath(forPath: String) -> String {
         return Bundle.main.path(forResource: forPath, ofType: "JSON")!
+    }
+    
+    private func retrieveAlamofireData(handler: @escaping (JSON) -> Void) {
+        Alamofire.request("http://localhost:4545/api/1/tags").responseJSON { MBresponse in
+            let JSONresponse = JSON(MBresponse.result.value!)
+//            self.createTags(jsonObj: JSONresponse)
+            handler(JSONresponse)
+        }
     }
 }
