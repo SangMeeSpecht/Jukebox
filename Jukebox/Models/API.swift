@@ -11,17 +11,16 @@ import SwiftyJSON
 import Alamofire
 
 class API {
-//    var jsonObj: JSON?
-    var tags: [Tag]?
     func fetchData(forRoute route: String, withIDs ids: [String]? = nil, handler: @escaping ([DataObjectMaker]) -> Void) {
-        
         var music: [DataObjectMaker] = []
         if route == "/api/1/tags" {
             createTags {response in
                 handler(response) 
             }
         } else if foundMatchForCategory(withURL: route) {
-            music = createCategories()!
+            createCategories { response in
+                handler(response)
+            }
         } else if foundMatchForSong(withURL: route) {
             if ids == nil {
                 music = createSongs()!
@@ -29,7 +28,6 @@ class API {
                 music = createSongs(withIDs: ids!)!
             }
         }
-//        return music
     }
 
     private func foundMatchForCategory(withURL URL: String) -> Bool {
@@ -61,10 +59,8 @@ class API {
     }
     
     private func createTags(handler: @escaping ([Tag]) -> Void) {
-//        var jsonObj: JSON?
-        retrieveAlamofireData() { response in
+        retrieveAlamofireData(withEndPoint: "tags") { response in
             var tags: [Tag] = []
-//            jsonObj = response
             
             for (id, title) in response {
                 tags.append(Tag(title: String(describing: title), id: id))
@@ -73,17 +69,19 @@ class API {
         }
     }
     
-    private func createCategories() -> [Category]? {
-        var categories: [Category] = []
-        let jsonObj = retrieveData(forPath: findJSONfilePath(forPath: "CategoryData"))
-        
-        for (id, info) in jsonObj! {
-            categories.append(Category(name: String(describing: info["name"]), id: id, songIDs: createSongIDlist(forID: info["songs"])!))
+    private func createCategories(handler: @escaping ([Category]) -> Void) {
+//        change tag id
+        retrieveAlamofireData(withEndPoint: "category/tag/3") { response in
+            var categories: [Category] = []
+            
+            for (id, info) in response {
+                categories.append(Category(name: String(describing: info["name"]), id: id, songIDs: self.createSongIDlist(forID: info["songs"])!))
+            }
+            handler(categories)
         }
-        return categories
     }
     
-    public func createSongs(withIDs songID: [String]? = nil) -> [Song]? {
+    private func createSongs(withIDs songID: [String]? = nil) -> [Song]? {
         var songs: [Song] = []
         let jsonObj = retrieveData(forPath: findJSONfilePath(forPath: "SongData"))
         
@@ -113,6 +111,7 @@ class API {
         return songList
     }
     
+//    DELETE
     private func retrieveData(forPath path: String) -> JSON? {
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
@@ -124,15 +123,14 @@ class API {
         return nil
     }
     
-    
+//    DELETE
     private func findJSONfilePath(forPath: String) -> String {
         return Bundle.main.path(forResource: forPath, ofType: "JSON")!
     }
     
-    private func retrieveAlamofireData(handler: @escaping (JSON) -> Void) {
-        Alamofire.request("http://localhost:4545/api/1/tags").responseJSON { MBresponse in
+    private func retrieveAlamofireData(withEndPoint: String, handler: @escaping (JSON) -> Void) {
+        Alamofire.request("http://localhost:4545/api/1/" + withEndPoint).responseJSON { MBresponse in
             let JSONresponse = JSON(MBresponse.result.value!)
-//            self.createTags(jsonObj: JSONresponse)
             handler(JSONresponse)
         }
     }

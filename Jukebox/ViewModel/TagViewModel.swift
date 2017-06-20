@@ -9,6 +9,7 @@
 import Foundation
 
 class TagViewModel {
+    var reloadTableView: ((TagViewModel) -> ())?
     private let route = "/api/1/tags"
     private var tags: [String] = [] {
         didSet {
@@ -17,14 +18,8 @@ class TagViewModel {
     }
     
     init() {
-        self.setTagTitles { response in
+        self.getTagTitles { response in
             self.tags = response
-        }
-    }
-    
-    private func setTagTitles(handler: @escaping ([String]) -> Void) {
-        getTagTitles { response in
-            handler(response)
         }
     }
     
@@ -59,9 +54,5 @@ class TagViewModel {
             
             handler(tagNames)
         }
-        
-//        return tagNames
     }
-    
-        var reloadTableView: ((TagViewModel) -> ())?
 }

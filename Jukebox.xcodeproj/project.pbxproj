@@ -37,7 +37,7 @@
 		846B1D611EEF204D00EB8FCD /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D601EEF204D00EB8FCD /* CategoryViewModel.swift */; };
 		846B1D651EEF256500EB8FCD /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D641EEF256500EB8FCD /* CategoryTableViewController.swift */; };
 		846B1D671EEF268B00EB8FCD /* CategoryTableViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D661EEF268B00EB8FCD /* CategoryTableViewControllerSpec.swift */; };
-		846B1DBA1EF3345000EB8FCD /* TagAPIdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1DB91EF3345000EB8FCD /* TagAPIdata.swift */; };
+		846B1DBA1EF3345000EB8FCD /* MockAPIdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1DB91EF3345000EB8FCD /* MockAPIdata.swift */; };
 		84E217F11EE74CE000B17813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E217F01EE74CE000B17813 /* AppDelegate.swift */; };
 		84E217F31EE74CE000B17813 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E217F21EE74CE000B17813 /* ViewController.swift */; };
 		84E217F61EE74CE000B17813 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E217F41EE74CE000B17813 /* Main.storyboard */; };
@@ -112,7 +112,7 @@
 		846B1D601EEF204D00EB8FCD /* CategoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryViewModel.swift; path = ViewModel/CategoryViewModel.swift; sourceTree = "<group>"; };
 		846B1D641EEF256500EB8FCD /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryTableViewController.swift; path = ViewControllers/CategoryTableViewController.swift; sourceTree = "<group>"; };
 		846B1D661EEF268B00EB8FCD /* CategoryTableViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewControllerSpec.swift; sourceTree = "<group>"; };
-		846B1DB91EF3345000EB8FCD /* TagAPIdata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagAPIdata.swift; sourceTree = "<group>"; };
+		846B1DB91EF3345000EB8FCD /* MockAPIdata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAPIdata.swift; sourceTree = "<group>"; };
 		84E217ED1EE74CE000B17813 /* Jukebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jukebox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E217F01EE74CE000B17813 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84E217F21EE74CE000B17813 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 				846B1D2F1EE8483F00EB8FCD /* TagData.JSON */,
 				846B1D311EE8487100EB8FCD /* CategoryData.JSON */,
 				846B1D331EE8493F00EB8FCD /* SongData.JSON */,
-				846B1DB91EF3345000EB8FCD /* TagAPIdata.swift */,
+				846B1DB91EF3345000EB8FCD /* MockAPIdata.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -421,7 +421,7 @@
 				846B1D611EEF204D00EB8FCD /* CategoryViewModel.swift in Sources */,
 				846B1D451EE8A37400EB8FCD /* Category.swift in Sources */,
 				84E217F31EE74CE000B17813 /* ViewController.swift in Sources */,
-				846B1DBA1EF3345000EB8FCD /* TagAPIdata.swift in Sources */,
+				846B1DBA1EF3345000EB8FCD /* MockAPIdata.swift in Sources */,
 				846B1D4B1EEAF8D400EB8FCD /* DataObjectMaker.swift in Sources */,
 				846B1D561EEEEB9200EB8FCD /* TagViewModel.swift in Sources */,
 				846B1D401EE870E000EB8FCD /* Tag.swift in Sources */,
