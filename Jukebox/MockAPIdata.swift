@@ -17,6 +17,10 @@ let params: Parameters = [
         categoryStub,
         rockSongsStub,
         rapSongsStub,
+        song1Stub,
+        song2Stub,
+        song3Stub,
+        song4Stub,
         allSongsStub
     ]
 ]
@@ -109,7 +113,8 @@ private let allSongsStub: Parameters = [
                         "description": "4 description",
                         "coverURL": "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg"
                     ]
-                ]
+                ],
+                "headers": [ "content-type": "application/json" ]
             ]
         ]
     ]
@@ -139,7 +144,8 @@ let rockSongsStub: Parameters = [
                         "description": "3 description",
                         "coverURL": "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg"
                     ]
-                ]
+                ],
+                "headers": [ "content-type": "application/json" ]
             ]
         ]
     ]
@@ -169,59 +175,113 @@ let rapSongsStub: Parameters = [
                         "description": "4 description",
                         "coverURL": "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg"
                     ]
-                ]
+                ],
+                "headers": [ "content-type": "application/json" ]
             ]
         ]
     ]
 ]
 
-//let song3Stub: Parameters = [
-//    "predicates": [
-//        [
-//            "equals": [
-//                "method": "GET",
-//                "path": "/api/1/songs/multi",
-//                "query": [ "id": "3" ]
-//            ]
-//        ]
-//    ],
-//    "responses": [
-//        [
-//            "is": [
-//                "body": [
-//                    "3": [
-//                        "name": "Song3",
-//                        "description": "3 description",
-//                        "coverURL": "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg"
-//                    ]
-//                ]
-//            ]
-//        ]
-//    ]
-//]
-//
-//let song4Stub: Parameters = [
-//    "predicates": [
-//        [
-//            "equals": [
-//                "method": "GET",
-//                "path": "/api/1/songs/multi",
-//                "query": [ "id": "4" ]
-//            ]
-//        ]
-//    ],
-//    "responses": [
-//        [
-//            "is": [
-//                "body": [
-//                    "4": [
-//                        "name": "Song4",
-//                        "description": "4 description",
-//                        "coverURL": "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg"
-//                    ]
-//                ]
-//            ]
-//        ]
-//    ]
-//]
+let song1Stub: Parameters = [
+    "predicates": [
+        [
+            "equals": [
+                "method": "GET",
+                "path": "/api/1/songs/multi",
+                "query": [ "id": "1" ]
+            ]
+        ]
+    ],
+    "responses": [
+        [
+            "is": [
+                "body": [
+                    "1": [
+                        "name": "Song1",
+                        "description": "1 description",
+                        "coverURL": "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg"
+                    ]
+                ],
+                "headers": [ "content-type": "application/json" ]
+            ]
+        ]
+    ]
+]
 
+let song2Stub: Parameters = [
+    "predicates": [
+        [
+            "equals": [
+                "method": "GET",
+                "path": "/api/1/songs/multi",
+                "query": [ "id": "2" ]
+            ]
+        ]
+    ],
+    "responses": [
+        [
+            "is": [
+                "body": [
+                    "2": [
+                        "name": "Song2",
+                        "description": "2 description",
+                        "coverURL": "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg"
+                    ]
+                ],
+                "headers": [ "content-type": "application/json" ]
+            ]
+        ]
+    ]
+]
+
+let song3Stub: Parameters = [
+    "predicates": [
+        [
+            "equals": [
+                "method": "GET",
+                "path": "/api/1/songs/multi",
+                "query": [ "id": "3" ]
+            ]
+        ]
+    ],
+    "responses": [
+        [
+            "is": [
+                "body": [
+                    "3": [
+                        "name": "Song3",
+                        "description": "3 description",
+                        "coverURL": "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg"
+                    ]
+                ],
+                "headers": [ "content-type": "application/json" ]
+            ]
+        ]
+    ]
+]
+
+let song4Stub: Parameters = [
+    "predicates": [
+        [
+            "equals": [
+                "method": "GET",
+                "path": "/api/1/songs/multi",
+                "query": [ "id": "4" ]
+            ]
+        ]
+    ],
+    "responses": [
+        [
+            "is": [
+                "body": [
+                    "4": [
+                        "name": "Song4",
+                        "description": "4 description",
+                        "coverURL": "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg"
+                    ]
+                ],
+                "headers": [ "content-type": "application/json" ]
+            ]
+        ]
+    ]
+]
