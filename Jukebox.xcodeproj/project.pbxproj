@@ -13,14 +13,8 @@
 		846B1D261EE754B800EB8FCD /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 846B1D1F1EE7549C00EB8FCD /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		846B1D281EE754C500EB8FCD /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 846B1D211EE754A500EB8FCD /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		846B1D291EE754C500EB8FCD /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 846B1D221EE754A500EB8FCD /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		846B1D301EE8483F00EB8FCD /* TagData.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 846B1D2F1EE8483F00EB8FCD /* TagData.JSON */; };
-		846B1D321EE8487100EB8FCD /* CategoryData.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 846B1D311EE8487100EB8FCD /* CategoryData.JSON */; };
-		846B1D341EE8493F00EB8FCD /* SongData.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 846B1D331EE8493F00EB8FCD /* SongData.JSON */; };
 		846B1D391EE8550C00EB8FCD /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D381EE8550C00EB8FCD /* API.swift */; };
 		846B1D3B1EE8594200EB8FCD /* APISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D3A1EE8594200EB8FCD /* APISpec.swift */; };
-		846B1D3C1EE86AFE00EB8FCD /* TagData.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 846B1D2F1EE8483F00EB8FCD /* TagData.JSON */; };
-		846B1D3D1EE86F2000EB8FCD /* CategoryData.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 846B1D311EE8487100EB8FCD /* CategoryData.JSON */; };
-		846B1D3E1EE86F2000EB8FCD /* SongData.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 846B1D331EE8493F00EB8FCD /* SongData.JSON */; };
 		846B1D401EE870E000EB8FCD /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D3F1EE870E000EB8FCD /* Tag.swift */; };
 		846B1D421EE879D200EB8FCD /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B1D411EE879D200EB8FCD /* SwiftyJSON.framework */; };
 		846B1D431EE879DA00EB8FCD /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 846B1D411EE879D200EB8FCD /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -92,9 +86,6 @@
 		846B1D1F1EE7549C00EB8FCD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		846B1D211EE754A500EB8FCD /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		846B1D221EE754A500EB8FCD /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		846B1D2F1EE8483F00EB8FCD /* TagData.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TagData.JSON; path = Data/TagData.JSON; sourceTree = "<group>"; };
-		846B1D311EE8487100EB8FCD /* CategoryData.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = CategoryData.JSON; path = Data/CategoryData.JSON; sourceTree = "<group>"; };
-		846B1D331EE8493F00EB8FCD /* SongData.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SongData.JSON; path = Data/SongData.JSON; sourceTree = "<group>"; };
 		846B1D381EE8550C00EB8FCD /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = Models/API.swift; sourceTree = "<group>"; };
 		846B1D3A1EE8594200EB8FCD /* APISpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APISpec.swift; sourceTree = "<group>"; };
 		846B1D3F1EE870E000EB8FCD /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tag.swift; path = Models/Tag.swift; sourceTree = "<group>"; };
@@ -170,9 +161,6 @@
 		846B1D2E1EE8481E00EB8FCD /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				846B1D2F1EE8483F00EB8FCD /* TagData.JSON */,
-				846B1D311EE8487100EB8FCD /* CategoryData.JSON */,
-				846B1D331EE8493F00EB8FCD /* SongData.JSON */,
 				846B1DB91EF3345000EB8FCD /* MockAPIdata.swift */,
 			);
 			name = Data;
@@ -382,10 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				846B1D341EE8493F00EB8FCD /* SongData.JSON in Resources */,
-				846B1D301EE8483F00EB8FCD /* TagData.JSON in Resources */,
 				84E217FB1EE74CE000B17813 /* LaunchScreen.storyboard in Resources */,
-				846B1D321EE8487100EB8FCD /* CategoryData.JSON in Resources */,
 				84E217F81EE74CE000B17813 /* Assets.xcassets in Resources */,
 				84E217F61EE74CE000B17813 /* Main.storyboard in Resources */,
 			);
@@ -395,9 +380,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				846B1D3D1EE86F2000EB8FCD /* CategoryData.JSON in Resources */,
-				846B1D3E1EE86F2000EB8FCD /* SongData.JSON in Resources */,
-				846B1D3C1EE86AFE00EB8FCD /* TagData.JSON in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

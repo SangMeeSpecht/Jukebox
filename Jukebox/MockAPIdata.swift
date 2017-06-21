@@ -120,7 +120,7 @@ private let allSongsStub: Parameters = [
     ]
 ]
 
-let rockSongsStub: Parameters = [
+private let rockSongsStub: Parameters = [
     "predicates": [
         [
             "equals": [
@@ -151,7 +151,7 @@ let rockSongsStub: Parameters = [
     ]
 ]
 
-let rapSongsStub: Parameters = [
+private let rapSongsStub: Parameters = [
     "predicates": [
         [
             "equals": [
@@ -182,7 +182,7 @@ let rapSongsStub: Parameters = [
     ]
 ]
 
-let song1Stub: Parameters = [
+private let song1Stub: Parameters = [
     "predicates": [
         [
             "equals": [
@@ -208,7 +208,7 @@ let song1Stub: Parameters = [
     ]
 ]
 
-let song2Stub: Parameters = [
+private let song2Stub: Parameters = [
     "predicates": [
         [
             "equals": [
@@ -234,7 +234,7 @@ let song2Stub: Parameters = [
     ]
 ]
 
-let song3Stub: Parameters = [
+private let song3Stub: Parameters = [
     "predicates": [
         [
             "equals": [
@@ -260,7 +260,7 @@ let song3Stub: Parameters = [
     ]
 ]
 
-let song4Stub: Parameters = [
+private let song4Stub: Parameters = [
     "predicates": [
         [
             "equals": [
