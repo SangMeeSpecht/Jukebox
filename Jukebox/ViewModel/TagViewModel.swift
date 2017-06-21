@@ -44,7 +44,7 @@ class TagViewModel {
 //    }
     
     private func getTagTitles(handler: @escaping ([String]) -> Void) {
-        API().fetchData(forRoute: route) { response in
+        API().fetchData(withEndpoint: route) { response in
             var tagNames: [String] = []
             
             for tag in response {

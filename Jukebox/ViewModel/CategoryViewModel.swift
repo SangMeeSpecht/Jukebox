@@ -36,7 +36,7 @@ class CategoryViewModel {
     
     private func getCategoryTitles(handler: @escaping ([String]) -> Void) {
 //        change to be dynamic later
-        API().fetchData(forRoute: "/api/1/category/tag/3") { response in
+        API().fetchData(withEndpoint: "category/tag/3") { response in
             var categoryTitles: [String] = []
             
             for category in response {

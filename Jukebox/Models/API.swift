@@ -11,19 +11,13 @@ import SwiftyJSON
 import Alamofire
 
 class API {
-    func fetchData(forRoute route: String, withIDs ids: [String]? = nil, handler: @escaping ([DataObjectMaker]) -> Void) {
-        if route == "tags" {
-            createTags {response in
-                handler(response) 
-            }
-        } else if foundMatchForCategory(withURL: route) {
-            createCategories { response in
-                handler(response)
-            }
-        } else if foundMatchForSong(withURL: route) {
-            createSongs(withQueries: route) { response in
-                handler(response)
-            }
+    func fetchData(withEndpoint endpoint: String, withIDs ids: [String]? = nil, handler: @escaping ([DataObjectMaker]) -> Void) {
+        if endpoint == "tags" {
+            createTags { response in handler(response) }
+        } else if foundMatchForCategory(withURL: endpoint) {
+            createCategories(withURL: endpoint) { response in handler(response) }
+        } else if foundMatchForSong(withURL: endpoint) {
+            createSongs(withQueries: endpoint) { response in handler(response) }
         }
     }
 
@@ -66,9 +60,8 @@ class API {
         }
     }
     
-    private func createCategories(handler: @escaping ([Category]) -> Void) {
-//        change tag id
-        retrieveAlamofireData(withEndPoint: "category/tag/3") { response in
+    private func createCategories(withURL URL: String, handler: @escaping ([Category]) -> Void) {
+        retrieveAlamofireData(withEndPoint: URL) { response in
             var categories: [Category] = []
             
             for (id, info) in response {
@@ -79,24 +72,6 @@ class API {
     }
     
     private func createSongs(withQueries queries: String, handler: @escaping ([Song]) -> Void) {
-//        var songs: [Song] = []
-//        let jsonObj = retrieveData(forPath: findJSONfilePath(forPath: "SongData"))
-//        
-//        if songID == nil {
-//            for (id, info) in jsonObj! {
-//                songs.append(Song(name: String(describing: info["name"]), id: id, description: String(describing: info["description"]), coverURL: NSURL(string: String(describing: info["coverURL"]))! as URL))
-//            }
-//            return songs
-//        }
-//        
-//        for (id, info) in jsonObj! {
-//            if (songID?.contains(id))! {
-//                songs.append(Song(name: String(describing: info["name"]), id: id, description: String(describing: info["description"]), coverURL: NSURL(string: String(describing: info["coverURL"]))! as URL))
-//            }
-//        }
-//        
-//        return songs 
-        
         retrieveAlamofireData(withEndPoint: queries) { response in
             var songs: [Song] = []
             
@@ -113,25 +88,7 @@ class API {
         for (_, song) in songs {
             songList.append(Int(String(describing: song))!)
         }
-        
         return songList
-    }
-    
-//    DELETE
-    private func retrieveData(forPath path: String) -> JSON? {
-        do {
-            let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
-            let jsonObj = JSON(data: data as Data)
-            return jsonObj
-        } catch {
-            print("unable to parse JSON file")
-        }
-        return nil
-    }
-    
-//    DELETE
-    private func findJSONfilePath(forPath: String) -> String {
-        return Bundle.main.path(forResource: forPath, ofType: "JSON")!
     }
     
     private func retrieveAlamofireData(withEndPoint: String, handler: @escaping (JSON) -> Void) {
