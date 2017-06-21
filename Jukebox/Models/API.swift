@@ -12,8 +12,7 @@ import Alamofire
 
 class API {
     func fetchData(forRoute route: String, withIDs ids: [String]? = nil, handler: @escaping ([DataObjectMaker]) -> Void) {
-        var music: [DataObjectMaker] = []
-        if route == "/api/1/tags" {
+        if route == "tags" {
             createTags {response in
                 handler(response) 
             }
@@ -22,17 +21,15 @@ class API {
                 handler(response)
             }
         } else if foundMatchForSong(withURL: route) {
-            if ids == nil {
-                music = createSongs()!
-            } else {
-                music = createSongs(withIDs: ids!)!
+            createSongs(withQueries: route) { response in
+                handler(response)
             }
         }
     }
 
     private func foundMatchForCategory(withURL URL: String) -> Bool {
         do {
-            let regex = try NSRegularExpression(pattern: "^/api/1/category/tag/\\d{1,}", options: [])
+            let regex = try NSRegularExpression(pattern: "^category/tag/\\d{1,}", options: [])
             let matches = regex.matches(in: URL, options: [], range: NSRange(location: 0, length: URL.utf16.count))
             
             if let _ = matches.first {
@@ -46,7 +43,7 @@ class API {
 
     private func foundMatchForSong(withURL URL: String) -> Bool {
         do {
-            let regex = try NSRegularExpression(pattern: "^/api/1/songs/multi[?]{0,1}(id=\\d{1,}){0,1}(&id=\\d{1,}){0,}", options: [])
+            let regex = try NSRegularExpression(pattern: "^songs/multi[?]{0,1}(id=\\d{1,}){0,1}(&id=\\d{1,}){0,}", options: [])
             let matches = regex.matches(in: URL, options: [], range: NSRange(location: 0, length: URL.utf16.count))
             
             if let _ = matches.first {
@@ -81,24 +78,33 @@ class API {
         }
     }
     
-    private func createSongs(withIDs songID: [String]? = nil) -> [Song]? {
-        var songs: [Song] = []
-        let jsonObj = retrieveData(forPath: findJSONfilePath(forPath: "SongData"))
+    private func createSongs(withQueries queries: String, handler: @escaping ([Song]) -> Void) {
+//        var songs: [Song] = []
+//        let jsonObj = retrieveData(forPath: findJSONfilePath(forPath: "SongData"))
+//        
+//        if songID == nil {
+//            for (id, info) in jsonObj! {
+//                songs.append(Song(name: String(describing: info["name"]), id: id, description: String(describing: info["description"]), coverURL: NSURL(string: String(describing: info["coverURL"]))! as URL))
+//            }
+//            return songs
+//        }
+//        
+//        for (id, info) in jsonObj! {
+//            if (songID?.contains(id))! {
+//                songs.append(Song(name: String(describing: info["name"]), id: id, description: String(describing: info["description"]), coverURL: NSURL(string: String(describing: info["coverURL"]))! as URL))
+//            }
+//        }
+//        
+//        return songs 
         
-        if songID == nil {
-            for (id, info) in jsonObj! {
+        retrieveAlamofireData(withEndPoint: queries) { response in
+            var songs: [Song] = []
+            
+            for (id, info) in response {
                 songs.append(Song(name: String(describing: info["name"]), id: id, description: String(describing: info["description"]), coverURL: NSURL(string: String(describing: info["coverURL"]))! as URL))
             }
-            return songs
+            handler(songs)
         }
-        
-        for (id, info) in jsonObj! {
-            if (songID?.contains(id))! {
-                songs.append(Song(name: String(describing: info["name"]), id: id, description: String(describing: info["description"]), coverURL: NSURL(string: String(describing: info["coverURL"]))! as URL))
-            }
-        }
-        
-        return songs 
     }
     
     private func createSongIDlist(forID songs: JSON) -> [Int]? {
@@ -130,8 +136,9 @@ class API {
     
     private func retrieveAlamofireData(withEndPoint: String, handler: @escaping (JSON) -> Void) {
         Alamofire.request("http://localhost:4545/api/1/" + withEndPoint).responseJSON { MBresponse in
-            let JSONresponse = JSON(MBresponse.result.value!)
-            handler(JSONresponse)
+            if let JSONresponse = MBresponse.result.value {
+                handler(JSON(JSONresponse))
+            }
         }
     }
 }

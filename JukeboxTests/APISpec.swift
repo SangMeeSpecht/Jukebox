@@ -8,6 +8,7 @@
 
 import Quick
 import Nimble
+import Alamofire
 @testable import Jukebox
 
 class APISpec: QuickSpec {
@@ -18,54 +19,89 @@ class APISpec: QuickSpec {
             APImodel = Jukebox.API()
         }
         
+        afterSuite {
+            Alamofire.request("http://localhost:2525/imposters/", method: .delete)
+        }
+        
         describe(".fetchData") {
             context("when a request for all tags is made") {
                 it("returns a collection of tags") {
-                    let tags = APImodel?.fetchData(forRoute: "/api/1/tags")
-                    expect(tags?.count).to(equal(3))
+                    var tags: [Tag] = []
+                    APImodel?.fetchData(forRoute: "tags") { response in
+                        tags = response as! [Tag]
+                    }
+                    expect(tags.count).toEventually(equal(3))
                 }
             }
             
             context("when a request for no song categories is made") {
                 it("returns an empty collection of song genre categories") {
-                    let categories = APImodel?.fetchData(forRoute: "/api/1/category/tag/")
-                    expect(categories?.count).to(equal(0))
+                    var categories: [Jukebox.Category] = []
+                    APImodel?.fetchData(forRoute: "category/tag/") { response in
+                        categories = response as! [Jukebox.Category]
+                    }
+                    expect(categories.count).toEventually(equal(0))
                 }
             }
             
             context("when a request for song categories is made") {
                 it("returns a collection of song genre categories") {
+                    var categories: [Jukebox.Category] = []
                     let tagID = 1
-                    let categories = APImodel?.fetchData(forRoute: "/api/1/category/tag/\(tagID)")
-                    expect(categories?.count).to(equal(2))
+                    APImodel?.fetchData(forRoute: "category/tag/\(tagID)") { response in
+                        categories = response as! [Jukebox.Category]
+                    }
+                    expect(categories.count).toEventually(equal(2))
                 }
             }
-            
+        
             context("when a request for no specific songs is made") {
                 it("returns a collection of all songs") {
-                    let songs = APImodel?.fetchData(forRoute: "/api/1/songs/multi")
-                    expect(songs?.count).to(equal(4))
+                    var songs: [Song] = []
+                    APImodel?.fetchData(forRoute: "songs/multi") { response in
+                        songs = response as! [Song]
+                    }
+                    expect(songs.count).toEventually(equal(4))
                 }
             }
-            
+        
             context("when a request for one song is made") {
                 it("returns a collection of one song") {
-                    let songs = APImodel?.fetchData(forRoute: "/api/1/songs/multi?id=1", withIDs: ["1"])
-                    expect(songs?.count).to(equal(1))
+                    var songs: [Song] = []
+                    APImodel?.fetchData(forRoute: "songs/multi?id=1") { response in
+                        songs = response as! [Song]
+                    }
+                    expect(songs.count).toEventually(equal(1))
                 }
             }
             
             context("when a request for two songs is made") {
                 it("returns a collection of two songs") {
-                    let songs = APImodel?.fetchData(forRoute: "/api/1/songs/multi?id=1?id=4", withIDs: ["1", "4"])
-                    expect(songs?.count).to(equal(2))
+                    var songs: [Song] = []
+                    APImodel?.fetchData(forRoute: "songs/multi?id=1&id=3") { response in
+                        songs = response as! [Song]
+                    }
+                    expect(songs.count).toEventually(equal(2))
+                }
+            }
+            
+            context("when a request for two songs is made, but only one song exists") {
+                it("returns only the song that exists") {
+                    var songs: [Song] = []
+                    APImodel?.fetchData(forRoute: "songs/multi?id=1234567&id=4") { response in
+                        songs = response as! [Song]
+                    }
+                    expect(songs.count).toEventually(equal(1))
                 }
             }
             
             context("when a request for a song that isn't in the collection is made") {
-                it("returns an empty collection of songs") {
-                    let songs = APImodel?.fetchData(forRoute: "/api/1/songs/multi?id=1234567", withIDs: ["1234567"])
-                    expect(songs?.count).to(equal(0))
+                it("returns a collection of all songs") {
+                    var songs: [Song] = []
+                    APImodel?.fetchData(forRoute: "songs/multi?id=1234567") { response in
+                        songs = response as! [Song]
+                    }
+                    expect(songs.count).toEventually(equal(4))
                 }
             }
         }
