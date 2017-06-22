@@ -10,7 +10,7 @@ import Foundation
 
 
 class CategoryViewModel {
-    private var route: String?
+    private var route = "category/tag/3"
     var tagID: String?
     var reloadTableView: ((CategoryViewModel) -> ())?
 
@@ -28,12 +28,12 @@ class CategoryViewModel {
         return categories.count
     }
     
-    func getCategoryTitle(at indexPath: IndexPath) -> String {
+    func getCategoryName(at indexPath: IndexPath) -> String {
         return categories[indexPath.row].name!
     }
     
     private func getCategories() {
-        API().fetchData(withEndpoint: "category/tag/3") { response in
+        API().fetchData(withEndpoint: route) { response in
             self.categories = response as! [Category]
         }
     }

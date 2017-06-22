@@ -12,16 +12,10 @@ import Nimble
 
 //class SongViewModelSpec: QuickSpec {
 //    override func spec() {
-//        var songViewModel: SongViewModel?
+//        var songViewModel = Jukebox.SongViewModel()
 //        
-//        beforeEach {
-//            songViewModel = Jukebox.SongViewModel()
-//        }
-//        
-//        describe(".fetchSongs") {
-//            context("when a request for specific songs is made") {
-//                it("") {
-//                    
-//                    expect(tags?.count).to(equal(3))
-//                }
+//        describe(".getSongCount") {
+//            it("returns a count of songs") {
+//                expect(songViewModel.getSongCount).to(equal(3))
+//            }
 //}

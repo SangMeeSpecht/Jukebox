@@ -14,7 +14,7 @@ class TagTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tagViewModel.reloadTableView = { [unowned self] viewModel in
+        tagViewModel.reloadTableView = { viewModel in
             self.tableView.reloadData()
         }
     }

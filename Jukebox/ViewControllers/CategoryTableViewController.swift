@@ -14,7 +14,7 @@ class CategoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        categoryViewModel.reloadTableView = { [unowned self] viewModel in
+        categoryViewModel.reloadTableView = { viewModel in
             self.tableView.reloadData()
         }
         
@@ -29,7 +29,7 @@ class CategoryTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Category Cell", for: indexPath)
 
         if let categoryCell = cell as? UITableViewCell {
-            let categoryName = categoryViewModel.getCategoryTitle(at: indexPath)
+            let categoryName = categoryViewModel.getCategoryName(at: indexPath)
             cell.textLabel?.text = categoryName
         }
 
