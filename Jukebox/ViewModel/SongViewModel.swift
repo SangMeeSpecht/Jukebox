@@ -28,6 +28,22 @@ class SongViewModel {
         }
     }
     
+    func getSongDescription(at indexPath: IndexPath) -> String? {
+        if songs.count > 0 {
+            return songs[indexPath.row].description
+        } else {
+            return nil
+        }
+    }
+    
+    func getCoverArtURL(at indexPath: IndexPath) -> URL? {
+        if songs.count > 0 {
+            return songs[indexPath.row].coverURL
+        } else {
+            return nil
+        }
+    }
+    
     private func getSongs() {
         API().fetchData(withEndpoint: route) { response in
             let songs = response as! [Song]

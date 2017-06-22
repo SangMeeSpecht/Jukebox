@@ -13,6 +13,7 @@ import Nimble
 class SongViewModelSpec: QuickSpec {
     override func spec() {
         let songViewModel = Jukebox.SongViewModel()
+        let indexPath = IndexPath(row: 2, section: 0)
         
         describe(".getSongCount") {
             it("returns a count of songs") {
@@ -22,8 +23,19 @@ class SongViewModelSpec: QuickSpec {
         
         describe(".getSongName") {
             it("returns the name for a song") {
-                let indexPath = IndexPath(row: 2, section: 0)
                 expect(songViewModel.getSongName(at: indexPath)).toEventually(equal("Song3"))
+            }
+        }
+        
+        describe(".getSongDescription") {
+            it("returns a description for a song") {
+                expect(songViewModel.getSongDescription(at: indexPath)).toEventually(equal("3 description"))
+            }
+        }
+        
+        describe(".getCoverArtURL") {
+            it("returns a URL for a song's album") {
+                expect(songViewModel.getCoverArtURL(at: indexPath)).toEventually(equal(URL(string: "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg")))
             }
         }
     }
