@@ -28,8 +28,9 @@ class TagTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Tag Cell", for: indexPath)
         
         if let tagCell = cell as? UITableViewCell {
-            let tagTitle = tagViewModel.getTagTitle(at: indexPath)
-            cell.textLabel?.text = tagTitle 
+            if let tagTitle = tagViewModel.getTagTitle(at: indexPath) {
+                cell.textLabel?.text = tagTitle
+            }
         }
         
         return cell

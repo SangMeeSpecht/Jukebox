@@ -10,12 +10,21 @@ import Quick
 import Nimble
 @testable import Jukebox
 
-//class SongViewModelSpec: QuickSpec {
-//    override func spec() {
-//        var songViewModel = Jukebox.SongViewModel()
-//        
-//        describe(".getSongCount") {
-//            it("returns a count of songs") {
-//                expect(songViewModel.getSongCount).to(equal(3))
-//            }
-//}
+class SongViewModelSpec: QuickSpec {
+    override func spec() {
+        let songViewModel = Jukebox.SongViewModel()
+        
+        describe(".getSongCount") {
+            it("returns a count of songs") {
+                expect(songViewModel.getSongCount()).toEventually(equal(4))
+            }
+        }
+        
+        describe(".getSongName") {
+            it("returns the name for a song") {
+                let indexPath = IndexPath(row: 2, section: 0)
+                expect(songViewModel.getSongName(at: indexPath)).toEventually(equal("Song3"))
+            }
+        }
+    }
+}

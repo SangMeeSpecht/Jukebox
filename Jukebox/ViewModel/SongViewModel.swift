@@ -9,9 +9,33 @@
 import Foundation
 
 class SongViewModel {
-//    func APIrouteBuilder(withSongIDs ids: [Int]) {
-//        var route = "/api/1/songs/multi"
-//        
-//        
-//    }
+    var route = "songs/multi"
+    private var songs: [Song] = []
+    
+    init() {
+        getSongs()
+    }
+    
+    func getSongCount() -> Int {
+        return songs.count 
+    }
+    
+    func getSongName(at indexPath: IndexPath) -> String? {
+        if songs.count > 0 {
+            return songs[indexPath.row].name
+        } else {
+            return nil
+        }
+    }
+    
+    private func getSongs() {
+        API().fetchData(withEndpoint: route) { response in
+            let songs = response as! [Song]
+            self.songs = self.sortSongsByID(withSongs: songs)
+        }
+    }
+    
+    private func sortSongsByID(withSongs songs: [Song]) -> [Song] {
+        return songs.sorted { Int($0.id!)! < Int($1.id!)! }
+    }
 }

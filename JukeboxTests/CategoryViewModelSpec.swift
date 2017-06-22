@@ -23,7 +23,7 @@ class CategoryViewModelSpec: QuickSpec {
         
         describe(".getCategoryName") {
             it("returns the name for a category") {
-                let indexPath = IndexPath(row: 1, section: 0)
+                let indexPath = IndexPath(row: 0, section: 0)
                 expect(categoryViewModel.getCategoryName(at: indexPath)).toEventually(equal("Rock"))
             }
         }

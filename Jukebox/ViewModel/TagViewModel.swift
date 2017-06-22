@@ -25,8 +25,12 @@ class TagViewModel {
         return tags.count
     }
     
-    func getTagTitle(at indexPath: IndexPath) -> String {
-        return tags[indexPath.row].title!
+    func getTagTitle(at indexPath: IndexPath) -> String? {
+        if tags.count > 0 {
+            return tags[indexPath.row].title
+        } else {
+            return nil
+        }
     }
     
     func getTagID(at indexPath: IndexPath) -> String {
@@ -35,7 +39,12 @@ class TagViewModel {
     
     private func getTags() -> Void {
         API().fetchData(withEndpoint: route) { response in
-            self.tags = response as! [Tag]
+            let tags = response as! [Tag]
+            self.tags = self.sortTagsByID(withTags: tags)
         }
+    }
+    
+    private func sortTagsByID(withTags tags: [Tag]) -> [Tag] {
+        return tags.sorted { Int($0.id!)! < Int($1.id!)! }
     }
 }

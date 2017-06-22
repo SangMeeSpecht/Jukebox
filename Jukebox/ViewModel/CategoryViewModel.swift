@@ -28,13 +28,22 @@ class CategoryViewModel {
         return categories.count
     }
     
-    func getCategoryName(at indexPath: IndexPath) -> String {
-        return categories[indexPath.row].name!
+    func getCategoryName(at indexPath: IndexPath) -> String? {
+        if categories.count > 0 {
+            return categories[indexPath.row].name
+        } else {
+            return nil
+        }
     }
     
     private func getCategories() {
         API().fetchData(withEndpoint: route) { response in
-            self.categories = response as! [Category]
+            let categories = response as! [Category]
+            self.categories = self.sortCategoriesByID(withCategories: categories)
         }
+    }
+    
+    private func sortCategoriesByID(withCategories categories: [Category]) -> [Category] {
+        return categories.sorted { Int($0.id!)! < Int($1.id!)! }
     }
 }

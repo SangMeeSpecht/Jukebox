@@ -22,15 +22,15 @@ class TagViewModelSpec: QuickSpec {
         
         describe(".getTagTitle") {
             it("returns the title for a tag") {
-                let indexPath = IndexPath(row: 2, section: 0)
-                expect(tagViewModel.getTagTitle(at: indexPath)).toEventually(equal("Genre"))
+                let indexPath = IndexPath(row: 0, section: 0)
+                expect(tagViewModel.getTagTitle(at: indexPath)).toEventually(equal("Artists"))
             }
         }
         
         describe("getTagID") {
             it("returns the id based on the tag title") {
-                let indexPath = IndexPath(row: 2, section: 0)
-                expect(tagViewModel.getTagID(at: indexPath)).toEventually(equal("3"))
+                let indexPath = IndexPath(row: 1, section: 0)
+                expect(tagViewModel.getTagID(at: indexPath)).toEventually(equal("2"))
             }
         }
     }

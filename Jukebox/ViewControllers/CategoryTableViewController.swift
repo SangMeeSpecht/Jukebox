@@ -29,8 +29,9 @@ class CategoryTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Category Cell", for: indexPath)
 
         if let categoryCell = cell as? UITableViewCell {
-            let categoryName = categoryViewModel.getCategoryName(at: indexPath)
-            cell.textLabel?.text = categoryName
+            if let categoryName = categoryViewModel.getCategoryName(at: indexPath) {
+                cell.textLabel?.text = categoryName
+            }
         }
 
         return cell
