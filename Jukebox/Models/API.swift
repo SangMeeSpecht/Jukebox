@@ -11,7 +11,7 @@ import SwiftyJSON
 import Alamofire
 
 class API {
-    func fetchData(withEndpoint endpoint: String, withIDs ids: [String]? = nil, handler: @escaping ([DataObjectMaker]) -> Void) {
+    func fetchData(withEndpoint endpoint: String, handler: @escaping ([DataObjectMaker]) -> Void) {
         if endpoint == "tags" {
             createTags { response in handler(response) }
         } else if foundMatchForCategory(withURL: endpoint) {
@@ -50,7 +50,7 @@ class API {
     }
     
     private func createTags(handler: @escaping ([Tag]) -> Void) {
-        retrieveAlamofireData(withEndPoint: "tags") { response in
+        fetchStubbedData(withEndPoint: "tags") { response in
             var tags: [Tag] = []
             
             for (id, title) in response {
@@ -61,7 +61,7 @@ class API {
     }
     
     private func createCategories(withURL URL: String, handler: @escaping ([Category]) -> Void) {
-        retrieveAlamofireData(withEndPoint: URL) { response in
+        fetchStubbedData(withEndPoint: URL) { response in
             var categories: [Category] = []
             
             for (id, info) in response {
@@ -72,7 +72,7 @@ class API {
     }
     
     private func createSongs(withQueries queries: String, handler: @escaping ([Song]) -> Void) {
-        retrieveAlamofireData(withEndPoint: queries) { response in
+        fetchStubbedData(withEndPoint: queries) { response in
             var songs: [Song] = []
             
             for (id, info) in response {
@@ -91,7 +91,7 @@ class API {
         return songList
     }
     
-    private func retrieveAlamofireData(withEndPoint: String, handler: @escaping (JSON) -> Void) {
+    private func fetchStubbedData(withEndPoint: String, handler: @escaping (JSON) -> Void) {
         Alamofire.request("http://localhost:4545/api/1/" + withEndPoint).responseJSON { MBresponse in
             if let JSONresponse = MBresponse.result.value {
                 handler(JSON(JSONresponse))

@@ -10,17 +10,15 @@ import Foundation
 
 class TagViewModel {
     var reloadTableView: ((TagViewModel) -> ())?
-    private let route = "/api/1/tags"
-    private var tags: [String] = [] {
+    private let route = "tags"
+    private var tags: [Tag] = [] {
         didSet {
             self.reloadTableView?(self)
         }
     }
     
     init() {
-        self.getTagTitles { response in
-            self.tags = response
-        }
+        getTags()
     }
     
     func getTagCount() -> Int {
@@ -28,31 +26,16 @@ class TagViewModel {
     }
     
     func getTagTitle(at indexPath: IndexPath) -> String {
-        return tags[indexPath.row]
+        return tags[indexPath.row].title!
     }
     
-//    func getTagID(withTitle title: String) -> String? {
-//        let tags = API().fetchData(forRoute: route) {response in
-//        }
-//        for tag in tags {
-//            let currentTag = tag as? Tag
-//            if currentTag?.title == title {
-//                return currentTag?.id!
-//            }
-//        }
-//        return nil
-//    }
+    func getTagID(at indexPath: IndexPath) -> String {
+        return tags[indexPath.row].id!
+    }
     
-    private func getTagTitles(handler: @escaping ([String]) -> Void) {
+    private func getTags() -> Void {
         API().fetchData(withEndpoint: route) { response in
-            var tagNames: [String] = []
-            
-            for tag in response {
-                let currentTag = tag as? Tag
-                tagNames.append((currentTag?.title)!)
-            }
-            
-            handler(tagNames)
+            self.tags = response as! [Tag]
         }
     }
 }

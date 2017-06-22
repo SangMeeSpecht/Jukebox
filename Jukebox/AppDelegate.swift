@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let parameters: Parameters = params
         
         Alamofire.request("http://localhost:2525/imposters/", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        
         return true
     }
 

@@ -14,16 +14,14 @@ class CategoryViewModel {
     var tagID: String?
     var reloadTableView: ((CategoryViewModel) -> ())?
 
-    private var categories: [String] = [] {
+    private var categories: [Category] = [] {
         didSet {
             self.reloadTableView?(self)
         }
     }
 
     init() {
-        self.getCategoryTitles { response in
-            self.categories = response
-        }
+        getCategories()
     }
     
     func getCategoryCount() -> Int {
@@ -31,19 +29,12 @@ class CategoryViewModel {
     }
     
     func getCategoryTitle(at indexPath: IndexPath) -> String {
-        return categories[indexPath.row]
+        return categories[indexPath.row].name!
     }
     
-    private func getCategoryTitles(handler: @escaping ([String]) -> Void) {
-//        change to be dynamic later
+    private func getCategories() {
         API().fetchData(withEndpoint: "category/tag/3") { response in
-            var categoryTitles: [String] = []
-            
-            for category in response {
-                let currentCategory = category as? Category
-                categoryTitles.append((currentCategory?.name)!)
-            }
-            handler(categoryTitles)
+            self.categories = response as! [Category]
         }
     }
 }
