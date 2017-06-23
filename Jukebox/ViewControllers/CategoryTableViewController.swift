@@ -37,6 +37,30 @@ class CategoryTableViewController: UITableViewController {
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+////        send over song ids and route name
+//        if let identifier = segue.identifier {
+//            switch identifier {
+//            case "Show Songs":
+//                if let seguedtoVC = segue.destination as? SongTableViewController {
+//                    seguedtoVC.songIDs = categoryViewModel.getSongIDs(forCategory: sender.indexPath)
+//                }
+//            }
+//        }
+//    }
 }
+
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let identifier = segue.identifier {
+//            switch identifier {
+//            case "Show Category":
+//                if let cell = sender as? UITableViewCell {
+//                    if let seguedToMVC = segue.destination as? CategoryTableViewController {
+////                        set specific tag_ids/route, change to be dynamic
+////                        seguedToMVC.tagID = tagViewModel.getTagID(withTitle: cell.textLabel?.text)
+//                    }
+//                }
+//            default: break
+//            }
+//        }
+//    }

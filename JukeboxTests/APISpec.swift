@@ -18,10 +18,10 @@ class APISpec: QuickSpec {
         beforeEach {
             APImodel = Jukebox.API()
         }
-//        
-//        afterSuite {
-//            Alamofire.request("http://localhost:2525/imposters/", method: .delete)
-//        }
+        
+        afterSuite {
+            Alamofire.request("http://localhost:2525/imposters/", method: .delete)
+        }
         
         describe(".fetchData") {
             context("when a request for all tags is made") {

@@ -14,6 +14,7 @@ import Alamofire
 class CategoryViewModelSpec: QuickSpec {
     override func spec() {
         let categoryViewModel = Jukebox.CategoryViewModel()
+        let indexPath = IndexPath(row: 0, section: 0)
 
         describe(".getTagCount") {
             it("returns a count of tags") {
@@ -23,8 +24,13 @@ class CategoryViewModelSpec: QuickSpec {
         
         describe(".getCategoryName") {
             it("returns the name for a category") {
-                let indexPath = IndexPath(row: 0, section: 0)
                 expect(categoryViewModel.getCategoryName(at: indexPath)).toEventually(equal("Rock"))
+            }
+        }
+        
+        describe(".getSongIDs") {
+            it("returns a collection of song ids for a category") {
+                expect(categoryViewModel.getSongIDs(at: indexPath)).toEventually(equal([1,3]))
             }
         }
     }

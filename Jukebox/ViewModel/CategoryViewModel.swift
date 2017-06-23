@@ -10,6 +10,7 @@ import Foundation
 
 
 class CategoryViewModel {
+//    change route to be dynamic later
     private var route = "category/tag/3"
     var tagID: String?
     var reloadTableView: ((CategoryViewModel) -> ())?
@@ -31,6 +32,14 @@ class CategoryViewModel {
     func getCategoryName(at indexPath: IndexPath) -> String? {
         if categories.count > 0 {
             return categories[indexPath.row].name
+        } else {
+            return nil
+        }
+    }
+    
+    func getSongIDs(at indexPath: IndexPath) -> [Int]? {
+        if categories.count > 0 {
+            return categories[indexPath.row].songIDs!
         } else {
             return nil
         }
