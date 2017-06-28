@@ -9,8 +9,8 @@
 import Foundation
 
 class SongViewModel {
-    private var route = "songs/multi"
     var reloadTableView: ((SongViewModel) -> ())?
+    private var route = "songs/multi"
     private var songs: [Song] = [] {
         didSet {
             self.reloadTableView?(self)
@@ -42,9 +42,9 @@ class SongViewModel {
         }
     }
     
-    func getCoverArtURL(at indexPath: IndexPath) -> URL? {
-        if songs.count > 0 {
-            return songs[indexPath.row].coverURL
+    func getCoverArt(at indexPath: IndexPath) -> Data? {
+        if songs.count > 0, let imageData = try? Data(contentsOf: (songs[indexPath.row].coverURL!.asURL())) {
+            return imageData
         } else {
             return nil
         }

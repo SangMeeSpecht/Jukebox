@@ -36,17 +36,12 @@ class SongCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AlbumCoverCell", for: indexPath) as? SongCollectionViewCell
-    
-        if try! songViewModel?.getCoverArtURL(at: indexPath)?.asURL() != nil {
-            if let imageData = try? Data(contentsOf: (songViewModel?.getCoverArtURL(at: indexPath)?.asURL())!) {
-                cell?.albumCover.image = UIImage(data: imageData)
-            }
-        }
+
+        cell?.albumCover.image = UIImage(data: (songViewModel?.getCoverArt(at: indexPath))!)
         
         return cell!
     }
     
-
     // MARK: UICollectionViewDelegate
 
     
