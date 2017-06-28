@@ -76,7 +76,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ouJ-MS-ORT" kind="show" id="Znw-aU-cOS"/>
+                                    <segue destination="HEE-zL-Ml1" kind="show" identifier="Show Songs" id="YQn-6K-cU9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -90,33 +90,50 @@
             </objects>
             <point key="canvasLocation" x="1694" y="-602"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="V9F-Sb-OQq">
+        <!--Song Collection View Controller-->
+        <scene sceneID="142-En-Q0C">
             <objects>
-                <tableViewController id="ouJ-MS-ORT" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qt2-ax-BNw">
+                <collectionViewController modalPresentationStyle="currentContext" id="HEE-zL-Ml1" customClass="SongCollectionViewController" customModule="Jukebox" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xtA-Qk-hjB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ckk-8j-NgA">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ckk-8j-NgA" id="ddR-8b-dNa">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sK9-Pm-bzJ">
+                            <size key="itemSize" width="345" height="570"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumCoverCell" id="op9-2k-ANP" customClass="SongCollectionViewCell" customModule="Jukebox" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="16.5" width="345" height="570"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="345" height="570"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f06-YW-UJL">
+                                            <rect key="frame" x="22" y="108" width="300" height="300"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="1" green="0.28438648950000001" blue="0.1429069945" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" red="0.82845090850000003" green="0.9339506662" blue="0.92262147500000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="albumCover" destination="f06-YW-UJL" id="hwG-jj-WW3"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
                         <connections>
-                            <outlet property="dataSource" destination="ouJ-MS-ORT" id="UHx-Si-Lox"/>
-                            <outlet property="delegate" destination="ouJ-MS-ORT" id="AtS-b3-yvh"/>
+                            <outlet property="dataSource" destination="HEE-zL-Ml1" id="2mF-02-fNK"/>
+                            <outlet property="delegate" destination="HEE-zL-Ml1" id="QK8-6v-IE2"/>
                         </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="562-9f-nhz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HYz-xd-JPq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2398" y="-602"/>
+            <point key="canvasLocation" x="2394.4000000000001" y="-604.04797601199402"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

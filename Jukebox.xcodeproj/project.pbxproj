@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8405CA1C1EFD750900433FD1 /* SongCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405CA1B1EFD750900433FD1 /* SongCollectionViewController.swift */; };
+		8405CA1F1F04068400433FD1 /* SongCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405CA1E1F04068400433FD1 /* SongCollectionViewCell.swift */; };
 		846B1D201EE7549C00EB8FCD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B1D1F1EE7549C00EB8FCD /* Alamofire.framework */; };
 		846B1D231EE754A500EB8FCD /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B1D211EE754A500EB8FCD /* Nimble.framework */; };
 		846B1D241EE754A500EB8FCD /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B1D221EE754A500EB8FCD /* Quick.framework */; };
@@ -83,6 +85,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8405CA1B1EFD750900433FD1 /* SongCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SongCollectionViewController.swift; path = ViewControllers/SongCollectionViewController.swift; sourceTree = "<group>"; };
+		8405CA1E1F04068400433FD1 /* SongCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SongCollectionViewCell.swift; path = Cells/SongCollectionViewCell.swift; sourceTree = "<group>"; };
 		846B1D1F1EE7549C00EB8FCD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		846B1D211EE754A500EB8FCD /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		846B1D221EE754A500EB8FCD /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -147,6 +151,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8405CA1D1F04066A00433FD1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8405CA1E1F04068400433FD1 /* SongCollectionViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		846B1D1E1EE7549C00EB8FCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +205,7 @@
 			children = (
 				846B1D581EEEF72500EB8FCD /* TagTableViewController.swift */,
 				846B1D641EEF256500EB8FCD /* CategoryTableViewController.swift */,
+				8405CA1B1EFD750900433FD1 /* SongCollectionViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -221,6 +234,7 @@
 		84E217EF1EE74CE000B17813 /* Jukebox */ = {
 			isa = PBXGroup;
 			children = (
+				8405CA1D1F04066A00433FD1 /* Cells */,
 				846B1D571EEEF6F800EB8FCD /* ViewControllers */,
 				846B1D501EEB4B0F00EB8FCD /* ViewModel */,
 				846B1D371EE854F400EB8FCD /* Models */,
@@ -400,8 +414,10 @@
 				846B1D471EE8AD4400EB8FCD /* Song.swift in Sources */,
 				846B1D4F1EEB4B0500EB8FCD /* SongViewModel.swift in Sources */,
 				846B1D591EEEF72500EB8FCD /* TagTableViewController.swift in Sources */,
+				8405CA1F1F04068400433FD1 /* SongCollectionViewCell.swift in Sources */,
 				846B1D611EEF204D00EB8FCD /* CategoryViewModel.swift in Sources */,
 				846B1D451EE8A37400EB8FCD /* Category.swift in Sources */,
+				8405CA1C1EFD750900433FD1 /* SongCollectionViewController.swift in Sources */,
 				84E217F31EE74CE000B17813 /* ViewController.swift in Sources */,
 				846B1DBA1EF3345000EB8FCD /* MockAPIdata.swift in Sources */,
 				846B1D4B1EEAF8D400EB8FCD /* DataObjectMaker.swift in Sources */,

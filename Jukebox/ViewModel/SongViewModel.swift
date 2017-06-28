@@ -9,10 +9,16 @@
 import Foundation
 
 class SongViewModel {
-    var route = "songs/multi"
-    private var songs: [Song] = []
+    private var route = "songs/multi"
+    var reloadTableView: ((SongViewModel) -> ())?
+    private var songs: [Song] = [] {
+        didSet {
+            self.reloadTableView?(self)
+        }
+    }
     
-    init() {
+    init(songIDs: [Int]) {
+        setRoute(forSongs: songIDs)
         getSongs()
     }
     
@@ -42,6 +48,18 @@ class SongViewModel {
         } else {
             return nil
         }
+    }
+    
+    private func setRoute(forSongs songs: [Int]) {
+        route += "?"
+        for song in songs {
+            route += "id=\(song)&"
+        }
+        removeLastAmperand()
+    }
+    
+    private func removeLastAmperand() {
+        _ = route.characters.dropLast()
     }
     
     private func getSongs() {
