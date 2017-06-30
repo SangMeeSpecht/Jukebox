@@ -38,8 +38,8 @@ class TagViewModel {
     }
     
     private func getTags() -> Void {
-        API().fetchData(withEndpoint: route) { response in
-            let tags = response as! [Tag]
+        API().fetchTags(withEndpoint: route) { response in
+            let tags = response 
             self.tags = self.sortTagsByID(withTags: tags)
         }
     }

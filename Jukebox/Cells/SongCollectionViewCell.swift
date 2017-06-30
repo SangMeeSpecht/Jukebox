@@ -10,4 +10,6 @@ import UIKit
 
 class SongCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var albumCover: UIImageView!
+    @IBOutlet weak var songName: UILabel!
+    @IBOutlet weak var songDescription: UILabel!
 }

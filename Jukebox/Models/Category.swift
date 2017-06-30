@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Category: DataObjectMaker {
+class Category {
     let name: String?
     let id: String?
     let songIDs: [Int]?

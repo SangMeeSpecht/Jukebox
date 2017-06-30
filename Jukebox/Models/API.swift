@@ -11,42 +11,16 @@ import SwiftyJSON
 import Alamofire
 
 class API {
-    func fetchData(withEndpoint endpoint: String, handler: @escaping ([DataObjectMaker]) -> Void) {
-        if endpoint == "tags" {
-            createTags { response in handler(response) }
-        } else if foundMatchForCategory(withURL: endpoint) {
-            createCategories(withURL: endpoint) { response in handler(response) }
-        } else if foundMatchForSong(withURL: endpoint) {
-            createSongs(withQueries: endpoint) { response in handler(response) }
-        }
+    func fetchTags(withEndpoint endpoint: String, handler: @escaping ([Tag]) -> Void) {
+        createTags { response in handler(response) }
     }
-
-    private func foundMatchForCategory(withURL URL: String) -> Bool {
-        do {
-            let regex = try NSRegularExpression(pattern: "^category/tag/\\d{1,}", options: [])
-            let matches = regex.matches(in: URL, options: [], range: NSRange(location: 0, length: URL.utf16.count))
-            
-            if let _ = matches.first {
-                return true
-            }
-        } catch {
-            print("bad regex")
-        }
-        return false
+    
+    func fetchCategories(withEndpoint endpoint: String, handler: @escaping ([Category]) -> Void) {
+        createCategories(withURL: endpoint) { response in handler(response) }
     }
-
-    private func foundMatchForSong(withURL URL: String) -> Bool {
-        do {
-            let regex = try NSRegularExpression(pattern: "^songs/multi[?]{0,1}(id=\\d{1,}){0,1}(&id=\\d{1,}){0,}", options: [])
-            let matches = regex.matches(in: URL, options: [], range: NSRange(location: 0, length: URL.utf16.count))
-            
-            if let _ = matches.first {
-                return true
-            }
-        } catch {
-            print("bad regex")
-        }
-        return false
+    
+    func fetchSongs(withEndpoint endpoint: String, handler: @escaping ([Song]) -> Void) {
+        createSongs(withQueries: endpoint) { response in handler(response) }
     }
     
     private func createTags(handler: @escaping ([Tag]) -> Void) {

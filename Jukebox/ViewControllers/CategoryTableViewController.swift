@@ -38,7 +38,6 @@ class CategoryTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        send over song ids and route name
         if let identifier = segue.identifier {
             switch identifier {
             case "Show Songs":

@@ -46,8 +46,8 @@ class CategoryViewModel {
     }
     
     private func getCategories() {
-        API().fetchData(withEndpoint: route) { response in
-            let categories = response as! [Category]
+        API().fetchCategories(withEndpoint: route) { response in
+            let categories = response 
             self.categories = self.sortCategoriesByID(withCategories: categories)
         }
     }

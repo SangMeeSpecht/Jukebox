@@ -51,20 +51,22 @@ class SongViewModel {
     }
     
     private func setRoute(forSongs songs: [Int]) {
-        route += "?"
-        for song in songs {
-            route += "id=\(song)&"
+        if songs.count > 0 {
+            route += "?"
+            for song in songs {
+                route += "id=\(song)&"
+            }
+            removeLastAmperand()        
         }
-        removeLastAmperand()
     }
     
     private func removeLastAmperand() {
-        _ = route.characters.dropLast()
+        route = String(route.characters.dropLast())
     }
     
     private func getSongs() {
-        API().fetchData(withEndpoint: route) { response in
-            let songs = response as! [Song]
+        API().fetchSongs(withEndpoint: route) { response in
+            let songs = response 
             self.songs = self.sortSongsByID(withSongs: songs)
         }
     }

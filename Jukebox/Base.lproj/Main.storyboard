@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -94,34 +95,61 @@
         <scene sceneID="142-En-Q0C">
             <objects>
                 <collectionViewController modalPresentationStyle="currentContext" id="HEE-zL-Ml1" customClass="SongCollectionViewController" customModule="Jukebox" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xtA-Qk-hjB">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="xtA-Qk-hjB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sK9-Pm-bzJ">
-                            <size key="itemSize" width="345" height="570"/>
+                            <size key="itemSize" width="345" height="553"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumCoverCell" id="op9-2k-ANP" customClass="SongCollectionViewCell" customModule="Jukebox" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="16.5" width="345" height="570"/>
+                                <rect key="frame" x="0.0" y="25" width="345" height="553"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="345" height="570"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="345" height="553"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f06-YW-UJL">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f06-YW-UJL">
                                             <rect key="frame" x="22" y="108" width="300" height="300"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="1" green="0.28438648950000001" blue="0.1429069945" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="300" id="bne-Wt-iWJ"/>
+                                            </constraints>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsv-Tc-6rc">
+                                            <rect key="frame" x="20" y="437" width="302" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qr-Bn-dj1">
+                                            <rect key="frame" x="20" y="473" width="305" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </view>
                                 <color key="backgroundColor" red="0.82845090850000003" green="0.9339506662" blue="0.92262147500000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="f06-YW-UJL" firstAttribute="centerX" secondItem="op9-2k-ANP" secondAttribute="centerX" id="3bh-DE-idR"/>
+                                    <constraint firstItem="5qr-Bn-dj1" firstAttribute="top" secondItem="Hsv-Tc-6rc" secondAttribute="bottom" constant="15" id="BTp-1m-gc0"/>
+                                    <constraint firstItem="f06-YW-UJL" firstAttribute="centerX" secondItem="5qr-Bn-dj1" secondAttribute="centerX" id="Lwe-2z-AdG"/>
+                                    <constraint firstItem="Hsv-Tc-6rc" firstAttribute="top" secondItem="f06-YW-UJL" secondAttribute="bottom" constant="29" id="NL5-M0-60x"/>
+                                    <constraint firstItem="Hsv-Tc-6rc" firstAttribute="leading" secondItem="op9-2k-ANP" secondAttribute="leadingMargin" constant="12" id="fFN-gb-NDl"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="5qr-Bn-dj1" secondAttribute="bottom" constant="51" id="g7b-1W-H9l"/>
+                                    <constraint firstItem="f06-YW-UJL" firstAttribute="trailing" secondItem="Hsv-Tc-6rc" secondAttribute="trailing" id="kzL-JX-fc2"/>
+                                    <constraint firstItem="f06-YW-UJL" firstAttribute="leading" secondItem="op9-2k-ANP" secondAttribute="leadingMargin" constant="14" id="lIo-9n-FBv"/>
+                                    <constraint firstItem="Hsv-Tc-6rc" firstAttribute="leading" secondItem="5qr-Bn-dj1" secondAttribute="leading" id="wlB-7Q-J8M"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="albumCover" destination="f06-YW-UJL" id="hwG-jj-WW3"/>
+                                    <outlet property="songDescription" destination="5qr-Bn-dj1" id="736-kR-ePj"/>
+                                    <outlet property="songName" destination="Hsv-Tc-6rc" id="Yi0-Nu-MZV"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -130,38 +158,11 @@
                             <outlet property="delegate" destination="HEE-zL-Ml1" id="QK8-6v-IE2"/>
                         </connections>
                     </collectionView>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HYz-xd-JPq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2394.4000000000001" y="-604.04797601199402"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Jukebox" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaD-39-OUK">
-                                <rect key="frame" x="156" y="266" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UXZ-IQ-gaw"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="134" y="243"/>
+            <point key="canvasLocation" x="2409" y="-602"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="l0x-JQ-qEo">
