@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class SongCollectionViewController: UICollectionViewController {
+class SongCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     var songViewModel: SongViewModel?
 
     override func viewDidLoad() {
@@ -37,5 +37,13 @@ class SongCollectionViewController: UICollectionViewController {
         cell?.songDescription.text = songViewModel?.getSongDescription(at: indexPath)
         
         return cell!
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemsPerRow:CGFloat = 1
+        let hardCodedPadding:CGFloat = 10
+        let itemWidth = (collectionView.bounds.width / itemsPerRow) - hardCodedPadding
+        let itemHeight = collectionView.bounds.height - (2 * hardCodedPadding)
+        return CGSize(width: itemWidth, height: itemHeight)
     }
 }
