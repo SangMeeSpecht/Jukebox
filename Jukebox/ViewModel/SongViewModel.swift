@@ -52,9 +52,9 @@ class SongViewModel {
     
     private func setRoute(forSongs songs: [Int]) {
         if songs.count > 0 {
-            route += "?"
+            route = "\(route)?"
             for song in songs {
-                route += "id=\(song)&"
+                route = "\(route)id=\(song)&"
             }
             removeLastAmperand()        
         }

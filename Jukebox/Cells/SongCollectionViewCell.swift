@@ -13,15 +13,3 @@ class SongCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var songName: UILabel!
     @IBOutlet weak var songDescription: UILabel!
 }
-
-extension SongCollectionViewCell : UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemsPerRow:CGFloat = 40
-        let hardCodedPadding:CGFloat = 5
-        let itemWidth = (collectionView.bounds.width / itemsPerRow) - hardCodedPadding
-        let itemHeight = collectionView.bounds.height - (2 * hardCodedPadding)
-        return CGSize(width: itemWidth, height: itemHeight)
-    }
-    
-}

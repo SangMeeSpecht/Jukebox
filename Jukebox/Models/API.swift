@@ -66,7 +66,7 @@ class API {
     }
     
     private func fetchStubbedData(withEndPoint: String, handler: @escaping (JSON) -> Void) {
-        Alamofire.request("http://localhost:4545/api/1/" + withEndPoint).responseJSON { MBresponse in
+        Alamofire.request("http://localhost:4545/api/1/\(withEndPoint)").responseJSON { MBresponse in
             if let JSONresponse = MBresponse.result.value {
                 handler(JSON(JSONresponse))
             }
