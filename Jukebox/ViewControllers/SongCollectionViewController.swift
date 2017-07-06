@@ -23,7 +23,7 @@ class SongCollectionViewController: UICollectionViewController, UICollectionView
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (songViewModel?.getSongCount())!
+        return songViewModel?.getSongCount() ?? 0
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -27,27 +27,26 @@ class SongViewModel {
     }
     
     func getSongName(at indexPath: IndexPath) -> String? {
-        if songs.count > 0 {
+        if songs.count > 0 && withinRangeOfSongCount(withIndex: indexPath.row){
             return songs[indexPath.row].name
-        } else {
-            return nil
         }
+        return nil
     }
     
     func getSongDescription(at indexPath: IndexPath) -> String? {
-        if songs.count > 0 {
+        if songs.count > 0 && withinRangeOfSongCount(withIndex: indexPath.row) {
             return songs[indexPath.row].description
-        } else {
-            return nil
-        }
+        } 
+        return nil
     }
     
     func getCoverArt(at indexPath: IndexPath) -> Data? {
-        if songs.count > 0, let imageData = try? Data(contentsOf: (songs[indexPath.row].coverURL.asURL())) {
-            return imageData
-        } else {
-            return nil
+        if songs.count > 0, withinRangeOfSongCount(withIndex: indexPath.row) {
+            if let imageData = try? Data(contentsOf: (songs[indexPath.row].coverURL.asURL())) {
+                return imageData
+            }
         }
+        return nil
     }
     
     private func setRoute(forSongs songs: [Int]) {
@@ -56,11 +55,18 @@ class SongViewModel {
             for song in songs {
                 route = "\(route)id=\(song)&"
             }
-            removeLastAmperand()        
+            removeExtraAmperand()        
         }
     }
     
-    private func removeLastAmperand() {
+    private func withinRangeOfSongCount(withIndex index: Int) -> Bool {
+        if index <= songs.count && index >= 0 {
+            return true
+        }
+        return false
+    }
+    
+    private func removeExtraAmperand() {
         route = String(route.characters.dropLast())
     }
     

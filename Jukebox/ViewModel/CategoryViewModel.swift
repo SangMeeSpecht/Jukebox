@@ -10,9 +10,9 @@ import Foundation
 
 
 class CategoryViewModel {
-//    change route to be dynamic later
     var tagID: String?
     var reloadTableView: ((CategoryViewModel) -> ())?
+//    make route dynamic later
     private var route = "category/tag/3"
     private var categories: [Category] = [] {
         didSet {
