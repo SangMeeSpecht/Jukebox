@@ -28,20 +28,18 @@ class SongCollectionViewController: UICollectionViewController, UICollectionView
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AlbumCoverCell", for: indexPath) as? SongCollectionViewCell
-
-        cell?.albumCover.image = UIImage(data: (songViewModel?.getCoverArt(at: indexPath))!)
         
-        cell?.songName.text = songViewModel?.getSongName(at: indexPath)
-        
-        cell?.songDescription.text = songViewModel?.getSongDescription(at: indexPath)
+        cell?.indexPath = indexPath
+        cell?.songViewModel = songViewModel
         
         return cell!
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemsPerRow:CGFloat = 1
-        let itemWidth = (collectionView.bounds.width / itemsPerRow)
+        let itemsPerRow: CGFloat = 1
+        let itemWidth = collectionView.bounds.width / itemsPerRow
         let itemHeight = collectionView.bounds.height
+        
         return CGSize(width: itemWidth, height: itemHeight)
     }
 }
