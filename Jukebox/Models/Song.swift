@@ -9,10 +9,10 @@
 import Foundation
 
 class Song {
-    let name: String?
-    let id: String?
-    let description: String?
-    let coverURL: URL?
+    let name: String
+    let id: String
+    let description: String
+    let coverURL: URL
     
     init(name: String, id: String, description: String, coverURL: URL) {
         self.name = name

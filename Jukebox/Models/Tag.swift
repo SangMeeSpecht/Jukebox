@@ -9,8 +9,8 @@
 import Foundation
 
 class Tag {
-    let title: String?
-    let id: String?
+    let title: String
+    let id: String
     
     init(title: String, id: String) {
         self.title = title

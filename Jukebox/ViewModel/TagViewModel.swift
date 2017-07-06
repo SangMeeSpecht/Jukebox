@@ -11,7 +11,7 @@ import Foundation
 class TagViewModel {
     var reloadTableView: ((TagViewModel) -> ())?
     private let route = "tags"
-    private var tags: [Tag] = [] {
+    private var tags: [Tag]? {
         didSet {
             self.reloadTableView?(self)
         }
@@ -21,20 +21,29 @@ class TagViewModel {
         getTags()
     }
     
-    func getTagCount() -> Int {
-        return tags.count
+    func getTagCount() -> Int? {
+        return tags?.count
     }
     
     func getTagTitle(at indexPath: IndexPath) -> String? {
-        if tags.count > 0 {
-            return tags[indexPath.row].title
-        } else {
-            return nil
+        if tags != nil && withinRangeOfTagCount(withIndex: indexPath.row)  {
+            return tags?[indexPath.row].title
         }
+        return nil
     }
     
-    func getTagID(at indexPath: IndexPath) -> String {
-        return tags[indexPath.row].id!
+    func getTagID(at indexPath: IndexPath) -> String? {
+        if tags != nil && withinRangeOfTagCount(withIndex: indexPath.row) {
+            return tags?[indexPath.row].id
+        }
+        return nil
+    }
+    
+    private func withinRangeOfTagCount(withIndex index: Int) -> Bool {
+        if index <= (tags?.count)! && index >= 0 {
+            return true
+        }
+        return false
     }
     
     private func getTags() -> Void {
@@ -45,6 +54,6 @@ class TagViewModel {
     }
     
     private func sortTagsByID(withTags tags: [Tag]) -> [Tag] {
-        return tags.sorted { Int($0.id!)! < Int($1.id!)! }
+        return tags.sorted { Int($0.id)! < Int($1.id)! }
     }
 }

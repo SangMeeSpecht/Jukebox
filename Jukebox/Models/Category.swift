@@ -9,9 +9,9 @@
 import Foundation
 
 class Category {
-    let name: String?
-    let id: String?
-    let songIDs: [Int]?
+    let name: String
+    let id: String
+    let songIDs: [Int]
     
     init(name: String, id: String, songIDs: [Int]) {
         self.name = name

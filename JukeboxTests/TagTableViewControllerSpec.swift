@@ -30,11 +30,5 @@ class TagTableViewControllerSpec: QuickSpec {
                 expect(tagTableViewController.numberOfSections(in: tagTableViewController.view as! UITableView)).to(equal(1))
             }
         }
-        describe("rows in table"){
-            it("is equal to the number of tags"){
-                let tagViewModel = TagViewModel()
-                expect(tagTableViewController.tableView(tagTableViewController.view as! UITableView, numberOfRowsInSection: 1)).to(equal(tagViewModel.getTagCount()))
-            }
-        }
     }
 }

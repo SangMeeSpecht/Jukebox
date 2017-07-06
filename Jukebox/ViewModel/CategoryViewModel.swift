@@ -39,7 +39,7 @@ class CategoryViewModel {
     
     func getSongIDs(at indexPath: IndexPath) -> [Int]? {
         if categories.count > 0 {
-            return categories[indexPath.row].songIDs!
+            return categories[indexPath.row].songIDs
         } else {
             return nil
         }
@@ -53,6 +53,6 @@ class CategoryViewModel {
     }
     
     private func sortCategoriesByID(withCategories categories: [Category]) -> [Category] {
-        return categories.sorted { Int($0.id!)! < Int($1.id!)! }
+        return categories.sorted { Int($0.id)! < Int($1.id)! }
     }
 }

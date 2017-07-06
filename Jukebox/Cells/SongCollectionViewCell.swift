@@ -45,7 +45,7 @@ class SongCollectionViewCell: UICollectionViewCell {
     
     private func setDescription() {
         if let index = indexPath {
-            if let description = songViewModel?.getSongDescription(at: indexPath!) {
+            if let description = songViewModel?.getSongDescription(at: index) {
                  songDescription.text = description
             }
         }

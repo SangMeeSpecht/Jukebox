@@ -20,17 +20,15 @@ class TagTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tagViewModel.getTagCount()
+        return tagViewModel.getTagCount() ?? 0
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Tag Cell", for: indexPath)
         
-        if let tagCell = cell as? UITableViewCell {
-            if let tagTitle = tagViewModel.getTagTitle(at: indexPath) {
-                cell.textLabel?.text = tagTitle
-            }
+        if let tagTitle = tagViewModel.getTagTitle(at: indexPath) {
+            cell.textLabel?.text = tagTitle
         }
         
         return cell

@@ -30,13 +30,6 @@ class CategoryTableViewControllerSpec: QuickSpec {
                 expect(categoryTableViewController.numberOfSections(in: categoryTableViewController.view as! UITableView)).to(equal(1))
             }
         }
-        
-        describe("rows in table"){
-            it("is equal to the number of tags"){
-                let categoryViewModel = CategoryViewModel()
-                expect(categoryTableViewController.tableView(categoryTableViewController.view as! UITableView, numberOfRowsInSection: 1)).to(equal(categoryViewModel.getCategoryCount()))
-            }
-        }
     }
 }
 
