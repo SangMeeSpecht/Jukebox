@@ -20,7 +20,7 @@ class TagTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tagViewModel.getTagCount() ?? 0
+        return tagViewModel.getTagCount() 
     }
 
     

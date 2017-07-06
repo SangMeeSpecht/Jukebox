@@ -28,10 +28,8 @@ class CategoryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Category Cell", for: indexPath)
 
-        if let categoryCell = cell as? UITableViewCell {
-            if let categoryName = categoryViewModel.getCategoryName(at: indexPath) {
-                cell.textLabel?.text = categoryName
-            }
+        if let categoryName = categoryViewModel.getCategoryName(at: indexPath) {
+            cell.textLabel?.text = categoryName
         }
 
         return cell
