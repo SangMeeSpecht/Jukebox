@@ -142,6 +142,11 @@
                                                 </label>
                                             </subviews>
                                         </stackView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Ppt-M8-SLy">
+                                            <rect key="frame" x="162" y="291" width="20" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="color" red="0.1119875439" green="0.083885521729999996" blue="0.50787136960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                 </view>
                                 <color key="backgroundColor" red="0.82845090850000003" green="0.9339506662" blue="0.92262147500000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -153,6 +158,7 @@
                                     <constraint firstItem="f06-YW-UJL" firstAttribute="centerX" secondItem="op9-2k-ANP" secondAttribute="centerX" id="lqO-fu-aEa"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="activityIndicator" destination="Ppt-M8-SLy" id="Y4k-4Q-VOr"/>
                                     <outlet property="albumCover" destination="f06-YW-UJL" id="hwG-jj-WW3"/>
                                     <outlet property="songDescription" destination="5qr-Bn-dj1" id="736-kR-ePj"/>
                                     <outlet property="songName" destination="Hsv-Tc-6rc" id="Yi0-Nu-MZV"/>

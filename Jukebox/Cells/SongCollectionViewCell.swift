@@ -9,9 +9,15 @@
 import UIKit
 
 class SongCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var albumCover: UIImageView!
+    @IBOutlet weak var albumCover: UIImageView! {
+        didSet {
+            activityIndicator.stopAnimating()
+        }
+    }
     @IBOutlet weak var songName: UILabel!
     @IBOutlet weak var songDescription: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     
     var songViewModel: SongViewModel? {
         didSet {
@@ -28,13 +34,14 @@ class SongCollectionViewCell: UICollectionViewCell {
     }
     
     private func setImage() {
+        activityIndicator.startAnimating()
         if let index = indexPath {
             if let image = songViewModel?.getCoverArt(at: index) {
                 albumCover.image = UIImage(data: image)
             }
         }
     }
-    
+
     private func setName() {
         if let index = indexPath {
             if let name = songViewModel?.getSongName(at: index) {
