@@ -1,0 +1,97 @@
+# Customise this file, documentation can be found here:
+# https://github.com/fastlane/fastlane/tree/master/fastlane/docs
+# All available actions: https://docs.fastlane.tools/actions
+# can also be listed using the `fastlane actions` command
+
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+# If you want to automatically update fastlane if a new version is available:
+# update_fastlane
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "2.34.0"
+
+default_platform :ios
+
+platform :ios do
+  before_all do
+    carthage
+    gym(scheme: "Jukebox", workspace: "Jukebox.xcworkspace", export_method: "development")
+  end
+
+  desc "Install the Xcode version used"
+  lane :install_xcode do
+    xcode_install(version: xcode_version)
+  end
+
+  desc "Clean builds and simulators"
+  lane :clean do
+    reset_simulators
+    xcclean(scheme: "Jukebox")
+    clean_build_artifacts
+  end
+
+  desc "Runs all the tests"
+  lane :test do
+    gym(scheme: "Jukebox", workspace: "Jukebox.xcworkspace", export_method: "development")
+    scan(scheme: "Jukebox", device: "iPhone 7")
+    # xcov(scheme: "Jukebox", minimum_coverage_percentage: 50.0)
+  end
+
+  # use this for deploying to HockeyApp
+  # desc "Submit a new Beta Build to Apple TestFlight"
+  desc "Builds program and deploys to HockeyApp"
+  lane :beta do
+    gym(
+      workspace: "Jukebox.xcworkspace",
+      configuration: "beta",
+      scheme: "Jukebox",
+      silent: true,
+      clean: true,
+      export_method: "development"
+    ) # Build your app - more options available
+    hockey(
+      api_token: hockeyapp_api_key,
+      public_identifier: public_identifier,
+      bundle_version: "1.0",
+      notify: "0"
+    )
+    # sh "your_script.sh"
+    # You can also use other beta testing services here (run `fastlane actions`)
+  end
+
+  desc "Deploy a new version to the App Store"
+  lane :release do
+    # match(type: "appstore")
+    # snapshot
+    gym # Build your app - more options available
+    deliver(force: true)
+    # frameit
+  end
+
+  # You can define as many lanes as you want
+
+  after_all do |lane|
+    # This block is called, only if the executed lane was successful
+
+    # slack(
+    #   message: "Successfully deployed new App Update."
+    # )
+  end
+
+  error do |lane, exception|
+    # slack(
+    #   message: exception.message,
+    #   success: false
+    # )
+  end
+end
+
+
+# More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
+# All available actions: https://docs.fastlane.tools/actions
+
+# fastlane reports which actions are used. No personal data is recorded.
+# Learn more at https://github.com/fastlane/fastlane#metrics
