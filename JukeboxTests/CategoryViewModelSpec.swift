@@ -30,7 +30,7 @@ class CategoryViewModelSpec: QuickSpec {
         
         describe(".getSongIDs") {
             it("returns a collection of song ids for a category") {
-                expect(categoryViewModel.getSongIDs(at: indexPath)).toEventually(equal([1,3]))
+                expect(categoryViewModel.getSongIDs(at: indexPath)).toEventually(equal([1,3,5,6,7,8]))
             }
         }
     }

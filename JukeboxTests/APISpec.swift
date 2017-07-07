@@ -82,7 +82,7 @@ class APISpec: QuickSpec {
             context("when a request for two songs is made") {
                 it("returns a collection of two songs") {
                     var songs: [Song] = []
-                    APImodel?.fetchSongs(withEndpoint: "songs/multi?id=1&id=3") { response in
+                    APImodel?.fetchSongs(withEndpoint: "songs/multi?id=2&id=4") { response in
                         songs = response
                     }
                     expect(songs.count).toEventually(equal(2))

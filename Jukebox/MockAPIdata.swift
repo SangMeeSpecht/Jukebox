@@ -67,7 +67,7 @@ private let categoryStub: Parameters = [
                 "body": [
                     "1": [
                         "name": "Rock",
-                        "songs": [1,3]
+                        "songs": [1,3,5,6,7,8]
                     ],
                     "2": [
                         "name": "Rap",
@@ -112,6 +112,26 @@ private let allSongsStub: Parameters = [
                         "name": "Song4",
                         "description": "4 description",
                         "coverURL": "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg"
+                    ],
+                    "5": [
+                        "name": "Song5",
+                        "description": "5 description",
+                        "coverURL": "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg"
+                    ],
+                    "6": [
+                        "name": "Song6",
+                        "description": "6 description",
+                        "coverURL": "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg"
+                    ],
+                    "7": [
+                        "name": "Song7",
+                        "description": "7 description",
+                        "coverURL": "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg"
+                    ],
+                    "8": [
+                        "name": "Song8",
+                        "description": "8 description",
+                        "coverURL": "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg"
                     ]
                 ],
                 "headers": [ "content-type": "application/json" ]
@@ -126,7 +146,7 @@ private let rockSongsStub: Parameters = [
             "equals": [
                 "method": "GET",
                 "path": "/api/1/songs/multi",
-                "query": [ "id": [ "1", "3" ] ]
+                "query": [ "id": [ "1", "3", "5", "6", "7", "8" ] ]
             ]
         ]
     ],
@@ -142,6 +162,26 @@ private let rockSongsStub: Parameters = [
                     "3": [
                         "name": "Song3",
                         "description": "3 description",
+                        "coverURL": "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg"
+                    ],
+                    "5": [
+                        "name": "Song5",
+                        "description": "5 description",
+                        "coverURL": "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg"
+                    ],
+                    "6": [
+                        "name": "Song6",
+                        "description": "6 description",
+                        "coverURL": "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg"
+                    ],
+                    "7": [
+                        "name": "Song7",
+                        "description": "7 description",
+                        "coverURL": "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg"
+                    ],
+                    "8": [
+                        "name": "Song8",
+                        "description": "8 description",
                         "coverURL": "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg"
                     ]
                 ],

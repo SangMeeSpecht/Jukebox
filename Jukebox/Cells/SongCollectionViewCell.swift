@@ -21,13 +21,20 @@ class SongCollectionViewCell: UICollectionViewCell {
     
     var songViewModel: SongViewModel? {
         didSet {
-            updateSongInfo()
+            removeExistingSongInfo()
+            addSongInfo()
         }
     }
     
     var indexPath: IndexPath?
     
-    private func updateSongInfo() {
+    private func removeExistingSongInfo() {
+        songName?.text = nil
+        songDescription?.text = nil
+        albumCover?.image = nil
+    }
+    
+    private func addSongInfo() {
         setImage()
         setName()
         setDescription()
