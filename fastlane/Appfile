@@ -1,7 +1,9 @@
-app_identifier "com.thoughtworks.acprogram.Jukebox" # The bundle identifier of your app
-apple_id apple_identifier # Your Apple email address
+require_relative 'secrets'
 
-team_id team_identifier # Developer Portal Team ID
+app_identifier "com.thoughtworks.acprogram.Jukebox" # The bundle identifier of your app
+apple_id Secrets::APPLE_ID # Your Apple email address
+
+team_id Secrets::TEAM_ID # Developer Portal Team ID
 
 # you can even provide different app identifiers, Apple IDs and team names per lane:
 # More information: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Appfile.md

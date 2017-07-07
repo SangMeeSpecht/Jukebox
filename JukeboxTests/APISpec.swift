@@ -65,7 +65,7 @@ class APISpec: QuickSpec {
                     APImodel?.fetchSongs(withEndpoint: "songs/multi") { response in
                         songs = response
                     }
-                    expect(songs.count).toEventually(equal(4))
+                    expect(songs.count).toEventually(equal(8))
                 }
             }
             
@@ -105,7 +105,7 @@ class APISpec: QuickSpec {
                     APImodel?.fetchSongs(withEndpoint: "songs/multi?id=1234567") { response in
                         songs = response 
                     }
-                    expect(songs.count).toEventually(equal(4))
+                    expect(songs.count).toEventually(equal(8))
                 }
             }
         }

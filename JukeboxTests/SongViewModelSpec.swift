@@ -17,7 +17,7 @@ class SongViewModelSpec: QuickSpec {
         
         describe(".getSongCount") {
             it("returns a count of songs") {
-                expect(songViewModel.getSongCount()).toEventually(equal(4))
+                expect(songViewModel.getSongCount()).toEventually(equal(8))
             }
         }
         

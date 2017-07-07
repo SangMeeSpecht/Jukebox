@@ -12,8 +12,8 @@
 # This is the minimum version number required.
 # Update this, if you use features of a newer version
 fastlane_version "2.34.0"
-
 default_platform :ios
+require_relative 'secrets'
 
 platform :ios do
   before_all do
@@ -53,8 +53,8 @@ platform :ios do
       export_method: "development"
     ) # Build your app - more options available
     hockey(
-      api_token: hockeyapp_api_key,
-      public_identifier: public_identifier,
+      api_token: Secrets::API_KEY,
+      public_identifier: Secrets::PUBLIC_ID,
       bundle_version: "1.0",
       notify: "0"
     )
