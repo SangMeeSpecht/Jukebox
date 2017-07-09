@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import ReactiveCocoa
-import ReactiveSwift
-
 
 class SongCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     var songViewModel: SongViewModel?

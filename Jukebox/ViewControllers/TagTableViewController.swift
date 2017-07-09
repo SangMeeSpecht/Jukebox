@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import ReactiveCocoa
-import ReactiveSwift
 
 class TagTableViewController: UITableViewController {
     var tagViewModel: TagViewModel!
