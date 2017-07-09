@@ -7,40 +7,37 @@
 //
 
 import Foundation
+import ReactiveCocoa
+import ReactiveSwift
 
 class TagViewModel {
-    var reloadTableView: ((TagViewModel) -> ())?
+    let tags = MutableProperty<[Tag]>([])
     private let route = "tags"
-    private var tags: [Tag] = [] {
-        didSet {
-            self.reloadTableView?(self)
-        }
-    }
     
     init() {
         getTags()
     }
     
     func getTagCount() -> Int {
-        return tags.count
+        return tags.value.count
     }
     
     func getTagTitle(at indexPath: IndexPath) -> String? {
-        if tags.count >= 0 && withinRangeOfTagCount(withIndex: indexPath.row)  {
-            return tags[indexPath.row].title
+        if tags.value.count >= 0 && withinRangeOfTagCount(withIndex: indexPath.row)  {
+            return tags.value[indexPath.row].title
         }
         return nil
     }
     
     func getTagID(at indexPath: IndexPath) -> String? {
-        if tags.count > 0 && withinRangeOfTagCount(withIndex: indexPath.row) {
-            return tags[indexPath.row].id
+        if tags.value.count > 0 && withinRangeOfTagCount(withIndex: indexPath.row) {
+            return tags.value[indexPath.row].id
         }
         return nil
     }
     
     private func withinRangeOfTagCount(withIndex index: Int) -> Bool {
-        if index <= tags.count && index >= 0 {
+        if index <= tags.value.count && index >= 0 {
             return true
         }
         return false
@@ -49,7 +46,7 @@ class TagViewModel {
     private func getTags() -> Void {
         API().fetchTags(withEndpoint: route) { response in
             let tags = response 
-            self.tags = self.sortTagsByID(withTags: tags)
+            self.tags.value = self.sortTagsByID(withTags: tags)
         }
     }
     

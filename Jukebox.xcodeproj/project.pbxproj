@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		8405CA1C1EFD750900433FD1 /* SongCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405CA1B1EFD750900433FD1 /* SongCollectionViewController.swift */; };
 		8405CA1F1F04068400433FD1 /* SongCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405CA1E1F04068400433FD1 /* SongCollectionViewCell.swift */; };
+		843873911F11B9EC003F0B45 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843873901F11B9EC003F0B45 /* ReactiveSwift.framework */; };
+		843873921F11B9F7003F0B45 /* ReactiveSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 843873901F11B9EC003F0B45 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		843873951F11C125003F0B45 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843873931F11C125003F0B45 /* ReactiveCocoa.framework */; };
+		843873961F11C125003F0B45 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843873941F11C125003F0B45 /* Result.framework */; };
+		843873971F11C12F003F0B45 /* ReactiveCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 843873931F11C125003F0B45 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		843873981F11C12F003F0B45 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 843873941F11C125003F0B45 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		846B1D201EE7549C00EB8FCD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B1D1F1EE7549C00EB8FCD /* Alamofire.framework */; };
 		846B1D231EE754A500EB8FCD /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B1D211EE754A500EB8FCD /* Nimble.framework */; };
 		846B1D241EE754A500EB8FCD /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B1D221EE754A500EB8FCD /* Quick.framework */; };
@@ -64,6 +70,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				843873971F11C12F003F0B45 /* ReactiveCocoa.framework in CopyFiles */,
+				843873981F11C12F003F0B45 /* Result.framework in CopyFiles */,
+				843873921F11B9F7003F0B45 /* ReactiveSwift.framework in CopyFiles */,
 				846B1D431EE879DA00EB8FCD /* SwiftyJSON.framework in CopyFiles */,
 				846B1D261EE754B800EB8FCD /* Alamofire.framework in CopyFiles */,
 			);
@@ -85,6 +94,9 @@
 /* Begin PBXFileReference section */
 		8405CA1B1EFD750900433FD1 /* SongCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SongCollectionViewController.swift; path = ViewControllers/SongCollectionViewController.swift; sourceTree = "<group>"; };
 		8405CA1E1F04068400433FD1 /* SongCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SongCollectionViewCell.swift; path = Cells/SongCollectionViewCell.swift; sourceTree = "<group>"; };
+		843873901F11B9EC003F0B45 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		843873931F11C125003F0B45 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		843873941F11C125003F0B45 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		846B1D1F1EE7549C00EB8FCD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		846B1D211EE754A500EB8FCD /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		846B1D221EE754A500EB8FCD /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -123,6 +135,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843873951F11C125003F0B45 /* ReactiveCocoa.framework in Frameworks */,
+				843873961F11C125003F0B45 /* Result.framework in Frameworks */,
+				843873911F11B9EC003F0B45 /* ReactiveSwift.framework in Frameworks */,
 				846B1D201EE7549C00EB8FCD /* Alamofire.framework in Frameworks */,
 				846B1D421EE879D200EB8FCD /* SwiftyJSON.framework in Frameworks */,
 			);
@@ -158,6 +173,9 @@
 		846B1D1E1EE7549C00EB8FCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				843873931F11C125003F0B45 /* ReactiveCocoa.framework */,
+				843873941F11C125003F0B45 /* Result.framework */,
+				843873901F11B9EC003F0B45 /* ReactiveSwift.framework */,
 				846B1D411EE879D200EB8FCD /* SwiftyJSON.framework */,
 				846B1D211EE754A500EB8FCD /* Nimble.framework */,
 				846B1D221EE754A500EB8FCD /* Quick.framework */,
@@ -188,9 +206,9 @@
 		846B1D501EEB4B0F00EB8FCD /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				846B1D4E1EEB4B0500EB8FCD /* SongViewModel.swift */,
 				846B1D551EEEEB9200EB8FCD /* TagViewModel.swift */,
 				846B1D601EEF204D00EB8FCD /* CategoryViewModel.swift */,
+				846B1D4E1EEB4B0500EB8FCD /* SongViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";

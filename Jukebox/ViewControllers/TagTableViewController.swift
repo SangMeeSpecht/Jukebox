@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import ReactiveCocoa
+import ReactiveSwift
 
 class TagTableViewController: UITableViewController {
-    var tagViewModel = TagViewModel()
+    var tagViewModel: TagViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tagViewModel = TagViewModel()
         
-        tagViewModel.reloadTableView = { viewModel in
+        let _ = tagViewModel.tags.producer.startWithValues { _ in
             self.tableView.reloadData()
         }
     }
@@ -49,3 +52,5 @@ class TagTableViewController: UITableViewController {
 //        }
 //    }
 }
+
+
