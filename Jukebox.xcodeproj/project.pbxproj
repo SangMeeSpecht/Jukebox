@@ -21,8 +21,8 @@
 		846B1D261EE754B800EB8FCD /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 846B1D1F1EE7549C00EB8FCD /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		846B1D281EE754C500EB8FCD /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 846B1D211EE754A500EB8FCD /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		846B1D291EE754C500EB8FCD /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 846B1D221EE754A500EB8FCD /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		846B1D391EE8550C00EB8FCD /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D381EE8550C00EB8FCD /* API.swift */; };
-		846B1D3B1EE8594200EB8FCD /* APISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D3A1EE8594200EB8FCD /* APISpec.swift */; };
+		846B1D391EE8550C00EB8FCD /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D381EE8550C00EB8FCD /* MusicService.swift */; };
+		846B1D3B1EE8594200EB8FCD /* MusicServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D3A1EE8594200EB8FCD /* MusicServiceSpec.swift */; };
 		846B1D401EE870E000EB8FCD /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B1D3F1EE870E000EB8FCD /* Tag.swift */; };
 		846B1D421EE879D200EB8FCD /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B1D411EE879D200EB8FCD /* SwiftyJSON.framework */; };
 		846B1D431EE879DA00EB8FCD /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 846B1D411EE879D200EB8FCD /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -100,8 +100,8 @@
 		846B1D1F1EE7549C00EB8FCD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		846B1D211EE754A500EB8FCD /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		846B1D221EE754A500EB8FCD /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		846B1D381EE8550C00EB8FCD /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = Models/API.swift; sourceTree = "<group>"; };
-		846B1D3A1EE8594200EB8FCD /* APISpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APISpec.swift; sourceTree = "<group>"; };
+		846B1D381EE8550C00EB8FCD /* MusicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MusicService.swift; path = Models/MusicService.swift; sourceTree = "<group>"; };
+		846B1D3A1EE8594200EB8FCD /* MusicServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicServiceSpec.swift; sourceTree = "<group>"; };
 		846B1D3F1EE870E000EB8FCD /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tag.swift; path = Models/Tag.swift; sourceTree = "<group>"; };
 		846B1D411EE879D200EB8FCD /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		846B1D441EE8A37400EB8FCD /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Category.swift; path = Models/Category.swift; sourceTree = "<group>"; };
@@ -195,7 +195,7 @@
 		846B1D371EE854F400EB8FCD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				846B1D381EE8550C00EB8FCD /* API.swift */,
+				846B1D381EE8550C00EB8FCD /* MusicService.swift */,
 				846B1D3F1EE870E000EB8FCD /* Tag.swift */,
 				846B1D441EE8A37400EB8FCD /* Category.swift */,
 				846B1D461EE8AD4400EB8FCD /* Song.swift */,
@@ -265,7 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				84E218071EE74CE000B17813 /* Info.plist */,
-				846B1D3A1EE8594200EB8FCD /* APISpec.swift */,
+				846B1D3A1EE8594200EB8FCD /* MusicServiceSpec.swift */,
 				846B1D4C1EEB49F800EB8FCD /* SongViewModelSpec.swift */,
 				846B1D511EEEEA4E00EB8FCD /* TagViewModelSpec.swift */,
 				846B1D5A1EEEF81400EB8FCD /* TagTableViewControllerSpec.swift */,
@@ -433,7 +433,7 @@
 				846B1DBA1EF3345000EB8FCD /* MockAPIdata.swift in Sources */,
 				846B1D561EEEEB9200EB8FCD /* TagViewModel.swift in Sources */,
 				846B1D401EE870E000EB8FCD /* Tag.swift in Sources */,
-				846B1D391EE8550C00EB8FCD /* API.swift in Sources */,
+				846B1D391EE8550C00EB8FCD /* MusicService.swift in Sources */,
 				84E217F11EE74CE000B17813 /* AppDelegate.swift in Sources */,
 				846B1D651EEF256500EB8FCD /* CategoryTableViewController.swift in Sources */,
 			);
@@ -443,7 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				846B1D3B1EE8594200EB8FCD /* APISpec.swift in Sources */,
+				846B1D3B1EE8594200EB8FCD /* MusicServiceSpec.swift in Sources */,
 				846B1D4D1EEB49F800EB8FCD /* SongViewModelSpec.swift in Sources */,
 				846B1D5D1EEF1EA200EB8FCD /* CategoryViewModelSpec.swift in Sources */,
 				846B1D5B1EEEF81400EB8FCD /* TagTableViewControllerSpec.swift in Sources */,

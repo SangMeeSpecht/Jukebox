@@ -50,7 +50,7 @@ class CategoryViewModel {
     }
     
     private func getCategories() {
-        API().fetchCategories(withEndpoint: route) { response in
+        MusicService().fetchCategories(withEndpoint: route) { response in
             let categories = response 
             self.categories = self.sortCategoriesByID(withCategories: categories)
         }

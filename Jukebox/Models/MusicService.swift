@@ -10,7 +10,7 @@ import Foundation
 import SwiftyJSON
 import Alamofire
 
-class API {
+class MusicService {
     func fetchTags(withEndpoint endpoint: String, handler: @escaping ([Tag]) -> Void) {
         createTags { response in handler(response) }
     }

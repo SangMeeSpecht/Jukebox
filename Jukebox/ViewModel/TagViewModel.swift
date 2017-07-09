@@ -12,9 +12,11 @@ import ReactiveSwift
 
 class TagViewModel {
     let tags = MutableProperty<[Tag]>([])
+    private let service: MusicService!
     private let route = "tags"
     
-    init() {
+    init(service: MusicService) {
+        self.service = service
         getTags()
     }
     
@@ -44,7 +46,7 @@ class TagViewModel {
     }
     
     private func getTags() -> Void {
-        API().fetchTags(withEndpoint: route) { response in
+        service.fetchTags(withEndpoint: route) { response in
             let tags = response 
             self.tags.value = self.sortTagsByID(withTags: tags)
         }

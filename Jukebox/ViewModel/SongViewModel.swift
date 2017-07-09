@@ -71,7 +71,7 @@ class SongViewModel {
     }
     
     private func getSongs() {
-        API().fetchSongs(withEndpoint: route) { response in
+        MusicService().fetchSongs(withEndpoint: route) { response in
             let songs = response 
             self.songs = self.sortSongsByID(withSongs: songs)
         }

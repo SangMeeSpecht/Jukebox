@@ -15,7 +15,7 @@ class TagTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tagViewModel = TagViewModel()
+        tagViewModel = TagViewModel(service: MusicService())
         
         let _ = tagViewModel.tags.producer.startWithValues { _ in
             self.tableView.reloadData()

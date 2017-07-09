@@ -12,7 +12,7 @@ import Nimble
 
 class TagViewModelSpec: QuickSpec {
     override func spec() {
-        let tagViewModel = Jukebox.TagViewModel()
+        let tagViewModel = Jukebox.TagViewModel(service: MusicService())
 
         describe(".getTagCount") {
             it("returns a count of tags") {
