@@ -7,42 +7,45 @@
 //
 
 import Foundation
+import ReactiveCocoa
+import ReactiveSwift
 
 class SongViewModel {
-    var reloadTableView: ((SongViewModel) -> ())?
+    let songs = MutableProperty<[Song]>([])
+    private let service: MusicService!
     private var route = "songs/multi"
-    private var songs: [Song] = [] {
-        didSet {
-            self.reloadTableView?(self)
-        }
-    }
     
-    init(songIDs: [Int]) {
+    init(service: MusicService, songIDs: [Int]) {
+        self.service = service
         setRoute(forSongs: songIDs)
         getSongs()
     }
     
+    func getNavTitle() -> String {
+        return "Songs"
+    }
+    
     func getSongCount() -> Int {
-        return songs.count 
+        return songs.value.count
     }
     
     func getSongName(at indexPath: IndexPath) -> String? {
-        if songs.count > 0 && withinRangeOfSongCount(withIndex: indexPath.row){
-            return songs[indexPath.row].name
+        if songs.value.count > 0 && withinRangeOfSongCount(withIndex: indexPath.row){
+            return songs.value[indexPath.row].name
         }
         return nil
     }
     
     func getSongDescription(at indexPath: IndexPath) -> String? {
-        if songs.count > 0 && withinRangeOfSongCount(withIndex: indexPath.row) {
-            return songs[indexPath.row].description
+        if songs.value.count > 0 && withinRangeOfSongCount(withIndex: indexPath.row) {
+            return songs.value[indexPath.row].description
         } 
         return nil
     }
     
     func getCoverArt(at indexPath: IndexPath) -> Data? {
-        if songs.count > 0, withinRangeOfSongCount(withIndex: indexPath.row) {
-            if let imageData = try? Data(contentsOf: (songs[indexPath.row].coverURL.asURL())) {
+        if songs.value.count > 0, withinRangeOfSongCount(withIndex: indexPath.row) {
+            if let imageData = try? Data(contentsOf: (songs.value[indexPath.row].coverURL.asURL())) {
                 return imageData
             }
         }
@@ -60,7 +63,7 @@ class SongViewModel {
     }
     
     private func withinRangeOfSongCount(withIndex index: Int) -> Bool {
-        if index <= songs.count && index >= 0 {
+        if index <= songs.value.count && index >= 0 {
             return true
         }
         return false
@@ -73,7 +76,7 @@ class SongViewModel {
     private func getSongs() {
         MusicService().fetchSongs(withEndpoint: route) { response in
             let songs = response 
-            self.songs = self.sortSongsByID(withSongs: songs)
+            self.songs.value = self.sortSongsByID(withSongs: songs)
         }
     }
     

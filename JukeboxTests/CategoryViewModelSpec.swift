@@ -13,7 +13,7 @@ import Alamofire
 
 class CategoryViewModelSpec: QuickSpec {
     override func spec() {
-        let categoryViewModel = Jukebox.CategoryViewModel()
+        let categoryViewModel = Jukebox.CategoryViewModel(service: MusicService())
         let indexPath = IndexPath(row: 0, section: 0)
 
         describe(".getTagCount") {

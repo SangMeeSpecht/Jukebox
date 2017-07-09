@@ -7,20 +7,20 @@
 //
 
 import UIKit
+import ReactiveCocoa
+import ReactiveSwift
 
 
 class SongCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    
     var songViewModel: SongViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        songViewModel?.reloadTableView = { viewModel in
+        self.navigationItem.title = songViewModel?.getNavTitle()
+        
+        let _ = songViewModel?.songs.producer.startWithValues { _ in
             self.collectionView?.reloadData()
         }
-        
-        self.navigationItem.title = "Songs"
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

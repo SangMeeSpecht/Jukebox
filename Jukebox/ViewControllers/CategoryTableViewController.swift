@@ -14,12 +14,11 @@ class CategoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         categoryViewModel = CategoryViewModel(service: MusicService())
+        self.navigationItem.title = categoryViewModel.getNavTitle()
         
         let _ = categoryViewModel.categories.producer.startWithValues { _ in
             self.tableView.reloadData()
         }
-        
-        self.navigationItem.title = categoryViewModel.getNavTitle()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,7 +42,7 @@ class CategoryTableViewController: UITableViewController {
                 if let seguedtoVC = segue.destination as? SongCollectionViewController {
                     if let cell = sender as? UITableViewCell {
                         let indexPath = tableView.indexPath(for: cell)
-                        seguedtoVC.songViewModel = SongViewModel(songIDs: categoryViewModel.getSongIDs(at: indexPath!)!)
+                        seguedtoVC.songViewModel = SongViewModel(service: MusicService(), songIDs: categoryViewModel.getSongIDs(at: indexPath!)!)
                     }
                 }
             default: break 
