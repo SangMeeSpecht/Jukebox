@@ -7,43 +7,46 @@
 //
 
 import Foundation
-
+import ReactiveCocoa
+import ReactiveSwift
 
 class CategoryViewModel {
+    let categories = MutableProperty<[Category]>([])
     var tagID: String?
-    var reloadTableView: ((CategoryViewModel) -> ())?
 //    make route dynamic later
     private var route = "category/tag/3"
-    private var categories: [Category] = [] {
-        didSet {
-            self.reloadTableView?(self)
-        }
-    }
+    private var service: MusicService!
 
-    init() {
+
+    init(service: MusicService) {
+        self.service = service
         getCategories()
     }
     
+    func getNavTitle() -> String {
+        return "Categories"
+    }
+    
     func getCategoryCount() -> Int {
-        return categories.count
+        return categories.value.count
     }
     
     func getCategoryName(at indexPath: IndexPath) -> String? {
-        if categories.count > 0 && withinRangeOfTagCount(withIndex: indexPath.row){
-            return categories[indexPath.row].name
+        if categories.value.count > 0 && withinRangeOfTagCount(withIndex: indexPath.row){
+            return categories.value[indexPath.row].name
         }
         return nil
     }
     
     func getSongIDs(at indexPath: IndexPath) -> [Int]? {
-        if categories.count > 0 && withinRangeOfTagCount(withIndex: indexPath.row) {
-            return categories[indexPath.row].songIDs
+        if categories.value.count > 0 && withinRangeOfTagCount(withIndex: indexPath.row) {
+            return categories.value[indexPath.row].songIDs
         }
         return nil
     }
     
     private func withinRangeOfTagCount(withIndex index: Int) -> Bool {
-        if index <= categories.count && index >= 0 {
+        if index <= categories.value.count && index >= 0 {
             return true
         }
         return false
@@ -52,7 +55,7 @@ class CategoryViewModel {
     private func getCategories() {
         MusicService().fetchCategories(withEndpoint: route) { response in
             let categories = response 
-            self.categories = self.sortCategoriesByID(withCategories: categories)
+            self.categories.value = self.sortCategoriesByID(withCategories: categories)
         }
     }
     

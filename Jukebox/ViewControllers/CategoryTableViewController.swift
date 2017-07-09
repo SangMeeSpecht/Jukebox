@@ -9,16 +9,17 @@
 import UIKit
 
 class CategoryTableViewController: UITableViewController {
-    var categoryViewModel = CategoryViewModel()
+    var categoryViewModel: CategoryViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        categoryViewModel = CategoryViewModel(service: MusicService())
         
-        categoryViewModel.reloadTableView = { viewModel in
+        let _ = categoryViewModel.categories.producer.startWithValues { _ in
             self.tableView.reloadData()
         }
         
-        self.navigationItem.title = "Categories"
+        self.navigationItem.title = categoryViewModel.getNavTitle()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
