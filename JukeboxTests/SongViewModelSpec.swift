@@ -12,7 +12,7 @@ import Nimble
 
 class SongViewModelSpec: QuickSpec {
     override func spec() {
-        let songViewModel = Jukebox.SongViewModel(songIDs: [])
+        let songViewModel = Jukebox.SongViewModel(service: MusicService(), songIDs: [])
         let indexPath = IndexPath(row: 2, section: 0)
         
         describe(".getSongCount") {
