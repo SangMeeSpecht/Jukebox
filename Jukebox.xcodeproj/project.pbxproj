@@ -97,6 +97,7 @@
 		843873901F11B9EC003F0B45 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		843873931F11C125003F0B45 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		843873941F11C125003F0B45 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		843873BF1F1425E8003F0B45 /* Jukebox copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Jukebox copy-Info.plist"; path = "/Users/sspecht/Desktop/Swift/Jukebox/Jukebox copy-Info.plist"; sourceTree = "<absolute>"; };
 		846B1D1F1EE7549C00EB8FCD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		846B1D211EE754A500EB8FCD /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		846B1D221EE754A500EB8FCD /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -233,6 +234,7 @@
 				84E2180F1EE74CE000B17813 /* JukeboxUITests */,
 				84E217EE1EE74CE000B17813 /* Products */,
 				846B1D1E1EE7549C00EB8FCD /* Frameworks */,
+				843873BF1F1425E8003F0B45 /* Jukebox copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
