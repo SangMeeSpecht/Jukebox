@@ -35,7 +35,7 @@ class SongViewModelSpec: QuickSpec {
         
         describe(".getCoverArtURL") {
             it("returns a URL for a song's album") {
-                let imageData = try? Data(contentsOf: URL(string: "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg")!)
+                let imageData = URL(string: "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg")
                 expect(songViewModel.getCoverArt(at: indexPath)).toEventually(equal(imageData))
             }
         }

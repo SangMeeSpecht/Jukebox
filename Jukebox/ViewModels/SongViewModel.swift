@@ -43,11 +43,10 @@ class SongViewModel {
         return nil
     }
     
-    func getCoverArt(at indexPath: IndexPath) -> Data? {
+    func getCoverArt(at indexPath: IndexPath) -> URL? {
         if songs.value.count > 0, withinRangeOfSongCount(withIndex: indexPath.row) {
-            if let imageData = try? Data(contentsOf: (songs.value[indexPath.row].coverURL.asURL())) {
-                return imageData
-            }
+            let songURL = try? self.songs.value[indexPath.row].coverURL.asURL()
+            return songURL
         }
         return nil
     }
