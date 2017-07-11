@@ -19,6 +19,7 @@ class SongCollectionViewCell: UICollectionViewCell {
         didSet {
             removeExistingSongInfo()
             addSongInfo()
+            styleCell()
         }
     }
     
@@ -66,6 +67,13 @@ class SongCollectionViewCell: UICollectionViewCell {
                  songDescription.text = description
             }
         }
+    }
+    
+    private func styleCell() {
+        albumCover.layer.cornerRadius = 8
+        albumCover.clipsToBounds = true
+        albumCover.layer.borderWidth = 1.5
+        albumCover.layer.borderColor = UIColor.black.cgColor
     }
 }
 

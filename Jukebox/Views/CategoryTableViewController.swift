@@ -15,7 +15,8 @@ class CategoryTableViewController: UITableViewController {
         super.viewDidLoad()
         categoryViewModel = CategoryViewModel(service: MusicService())
         self.navigationItem.title = categoryViewModel.getNavTitle()
-        
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "RockSalt", size: 15)!]
+        setBackgroundImageWithBlur()
         let _ = categoryViewModel.categories.producer.startWithValues { _ in
             self.tableView.reloadData()
         }
@@ -32,7 +33,13 @@ class CategoryTableViewController: UITableViewController {
             cell.textLabel?.text = categoryName
         }
 
+        cell.backgroundColor = .clear
+        
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(70.0)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -48,5 +55,15 @@ class CategoryTableViewController: UITableViewController {
             default: break 
             }
         }
+    }
+    
+    private func setBackgroundImageWithBlur() {
+        let backgroundImage = UIImage(named: "glitter.jpg")
+        let imageView = UIImageView(image: backgroundImage)
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        blurView.frame = (tableView?.bounds)!
+        imageView.addSubview(blurView)
+        self.tableView?.backgroundView = imageView
     }
 }

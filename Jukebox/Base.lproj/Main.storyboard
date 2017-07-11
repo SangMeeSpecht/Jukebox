@@ -10,6 +10,14 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Megrim.ttf">
+            <string>Megrim</string>
+        </array>
+        <array key="RockSalt.ttf">
+            <string>RockSalt</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Tags-->
         <scene sceneID="V8m-kb-ztr">
@@ -19,6 +27,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Tag Cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="Tag Cell" textLabel="llV-Bm-4dA" style="IBUITableViewCellStyleDefault" id="kXa-4g-Ls0">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
@@ -27,12 +36,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="llV-Bm-4dA">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="llV-Bm-4dA">
                                             <rect key="frame" x="15" y="0.0" width="384" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" name="Megrim" family="Megrim" pointSize="30"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -68,11 +78,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Qu-9G-CDr">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Qu-9G-CDr">
                                             <rect key="frame" x="15" y="0.0" width="384" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" name="Megrim" family="Megrim" pointSize="30"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -96,48 +106,47 @@
         <scene sceneID="142-En-Q0C">
             <objects>
                 <collectionViewController modalPresentationStyle="currentContext" id="HEE-zL-Ml1" customClass="SongCollectionViewController" customModule="Jukebox" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xtA-Qk-hjB">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="xtA-Qk-hjB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sK9-Pm-bzJ">
-                            <size key="itemSize" width="345" height="602"/>
+                            <size key="itemSize" width="345" height="531"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="15" minY="0.0" maxX="20" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="AlbumCoverCell" id="op9-2k-ANP" customClass="SongCollectionViewCell" customModule="Jukebox" customModuleProvider="target">
-                                <rect key="frame" x="15" y="35" width="345" height="602"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleAspectFill" reuseIdentifier="AlbumCoverCell" id="op9-2k-ANP" customClass="SongCollectionViewCell" customModule="Jukebox" customModuleProvider="target">
+                                <rect key="frame" x="15" y="70.666666666666671" width="345" height="531"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="345" height="602"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="345" height="531"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f06-YW-UJL">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="itunes-no-artwork" translatesAutoresizingMaskIntoConstraints="NO" id="f06-YW-UJL">
                                             <rect key="frame" x="11" y="58" width="323" height="310"/>
-                                            <color key="backgroundColor" red="1" green="0.28438648950000001" blue="0.1429069945" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="f06-YW-UJL" secondAttribute="height" multiplier="323:310" id="g0N-TX-51c"/>
                                                 <constraint firstAttribute="height" constant="310" id="h2N-Mc-Eg0"/>
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="w2v-Zo-129">
-                                            <rect key="frame" x="152.33333333333337" y="388" width="41.666666666666657" height="46.333333333333314"/>
+                                            <rect key="frame" x="-1776.3333333333333" y="388" width="3898" height="66.333333333333314"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsv-Tc-6rc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="41.666666666666657" height="21"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="3898" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="blz-aB-CCg"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="RockSalt" family="Rock Salt" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qr-Bn-dj1">
-                                                    <rect key="frame" x="0.0" y="26" width="41.666666666666657" height="20.333333333333314"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="0.0" y="26" width="3898" height="40.333333333333314"/>
+                                                    <fontDescription key="fontDescription" name="RockSalt" family="Rock Salt" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -149,7 +158,6 @@
                                         </activityIndicatorView>
                                     </subviews>
                                 </view>
-                                <color key="backgroundColor" red="0.82845090850000003" green="0.9339506662" blue="0.92262147500000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="f06-YW-UJL" firstAttribute="leading" secondItem="op9-2k-ANP" secondAttribute="leadingMargin" constant="3" id="12L-gP-yKt"/>
                                     <constraint firstItem="w2v-Zo-129" firstAttribute="centerX" secondItem="f06-YW-UJL" secondAttribute="centerX" id="A8T-Bu-eod"/>
@@ -174,14 +182,14 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HYz-xd-JPq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2407.1999999999998" y="-603.14842578710648"/>
+            <point key="canvasLocation" x="2405.7971014492755" y="-603.26086956521749"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="l0x-JQ-qEo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dnc-iC-hhc" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cz5-bD-IRP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Cz5-bD-IRP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -195,4 +203,7 @@
             <point key="canvasLocation" x="270" y="-597"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="itunes-no-artwork" width="402" height="402"/>
+    </resources>
 </document>

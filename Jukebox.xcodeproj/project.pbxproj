@@ -15,6 +15,10 @@
 		843873961F11C125003F0B45 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843873941F11C125003F0B45 /* Result.framework */; };
 		843873971F11C12F003F0B45 /* ReactiveCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 843873931F11C125003F0B45 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		843873981F11C12F003F0B45 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 843873941F11C125003F0B45 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		843873C71F1547D7003F0B45 /* Megrim.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 843873C51F1547D7003F0B45 /* Megrim.ttf */; };
+		843873C81F1547D7003F0B45 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 843873C61F1547D7003F0B45 /* OFL.txt */; };
+		843873CC1F154C86003F0B45 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 843873CA1F154C86003F0B45 /* LICENSE.txt */; };
+		843873CD1F154C86003F0B45 /* RockSalt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 843873CB1F154C86003F0B45 /* RockSalt.ttf */; };
 		846B1D201EE7549C00EB8FCD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B1D1F1EE7549C00EB8FCD /* Alamofire.framework */; };
 		846B1D231EE754A500EB8FCD /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B1D211EE754A500EB8FCD /* Nimble.framework */; };
 		846B1D241EE754A500EB8FCD /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B1D221EE754A500EB8FCD /* Quick.framework */; };
@@ -98,6 +102,10 @@
 		843873931F11C125003F0B45 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		843873941F11C125003F0B45 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		843873BF1F1425E8003F0B45 /* Jukebox copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Jukebox copy-Info.plist"; path = "/Users/sspecht/Desktop/Swift/Jukebox/Jukebox copy-Info.plist"; sourceTree = "<absolute>"; };
+		843873C51F1547D7003F0B45 /* Megrim.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Megrim.ttf; sourceTree = "<group>"; };
+		843873C61F1547D7003F0B45 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		843873CA1F154C86003F0B45 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		843873CB1F154C86003F0B45 /* RockSalt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RockSalt.ttf; sourceTree = "<group>"; };
 		846B1D1F1EE7549C00EB8FCD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		846B1D211EE754A500EB8FCD /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		846B1D221EE754A500EB8FCD /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -169,6 +177,24 @@
 				846B1D381EE8550C00EB8FCD /* MusicService.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		843873C41F1547D7003F0B45 /* Megrim */ = {
+			isa = PBXGroup;
+			children = (
+				843873C51F1547D7003F0B45 /* Megrim.ttf */,
+				843873C61F1547D7003F0B45 /* OFL.txt */,
+			);
+			path = Megrim;
+			sourceTree = "<group>";
+		};
+		843873C91F154C86003F0B45 /* Rock_Salt */ = {
+			isa = PBXGroup;
+			children = (
+				843873CA1F154C86003F0B45 /* LICENSE.txt */,
+				843873CB1F154C86003F0B45 /* RockSalt.ttf */,
+			);
+			path = Rock_Salt;
 			sourceTree = "<group>";
 		};
 		846B1D1E1EE7549C00EB8FCD /* Frameworks */ = {
@@ -251,6 +277,8 @@
 		84E217EF1EE74CE000B17813 /* Jukebox */ = {
 			isa = PBXGroup;
 			children = (
+				843873C91F154C86003F0B45 /* Rock_Salt */,
+				843873C41F1547D7003F0B45 /* Megrim */,
 				846B1D371EE854F400EB8FCD /* Models */,
 				846B1D571EEEF6F800EB8FCD /* Views */,
 				846B1D501EEB4B0F00EB8FCD /* ViewModels */,
@@ -398,9 +426,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843873CC1F154C86003F0B45 /* LICENSE.txt in Resources */,
+				843873C81F1547D7003F0B45 /* OFL.txt in Resources */,
+				843873CD1F154C86003F0B45 /* RockSalt.ttf in Resources */,
 				84E217FB1EE74CE000B17813 /* LaunchScreen.storyboard in Resources */,
 				84E217F81EE74CE000B17813 /* Assets.xcassets in Resources */,
 				84E217F61EE74CE000B17813 /* Main.storyboard in Resources */,
+				843873C71F1547D7003F0B45 /* Megrim.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

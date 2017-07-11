@@ -38,9 +38,9 @@ private let tagStub: Parameters = [
         [
             "is": [
                 "body": [
-                    "1": "Artists",
-                    "2": "Albums",
-                    "3": "Genre"
+                    "1": "ARTISTS",
+                    "2": "ALBUMS",
+                    "3": "GENRE"
                 ],
                 "headers": [ "content-type": "application/json" ]
             ]
@@ -66,11 +66,11 @@ private let categoryStub: Parameters = [
             "is": [
                 "body": [
                     "1": [
-                        "name": "Rock",
+                        "name": "ROCK",
                         "songs": [1,3,5,6,7,8]
                     ],
                     "2": [
-                        "name": "Rap",
+                        "name": "RAP",
                         "songs": [2,4]
                     ]
                 ],
@@ -155,9 +155,9 @@ private let rockSongsStub: Parameters = [
             "is": [
                 "body": [
                     "1": [
-                        "name": "Song1",
-                        "description": "1 description",
-                        "coverURL": "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg"
+                        "name": "Rock the Casbah",
+                        "description": "The Clash's 1982 'clash-ic'",
+                        "coverURL": "https://upload.wikimedia.org/wikipedia/en/b/bb/The_Clash_Rock_the_Casbah_single_cover.png"
                     ],
                     "3": [
                         "name": "Song3",

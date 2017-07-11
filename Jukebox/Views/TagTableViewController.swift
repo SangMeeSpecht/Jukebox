@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import QuartzCore
+
 
 class TagTableViewController: UITableViewController {
     var tagViewModel: TagViewModel!
@@ -14,10 +16,11 @@ class TagTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tagViewModel = TagViewModel(service: MusicService())
-        
+        setBackgroundImageWithBlur()
         let _ = tagViewModel.tags.producer.startWithValues { _ in
             self.tableView.reloadData()
         }
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "RockSalt", size: 15)!]
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,9 +34,16 @@ class TagTableViewController: UITableViewController {
         if let tagTitle = tagViewModel.getTagTitle(at: indexPath) {
             cell.textLabel?.text = tagTitle
         }
+
+        cell.backgroundColor = .clear
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(70.0)
+    }
+    
 
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if let identifier = segue.identifier {
@@ -49,6 +59,16 @@ class TagTableViewController: UITableViewController {
 //            }
 //        }
 //    }
+    
+    private func setBackgroundImageWithBlur() {
+        let backgroundImage = UIImage(named: "glitter.jpg")
+        let imageView = UIImageView(image: backgroundImage)
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        blurView.frame = (tableView?.bounds)!
+        imageView.addSubview(blurView)
+        self.tableView?.backgroundView = imageView
+    }
 }
 
 
