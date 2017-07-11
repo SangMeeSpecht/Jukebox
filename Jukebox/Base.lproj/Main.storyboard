@@ -134,19 +134,20 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="w2v-Zo-129">
-                                            <rect key="frame" x="138.33333333333337" y="388" width="68.666666666666657" height="66.333333333333314"/>
+                                            <rect key="frame" x="23" y="388" width="300" height="75.333333333333314"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsv-Tc-6rc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="68.666666666666657" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsv-Tc-6rc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="blz-aB-CCg"/>
+                                                        <constraint firstAttribute="width" constant="300" id="Kxe-rg-TBa"/>
+                                                        <constraint firstAttribute="height" constant="30" id="blz-aB-CCg"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="RockSalt" family="Rock Salt" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qr-Bn-dj1">
-                                                    <rect key="frame" x="0.0" y="26" width="68.666666666666657" height="40.333333333333314"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qr-Bn-dj1">
+                                                    <rect key="frame" x="0.0" y="35" width="300" height="40.333333333333314"/>
                                                     <fontDescription key="fontDescription" name="RockSalt" family="Rock Salt" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
