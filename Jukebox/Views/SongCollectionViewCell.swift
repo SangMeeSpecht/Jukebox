@@ -47,6 +47,10 @@ class SongCollectionViewCell: UICollectionViewCell {
                             self.albumCover.image = UIImage(data: imageData)
                             self.activityIndicator.stopAnimating()
                         }
+                    } else {
+                        DispatchQueue.main.async {
+                            self.albumCover.image = UIImage(named: "itunes-no-artwork.jpg")
+                        }
                     }
                 }
             }

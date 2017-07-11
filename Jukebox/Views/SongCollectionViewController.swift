@@ -13,12 +13,10 @@ class SongCollectionViewController: UICollectionViewController, UICollectionView
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = songViewModel?.getNavTitle()
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "RockSalt", size: 15)!]
-        setBackgroundImageWithBlur()
         let _ = songViewModel?.songs.producer.startWithValues { _ in
             self.collectionView?.reloadData()
         }
+        styleView()
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -42,6 +40,12 @@ class SongCollectionViewController: UICollectionViewController, UICollectionView
         return CGSize(width: itemWidth, height: itemHeight)
     }
     
+    private func styleView() {
+        setBackgroundImageWithBlur()
+        changeNavBarFont()
+        self.navigationItem.title = songViewModel?.getNavTitle()
+    }
+    
     private func setBackgroundImageWithBlur() {
         let backgroundImage = UIImage(named: "neonlights.jpg")
         let imageView = UIImageView(image: backgroundImage)
@@ -50,5 +54,9 @@ class SongCollectionViewController: UICollectionViewController, UICollectionView
         blurView.frame = (collectionView?.bounds)!
         imageView.addSubview(blurView)
         self.collectionView?.backgroundView = imageView
+    }
+    
+    private func changeNavBarFont() {
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "RockSalt", size: 15)!]
     }
 }

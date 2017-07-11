@@ -46,6 +46,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="Mjg-jf-14z" kind="show" identifier="Show Categories" id="Y3k-lt-L06"/>
                                 </connections>
@@ -87,6 +88,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="HEE-zL-Ml1" kind="show" identifier="Show Songs" id="YQn-6K-cU9"/>
                                 </connections>
@@ -132,10 +134,10 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="w2v-Zo-129">
-                                            <rect key="frame" x="-1776.3333333333333" y="388" width="3898" height="66.333333333333314"/>
+                                            <rect key="frame" x="138.33333333333337" y="388" width="68.666666666666657" height="66.333333333333314"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsv-Tc-6rc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="3898" height="21"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="68.666666666666657" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="blz-aB-CCg"/>
                                                     </constraints>
@@ -144,7 +146,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qr-Bn-dj1">
-                                                    <rect key="frame" x="0.0" y="26" width="3898" height="40.333333333333314"/>
+                                                    <rect key="frame" x="0.0" y="26" width="68.666666666666657" height="40.333333333333314"/>
                                                     <fontDescription key="fontDescription" name="RockSalt" family="Rock Salt" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>

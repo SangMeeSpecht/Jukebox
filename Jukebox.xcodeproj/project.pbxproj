@@ -19,6 +19,7 @@
 		843873C81F1547D7003F0B45 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 843873C61F1547D7003F0B45 /* OFL.txt */; };
 		843873CC1F154C86003F0B45 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 843873CA1F154C86003F0B45 /* LICENSE.txt */; };
 		843873CD1F154C86003F0B45 /* RockSalt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 843873CB1F154C86003F0B45 /* RockSalt.ttf */; };
+		843873CF1F1562E2003F0B45 /* secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843873CE1F1562E2003F0B45 /* secrets.swift */; };
 		846B1D201EE7549C00EB8FCD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B1D1F1EE7549C00EB8FCD /* Alamofire.framework */; };
 		846B1D231EE754A500EB8FCD /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B1D211EE754A500EB8FCD /* Nimble.framework */; };
 		846B1D241EE754A500EB8FCD /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B1D221EE754A500EB8FCD /* Quick.framework */; };
@@ -106,6 +107,7 @@
 		843873C61F1547D7003F0B45 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		843873CA1F154C86003F0B45 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		843873CB1F154C86003F0B45 /* RockSalt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RockSalt.ttf; sourceTree = "<group>"; };
+		843873CE1F1562E2003F0B45 /* secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = secrets.swift; sourceTree = "<group>"; };
 		846B1D1F1EE7549C00EB8FCD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		846B1D211EE754A500EB8FCD /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		846B1D221EE754A500EB8FCD /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				84E217F01EE74CE000B17813 /* AppDelegate.swift */,
 				84E217F71EE74CE000B17813 /* Assets.xcassets */,
 				84E217FC1EE74CE000B17813 /* Info.plist */,
+				843873CE1F1562E2003F0B45 /* secrets.swift */,
 			);
 			path = Jukebox;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				846B1D471EE8AD4400EB8FCD /* Song.swift in Sources */,
+				843873CF1F1562E2003F0B45 /* secrets.swift in Sources */,
 				846B1D4F1EEB4B0500EB8FCD /* SongViewModel.swift in Sources */,
 				846B1D591EEEF72500EB8FCD /* TagTableViewController.swift in Sources */,
 				8405CA1F1F04068400433FD1 /* SongCollectionViewCell.swift in Sources */,

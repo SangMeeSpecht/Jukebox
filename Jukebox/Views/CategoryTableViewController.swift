@@ -14,12 +14,10 @@ class CategoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         categoryViewModel = CategoryViewModel(service: MusicService())
-        self.navigationItem.title = categoryViewModel.getNavTitle()
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "RockSalt", size: 15)!]
-        setBackgroundImageWithBlur()
         let _ = categoryViewModel.categories.producer.startWithValues { _ in
             self.tableView.reloadData()
         }
+        styleView()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,8 +31,6 @@ class CategoryTableViewController: UITableViewController {
             cell.textLabel?.text = categoryName
         }
 
-        cell.backgroundColor = .clear
-        
         return cell
     }
     
@@ -57,6 +53,12 @@ class CategoryTableViewController: UITableViewController {
         }
     }
     
+    private func styleView() {
+        setBackgroundImageWithBlur()
+        changeNavBarFont()
+        self.navigationItem.title = categoryViewModel.getNavTitle()
+    }
+    
     private func setBackgroundImageWithBlur() {
         let backgroundImage = UIImage(named: "glitter.jpg")
         let imageView = UIImageView(image: backgroundImage)
@@ -66,4 +68,9 @@ class CategoryTableViewController: UITableViewController {
         imageView.addSubview(blurView)
         self.tableView?.backgroundView = imageView
     }
+    
+    private func changeNavBarFont() {
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "RockSalt", size: 15)!]
+    }
+    
 }
