@@ -168,46 +168,54 @@ private let categoryAlbumStub: Parameters = [
                         "songs": [16,17,18]
                     ],
                     "3": [
-                        "name": "",
+                        "name": "Combat Rock",
                         "songs": [1]
                     ],
                     "4": [
-                        "name": "",
-                        "songs": []
+                        "name": "The Masterpiece",
+                        "songs": [2]
                     ],
                     "5": [
-                        "name": "",
-                        "songs": []
+                        "name": "A Night at the Opera",
+                        "songs": [3]
                     ],
                     "6": [
-                        "name": "",
-                        "songs": []
+                        "name": "Straight Outta Compton",
+                        "songs": [4]
                     ],
                     "7": [
-                        "name": "",
-                        "songs": []
+                        "name": "Appetite for Destruction",
+                        "songs": [5]
                     ],
                     "8": [
-                        "name": "",
-                        "songs": []
+                        "name": "Led Zeppelin IV",
+                        "songs": [6]
                     ],
                     "9": [
-                        "name": "",
-                        "songs": []
+                        "name": "David Bowie",
+                        "songs": [7]
                     ],
                     "10": [
-                        "name": "",
-                        "songs": []
+                        "name": "Toys in the Attic",
+                        "songs": [8]
                     ],
                     "11": [
-                        "name": "",
-                        "songs": []
+                        "name": "The Chronic",
+                        "songs": [9]
                     ],
                     "12": [
-                        "name": "",
-                        "songs": []
+                        "name": "Illmatic",
+                        "songs": [10]
+                    ],
+                    "12": [
+                        "name": "All Eyez on Me",
+                        "songs": [11]
                     ],
                     "13": [
+                        "name": "Gangsta's Paradise",
+                        "songs": [12]
+                    ],
+                    "19": [
                         "name": "ALL ALBUMS",
                         "songs": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
                     ]
@@ -328,34 +336,34 @@ private let allSongsStub: Parameters = [
                         "coverURL": "https://img.discogs.com/f5zg-KTh_oPNysed_3ZU3tpAfVE=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1410402-1387664781-5828.jpeg.jpg"
                     ],
                     "13": [
-                        "name": "",
-                        "description": "",
-                        "coverURL": ""
+                        "name": "Kind of Woman",
+                        "description": "Stevie Nicks",
+                        "coverURL": "https://en.wikipedia.org/wiki/Bella_Donna_(album)#/media/File:Bella_Donna_(album).jpg"
                     ],
                     "14": [
-                        "name": "",
-                        "description": "",
-                        "coverURL": ""
+                        "name": "After the Glitter Fades",
+                        "description": "Stevie Nicks",
+                        "coverURL": "https://en.wikipedia.org/wiki/Bella_Donna_(album)#/media/File:Bella_Donna_(album).jpg"
                     ],
                     "15": [
-                        "name": "",
-                        "description": "",
-                        "coverURL": ""
+                        "name": "Edge of Seventeen",
+                        "description": "Stevie Nicks",
+                        "coverURL": "https://en.wikipedia.org/wiki/Bella_Donna_(album)#/media/File:Bella_Donna_(album).jpg"
                     ],
                     "16": [
-                        "name": "",
-                        "description": "",
-                        "coverURL": ""
+                        "name": "BirdFlu",
+                        "description": "M.I.A.",
+                        "coverURL": "https://en.wikipedia.org/wiki/Kala_(album)#/media/File:M.I.A._-_Kala.png"
                     ],
                     "17": [
-                        "name": "",
-                        "description": "",
-                        "coverURL": ""
+                        "name": "20 Dollar",
+                        "description": "M.I.A.",
+                        "coverURL": "https://en.wikipedia.org/wiki/Kala_(album)#/media/File:M.I.A._-_Kala.png"
                     ],
                     "18": [
-                        "name": "",
-                        "description": "",
-                        "coverURL": ""
+                        "name": "Paper Planes",
+                        "description": "M.I.A.",
+                        "coverURL": "https://en.wikipedia.org/wiki/Kala_(album)#/media/File:M.I.A._-_Kala.png"
                     ]
 
                 ],
