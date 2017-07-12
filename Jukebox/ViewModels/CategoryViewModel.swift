@@ -12,18 +12,27 @@ import ReactiveSwift
 
 class CategoryViewModel {
     let categories = MutableProperty<[Category]>([])
-    var tagID: String?
-//    make route dynamic later
-    private var route = "category/tag/3"
+    private var categoryID: String?
+    private var route = "category/tag/"
     private var service: MusicService!
+    private var categoryTitle = [
+        "1": "Artists",
+        "2": "Albums",
+        "3": "Genres"
+    ]
 
 
-    init(service: MusicService) {
+    init(service: MusicService, categoryID: String) {
         self.service = service
+        self.categoryID = categoryID
+        setRoute(forCategory: categoryID)
         getCategories()
     }
     
     func getNavTitle() -> String {
+        if let categoryID = categoryID {
+            return categoryTitle[categoryID]!
+        }
         return "Categories"
     }
     
@@ -57,6 +66,10 @@ class CategoryViewModel {
             let categories = response 
             self.categories.value = self.sortCategoriesByID(withCategories: categories)
         }
+    }
+    
+    private func setRoute(forCategory category: String) {
+        route = "\(route)\(category)"
     }
     
     private func sortCategoriesByID(withCategories categories: [Category]) -> [Category] {

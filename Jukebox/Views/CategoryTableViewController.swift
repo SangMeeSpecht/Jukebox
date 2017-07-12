@@ -10,10 +10,13 @@ import UIKit
 
 class CategoryTableViewController: UITableViewController {
     var categoryViewModel: CategoryViewModel!
+    var tagID: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        categoryViewModel = CategoryViewModel(service: MusicService())
+        if let tagID = tagID {
+            categoryViewModel = CategoryViewModel(service: MusicService(), categoryID: tagID)
+        }
         let _ = categoryViewModel.categories.producer.startWithValues { _ in
             self.tableView.reloadData()
         }

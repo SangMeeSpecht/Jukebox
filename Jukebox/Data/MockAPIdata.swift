@@ -14,11 +14,13 @@ let params: Parameters = [
     "protocol": "http",
     "stubs": [
         tagStub,
-        categoryGenreStub,
+        categoryAlbumStub,
         categoryArtistStub,
         categoryGenreStub,
         rockSongsStub,
         rapSongsStub,
+        songCollection1Stub,
+        songCollection2Stub,
         song1Stub,
         song2Stub,
         song3Stub,
@@ -133,7 +135,7 @@ private let categoryArtistStub: Parameters = [
                     ],
                     "15": [
                         "name": "ALL SONGS",
-                        "songs": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+                        "songs": []
                     ]
                 ],
                 "headers": [ "content-type": "application/json" ]
@@ -207,17 +209,17 @@ private let categoryAlbumStub: Parameters = [
                         "name": "Illmatic",
                         "songs": [10]
                     ],
-                    "12": [
+                    "13": [
                         "name": "All Eyez on Me",
                         "songs": [11]
                     ],
-                    "13": [
+                    "14": [
                         "name": "Gangsta's Paradise",
                         "songs": [12]
                     ],
                     "19": [
                         "name": "ALL ALBUMS",
-                        "songs": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+                        "songs": []
                     ]
                 ],
                 "headers": [ "content-type": "application/json" ]
@@ -253,7 +255,7 @@ private let categoryGenreStub: Parameters = [
                     ],
                     "3": [
                         "name": "ALL GENRES",
-                        "songs": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+                        "songs": []
                     ]
                 ],
                 "headers": [ "content-type": "application/json" ]
@@ -338,32 +340,32 @@ private let allSongsStub: Parameters = [
                     "13": [
                         "name": "Kind of Woman",
                         "description": "Stevie Nicks",
-                        "coverURL": "https://en.wikipedia.org/wiki/Bella_Donna_(album)#/media/File:Bella_Donna_(album).jpg"
+                        "coverURL": "https://upload.wikimedia.org/wikipedia/en/4/43/Bella_Donna_%28album%29.jpg"
                     ],
                     "14": [
                         "name": "After the Glitter Fades",
                         "description": "Stevie Nicks",
-                        "coverURL": "https://en.wikipedia.org/wiki/Bella_Donna_(album)#/media/File:Bella_Donna_(album).jpg"
+                        "coverURL": "https://upload.wikimedia.org/wikipedia/en/4/43/Bella_Donna_%28album%29.jpg"
                     ],
                     "15": [
                         "name": "Edge of Seventeen",
                         "description": "Stevie Nicks",
-                        "coverURL": "https://en.wikipedia.org/wiki/Bella_Donna_(album)#/media/File:Bella_Donna_(album).jpg"
+                        "coverURL": "https://upload.wikimedia.org/wikipedia/en/4/43/Bella_Donna_%28album%29.jpg"
                     ],
                     "16": [
                         "name": "BirdFlu",
                         "description": "M.I.A.",
-                        "coverURL": "https://en.wikipedia.org/wiki/Kala_(album)#/media/File:M.I.A._-_Kala.png"
+                        "coverURL": "https://upload.wikimedia.org/wikipedia/en/c/cf/M.I.A._-_Kala.png"
                     ],
                     "17": [
                         "name": "20 Dollar",
                         "description": "M.I.A.",
-                        "coverURL": "https://en.wikipedia.org/wiki/Kala_(album)#/media/File:M.I.A._-_Kala.png"
+                        "coverURL": "https://upload.wikimedia.org/wikipedia/en/c/cf/M.I.A._-_Kala.png"
                     ],
                     "18": [
                         "name": "Paper Planes",
                         "description": "M.I.A.",
-                        "coverURL": "https://en.wikipedia.org/wiki/Kala_(album)#/media/File:M.I.A._-_Kala.png"
+                        "coverURL": "https://upload.wikimedia.org/wikipedia/en/c/cf/M.I.A._-_Kala.png"
                     ]
 
                 ],
@@ -467,6 +469,78 @@ private let rapSongsStub: Parameters = [
                         "name": "Gangsta's Paradise",
                         "description": "Coolio",
                         "coverURL": "https://img.discogs.com/f5zg-KTh_oPNysed_3ZU3tpAfVE=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1410402-1387664781-5828.jpeg.jpg"
+                    ]
+                ],
+                "headers": [ "content-type": "application/json" ]
+            ]
+        ]
+    ]
+]
+
+private let songCollection1Stub: Parameters = [
+    "predicates": [
+        [
+            "equals": [
+                "method": "GET",
+                "path": "/api/1/songs/multi",
+                "query": [ "id": [ "13", "14", "15" ] ]
+            ]
+        ]
+    ],
+    "responses": [
+        [
+            "is": [
+                "body": [
+                    "13": [
+                        "name": "Kind of Woman",
+                        "description": "Stevie Nicks",
+                        "coverURL": "https://upload.wikimedia.org/wikipedia/en/4/43/Bella_Donna_%28album%29.jpg"
+                    ],
+                    "14": [
+                        "name": "After the Glitter Fades",
+                        "description": "Stevie Nicks",
+                        "coverURL": "https://upload.wikimedia.org/wikipedia/en/4/43/Bella_Donna_%28album%29.jpg"
+                    ],
+                    "15": [
+                        "name": "Edge of Seventeen",
+                        "description": "Stevie Nicks",
+                        "coverURL": "https://upload.wikimedia.org/wikipedia/en/4/43/Bella_Donna_%28album%29.jpg"
+                    ]
+                ],
+                "headers": [ "content-type": "application/json" ]
+            ]
+        ]
+    ]
+]
+
+private let songCollection2Stub: Parameters = [
+    "predicates": [
+        [
+            "equals": [
+                "method": "GET",
+                "path": "/api/1/songs/multi",
+                "query": [ "id": [ "16", "17", "18" ] ]
+            ]
+        ]
+    ],
+    "responses": [
+        [
+            "is": [
+                "body": [
+                    "16": [
+                        "name": "BirdFlu",
+                        "description": "M.I.A.",
+                        "coverURL": "https://upload.wikimedia.org/wikipedia/en/c/cf/M.I.A._-_Kala.png"
+                    ],
+                    "17": [
+                        "name": "20 Dollar",
+                        "description": "M.I.A.",
+                        "coverURL": "https://upload.wikimedia.org/wikipedia/en/c/cf/M.I.A._-_Kala.png"
+                    ],
+                    "18": [
+                        "name": "Paper Planes",
+                        "description": "M.I.A.",
+                        "coverURL": "https://upload.wikimedia.org/wikipedia/en/c/cf/M.I.A._-_Kala.png"
                     ]
                 ],
                 "headers": [ "content-type": "application/json" ]

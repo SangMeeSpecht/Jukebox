@@ -69,7 +69,9 @@ class SongViewModel {
     }
     
     private func removeExtraAmperand() {
-        route = String(route.characters.dropLast())
+        if route.characters.last == "&" {
+            route = String(route.characters.dropLast())
+        }
     }
     
     private func getSongs() {

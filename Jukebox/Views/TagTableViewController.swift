@@ -41,20 +41,21 @@ class TagTableViewController: UITableViewController {
     }
     
 
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let identifier = segue.identifier {
-//            switch identifier {
-//            case "Show Category":
-//                if let cell = sender as? UITableViewCell {
-//                    if let seguedToMVC = segue.destination as? CategoryTableViewController {
-////                        set specific tag_ids/route, change to be dynamic
-////                        seguedToMVC.tagID = tagViewModel.getTagID(withTitle: cell.textLabel?.text)
-//                    }
-//                }
-//            default: break
-//            }
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            switch identifier {
+            case "Show Categories":
+                if let cell = sender as? UITableViewCell {
+                    if let seguedToMVC = segue.destination as? CategoryTableViewController {
+                        if let indexPath = tableView.indexPath(for: cell) {
+                            seguedToMVC.tagID = tagViewModel.getTagID(at: indexPath)
+                        }
+                    }
+                }
+            default: break
+            }
+        }
+    }
     
     private func styleView() {
         setBackgroundImageWithBlur()
