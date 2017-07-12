@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import QuartzCore
 
 
 class TagTableViewController: UITableViewController {
@@ -59,7 +58,6 @@ class TagTableViewController: UITableViewController {
     
     private func styleView() {
         setBackgroundImageWithBlur()
-        changeNavBarFont()
     }
     
     private func setBackgroundImageWithBlur() {
@@ -70,10 +68,6 @@ class TagTableViewController: UITableViewController {
         blurView.frame = (tableView?.bounds)!
         imageView.addSubview(blurView)
         self.tableView?.backgroundView = imageView
-    }
-    
-    private func changeNavBarFont() {
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "RockSalt", size: 15)!]
     }
 }
 

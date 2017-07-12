@@ -55,7 +55,7 @@ platform :ios do
     hockey(
       api_token: Secrets::API_KEY,
       public_identifier: Secrets::PUBLIC_ID,
-      bundle_version: "1.0",
+      bundle_version: “1.1”,
       notify: "0"
     )
     # sh "your_script.sh"

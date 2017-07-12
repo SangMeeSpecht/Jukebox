@@ -42,21 +42,16 @@ class SongCollectionViewController: UICollectionViewController, UICollectionView
     
     private func styleView() {
         setBackgroundImageWithBlur()
-        changeNavBarFont()
         self.navigationItem.title = songViewModel?.getNavTitle()
     }
     
     private func setBackgroundImageWithBlur() {
-        let backgroundImage = UIImage(named: "neonlights.jpg")
+        let backgroundImage = UIImage(named: "glitterLightBlur.jpg")
         let imageView = UIImageView(image: backgroundImage)
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
-        let blurView = UIVisualEffectView(effect: blurEffect)
-        blurView.frame = (collectionView?.bounds)!
-        imageView.addSubview(blurView)
+//        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+//        let blurView = UIVisualEffectView(effect: blurEffect)
+//        blurView.frame = (collectionView?.bounds)!
+//        imageView.addSubview(blurView)
         self.collectionView?.backgroundView = imageView
-    }
-    
-    private func changeNavBarFont() {
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "RockSalt", size: 15)!]
     }
 }

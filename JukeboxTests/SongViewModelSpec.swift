@@ -12,31 +12,31 @@ import Nimble
 
 class SongViewModelSpec: QuickSpec {
     override func spec() {
-        let songViewModel = Jukebox.SongViewModel(service: MusicService(), songIDs: [])
-        let indexPath = IndexPath(row: 2, section: 0)
+        let songViewModel = Jukebox.SongViewModel(service: MusicService(), songIDs: [1,3,5,6,7,8])
+        let indexPath = IndexPath(row: 1, section: 0)
         
         describe(".getSongCount") {
             it("returns a count of songs") {
-                expect(songViewModel.getSongCount()).toEventually(equal(8))
+                expect(songViewModel.getSongCount()).toEventually(equal(6))
             }
         }
         
         describe(".getSongName") {
             it("returns the name for a song") {
-                expect(songViewModel.getSongName(at: indexPath)).toEventually(equal("Song3"))
+                expect(songViewModel.getSongName(at: indexPath)).toEventually(equal("Bohemian Rhapsody"))
             }
         }
         
         describe(".getSongDescription") {
             it("returns a description for a song") {
-                expect(songViewModel.getSongDescription(at: indexPath)).toEventually(equal("3 description"))
+                expect(songViewModel.getSongDescription(at: indexPath)).toEventually(equal("Queen"))
             }
         }
         
         describe(".getCoverArtURL") {
             it("returns a URL for a song's album") {
-                let imageData = URL(string: "https://www.smashingmagazine.com/images/music-cd-covers/1-2.jpg")
-                expect(songViewModel.getCoverArt(at: indexPath)).toEventually(equal(imageData))
+                let songURL = try? "https://upload.wikimedia.org/wikipedia/en/9/9f/Bohemian_Rhapsody.png".asURL()
+                expect(songViewModel.getCoverArt(at: indexPath)).toEventually(equal(songURL))
             }
         }
     }

@@ -24,7 +24,7 @@ class CategoryViewModelSpec: QuickSpec {
         
         describe(".getCategoryName") {
             it("returns the name for a category") {
-                expect(categoryViewModel.getCategoryName(at: indexPath)).toEventually(equal("Rock"))
+                expect(categoryViewModel.getCategoryName(at: indexPath)).toEventually(equal("ROCK"))
             }
         }
         

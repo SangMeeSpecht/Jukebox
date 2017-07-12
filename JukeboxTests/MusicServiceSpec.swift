@@ -65,7 +65,7 @@ class MusicServiceSpec: QuickSpec {
                     MusicServiceModel?.fetchSongs(withEndpoint: "songs/multi") { response in
                         songs = response
                     }
-                    expect(songs.count).toEventually(equal(8))
+                    expect(songs.count).toEventually(equal(12))
                 }
             }
             
@@ -79,13 +79,13 @@ class MusicServiceSpec: QuickSpec {
                 }
             }
             
-            context("when a request for two songs is made") {
-                it("returns a collection of two songs") {
+            context("when a request for more multiple existing songs is made") {
+                it("returns a collection of specified songs songs") {
                     var songs: [Song] = []
-                    MusicServiceModel?.fetchSongs(withEndpoint: "songs/multi?id=2&id=4") { response in
+                    MusicServiceModel?.fetchSongs(withEndpoint: "songs/multi?id=2&id=4&id=9&id=10&id=11&id=12") { response in
                         songs = response
                     }
-                    expect(songs.count).toEventually(equal(2))
+                    expect(songs.count).toEventually(equal(6))
                 }
             }
             
@@ -105,7 +105,7 @@ class MusicServiceSpec: QuickSpec {
                     MusicServiceModel?.fetchSongs(withEndpoint: "songs/multi?id=1234567") { response in
                         songs = response 
                     }
-                    expect(songs.count).toEventually(equal(8))
+                    expect(songs.count).toEventually(equal(12))
                 }
             }
         }

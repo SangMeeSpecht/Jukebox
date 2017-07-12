@@ -23,7 +23,7 @@ class TagViewModelSpec: QuickSpec {
         describe(".getTagTitle") {
             it("returns the title for a tag") {
                 let indexPath = IndexPath(row: 0, section: 0)
-                expect(tagViewModel.getTagTitle(at: indexPath)).toEventually(equal("Artists"))
+                expect(tagViewModel.getTagTitle(at: indexPath)).toEventually(equal("ARTISTS"))
             }
         }
         

@@ -74,10 +74,11 @@ class SongCollectionViewCell: UICollectionViewCell {
     }
     
     private func styleCell() {
-        albumCover.layer.cornerRadius = 8
-        albumCover.clipsToBounds = true
-        albumCover.layer.borderWidth = 1.5
-        albumCover.layer.borderColor = UIColor.black.cgColor
+        albumCover.clipsToBounds = false
+        albumCover.layer.shadowColor = UIColor.white.cgColor
+        albumCover.layer.shadowOffset = CGSize(width: 0, height: 0)
+        albumCover.layer.shadowOpacity = 0.5
+        albumCover.layer.shadowRadius = 10.0
     }
 }
 

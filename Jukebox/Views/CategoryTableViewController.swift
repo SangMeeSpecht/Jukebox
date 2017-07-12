@@ -55,7 +55,6 @@ class CategoryTableViewController: UITableViewController {
     
     private func styleView() {
         setBackgroundImageWithBlur()
-        changeNavBarFont()
         self.navigationItem.title = categoryViewModel.getNavTitle()
     }
     
@@ -68,9 +67,4 @@ class CategoryTableViewController: UITableViewController {
         imageView.addSubview(blurView)
         self.tableView?.backgroundView = imageView
     }
-    
-    private func changeNavBarFont() {
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "RockSalt", size: 15)!]
-    }
-    
 }

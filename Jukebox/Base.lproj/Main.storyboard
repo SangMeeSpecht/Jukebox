@@ -27,26 +27,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <inset key="separatorInset" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
                         <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Tag Cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="Tag Cell" textLabel="llV-Bm-4dA" style="IBUITableViewCellStyleDefault" id="kXa-4g-Ls0">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kXa-4g-Ls0" id="7e3-gv-2jP">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="llV-Bm-4dA">
-                                            <rect key="frame" x="15" y="0.0" width="384" height="43.666666666666664"/>
+                                            <rect key="frame" x="30" y="0.0" width="369" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Megrim" family="Megrim" pointSize="30"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" red="0.88789743185043335" green="0.96905916929244995" blue="0.96530860662460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                            <color key="shadowColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <size key="shadowOffset" width="4" height="4"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
                                 <connections>
                                     <segue destination="Mjg-jf-14z" kind="show" identifier="Show Categories" id="Y3k-lt-L06"/>
                                 </connections>
@@ -71,24 +75,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <inset key="separatorInset" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Category Cell" textLabel="8Qu-9G-CDr" style="IBUITableViewCellStyleDefault" id="mbj-io-pb3">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mbj-io-pb3" id="zMg-TZ-KoI">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Qu-9G-CDr">
-                                            <rect key="frame" x="15" y="0.0" width="384" height="43.666666666666664"/>
+                                            <rect key="frame" x="30" y="0.0" width="369" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Megrim" family="Megrim" pointSize="30"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" red="0.88789743185043335" green="0.96905916929244995" blue="0.96530860662460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <color key="shadowColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <size key="shadowOffset" width="4" height="4"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
                                 <connections>
                                     <segue destination="HEE-zL-Ml1" kind="show" identifier="Show Songs" id="YQn-6K-cU9"/>
                                 </connections>
@@ -120,7 +129,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleAspectFill" reuseIdentifier="AlbumCoverCell" id="op9-2k-ANP" customClass="SongCollectionViewCell" customModule="Jukebox" customModuleProvider="target">
-                                <rect key="frame" x="15" y="70.666666666666671" width="345" height="531"/>
+                                <rect key="frame" x="15" y="71" width="345" height="531"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="345" height="531"/>
@@ -134,7 +143,7 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="w2v-Zo-129">
-                                            <rect key="frame" x="23" y="388" width="300" height="75.333333333333314"/>
+                                            <rect key="frame" x="23" y="388" width="300" height="76"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsv-Tc-6rc">
                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
@@ -143,20 +152,19 @@
                                                         <constraint firstAttribute="height" constant="30" id="blz-aB-CCg"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="RockSalt" family="Rock Salt" pointSize="20"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" red="0.88789743185043335" green="0.96905916929244995" blue="0.96530860662460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qr-Bn-dj1">
-                                                    <rect key="frame" x="0.0" y="35" width="300" height="40.333333333333314"/>
+                                                    <rect key="frame" x="0.0" y="35" width="300" height="41"/>
                                                     <fontDescription key="fontDescription" name="RockSalt" family="Rock Salt" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" red="0.88789743185043335" green="0.96905916929244995" blue="0.96530860662460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
-                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Ppt-M8-SLy">
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Ppt-M8-SLy">
                                             <rect key="frame" x="162" y="291" width="20" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="color" red="0.1119875439" green="0.083885521729999996" blue="0.50787136960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </activityIndicatorView>
                                     </subviews>
@@ -165,6 +173,8 @@
                                     <constraint firstItem="f06-YW-UJL" firstAttribute="leading" secondItem="op9-2k-ANP" secondAttribute="leadingMargin" constant="3" id="12L-gP-yKt"/>
                                     <constraint firstItem="w2v-Zo-129" firstAttribute="centerX" secondItem="f06-YW-UJL" secondAttribute="centerX" id="A8T-Bu-eod"/>
                                     <constraint firstItem="f06-YW-UJL" firstAttribute="top" secondItem="op9-2k-ANP" secondAttribute="topMargin" constant="50" id="Dys-8r-NWZ"/>
+                                    <constraint firstItem="Ppt-M8-SLy" firstAttribute="centerX" secondItem="f06-YW-UJL" secondAttribute="centerX" id="KGT-XU-fD2"/>
+                                    <constraint firstItem="w2v-Zo-129" firstAttribute="top" secondItem="Ppt-M8-SLy" secondAttribute="bottom" constant="77" id="a10-IS-qJk"/>
                                     <constraint firstItem="w2v-Zo-129" firstAttribute="top" secondItem="f06-YW-UJL" secondAttribute="bottom" constant="20" id="fW7-kc-ajY"/>
                                     <constraint firstItem="f06-YW-UJL" firstAttribute="centerX" secondItem="op9-2k-ANP" secondAttribute="centerX" id="lqO-fu-aEa"/>
                                 </constraints>
@@ -195,6 +205,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Cz5-bD-IRP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.086869679391384125" green="0.65791553258895874" blue="0.76726311445236206" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="RockSalt" family="Rock Salt" pointSize="17"/>
+                            <color key="textColor" red="0.090226747095584869" green="0.090789340436458588" blue="0.45896285772323608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
