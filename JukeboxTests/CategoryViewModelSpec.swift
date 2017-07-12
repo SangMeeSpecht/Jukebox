@@ -16,9 +16,9 @@ class CategoryViewModelSpec: QuickSpec {
         let categoryViewModel = Jukebox.CategoryViewModel(service: MusicService())
         let indexPath = IndexPath(row: 0, section: 0)
 
-        describe(".getTagCount") {
-            it("returns a count of tags") {
-                expect(categoryViewModel.getCategoryCount()).toEventually(equal(2))
+        describe(".getCategoryCount") {
+            it("returns a count of categories") {
+                expect(categoryViewModel.getCategoryCount()).toEventually(equal(3))
             }
         }
         

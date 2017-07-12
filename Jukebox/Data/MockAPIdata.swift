@@ -14,7 +14,9 @@ let params: Parameters = [
     "protocol": "http",
     "stubs": [
         tagStub,
-        categoryStub,
+        categoryGenreStub,
+        categoryArtistStub,
+        categoryGenreStub,
         rockSongsStub,
         rapSongsStub,
         song1Stub,
@@ -56,7 +58,7 @@ private let tagStub: Parameters = [
     ]
 ]
 
-private let categoryStub: Parameters = [
+private let categoryArtistStub: Parameters = [
     "predicates": [
         [
             "equals": [
@@ -65,7 +67,167 @@ private let categoryStub: Parameters = [
         ],
         [
             "matches": [
-                "path": "/api/1/category/tag/[\\d]+$"
+                "path": "/api/1/category/tag/1"
+            ]
+        ]
+    ],
+    "responses": [
+        [
+            "is": [
+                "body": [
+                    "1": [
+                        "name": "Stevie Nicks",
+                        "songs": [13,14,15]
+                    ],
+                    "2": [
+                        "name": "M.I.A.",
+                        "songs": [16,17,18]
+                    ],
+                    "3": [
+                        "name": "The Clash",
+                        "songs": [1]
+                    ],
+                    "4": [
+                        "name": "Snoop Dogg",
+                        "songs": [2]
+                    ],
+                    "5": [
+                        "name": "Queen",
+                        "songs": [3]
+                    ],
+                    "6": [
+                        "name": "N.W.A.",
+                        "songs": [4]
+                    ],
+                    "7": [
+                        "name": "Guns N' Roses",
+                        "songs": [5]
+                    ],
+                    "8": [
+                        "name": "Led Zeppelin",
+                        "songs": [6]
+                    ],
+                    "9": [
+                        "name": "David Bowie",
+                        "songs": [7]
+                    ],
+                    "10": [
+                        "name": "Aerosmith",
+                        "songs": [8]
+                    ],
+                    "11": [
+                        "name": "Dr. Dre",
+                        "songs": [9]
+                    ],
+                    "12": [
+                        "name": "Nas",
+                        "songs": [10]
+                    ],
+                    "13": [
+                        "name": "Tupac Shakur",
+                        "songs": [11]
+                    ],
+                    "14": [
+                        "name": "Coolio",
+                        "songs": [12]
+                    ],
+                    "15": [
+                        "name": "ALL SONGS",
+                        "songs": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+                    ]
+                ],
+                "headers": [ "content-type": "application/json" ]
+            ]
+        ]
+    ]
+]
+
+private let categoryAlbumStub: Parameters = [
+    "predicates": [
+        [
+            "equals": [
+                "method": "GET"
+            ]
+        ],
+        [
+            "matches": [
+                "path": "/api/1/category/tag/2"
+            ]
+        ]
+    ],
+    "responses": [
+        [
+            "is": [
+                "body": [
+                    "1": [
+                        "name": "Bella Donna",
+                        "songs": [13,14,15]
+                    ],
+                    "2": [
+                        "name": "Kala",
+                        "songs": [16,17,18]
+                    ],
+                    "3": [
+                        "name": "",
+                        "songs": [1]
+                    ],
+                    "4": [
+                        "name": "",
+                        "songs": []
+                    ],
+                    "5": [
+                        "name": "",
+                        "songs": []
+                    ],
+                    "6": [
+                        "name": "",
+                        "songs": []
+                    ],
+                    "7": [
+                        "name": "",
+                        "songs": []
+                    ],
+                    "8": [
+                        "name": "",
+                        "songs": []
+                    ],
+                    "9": [
+                        "name": "",
+                        "songs": []
+                    ],
+                    "10": [
+                        "name": "",
+                        "songs": []
+                    ],
+                    "11": [
+                        "name": "",
+                        "songs": []
+                    ],
+                    "12": [
+                        "name": "",
+                        "songs": []
+                    ],
+                    "13": [
+                        "name": "ALL ALBUMS",
+                        "songs": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+                    ]
+                ],
+                "headers": [ "content-type": "application/json" ]
+            ]
+        ]
+    ]
+]
+
+private let categoryGenreStub: Parameters = [
+    "predicates": [
+        [
+            "equals": [
+                "method": "GET"
+            ]
+        ],
+        [
+            "matches": [
+                "path": "/api/1/category/tag/3"
             ]
         ]
     ],
@@ -80,6 +242,10 @@ private let categoryStub: Parameters = [
                     "2": [
                         "name": "RAP",
                         "songs": [2,4,9,10,11,12]
+                    ],
+                    "3": [
+                        "name": "ALL GENRES",
+                        "songs": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
                     ]
                 ],
                 "headers": [ "content-type": "application/json" ]
@@ -160,6 +326,36 @@ private let allSongsStub: Parameters = [
                         "name": "Gangsta's Paradise",
                         "description": "Coolio",
                         "coverURL": "https://img.discogs.com/f5zg-KTh_oPNysed_3ZU3tpAfVE=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1410402-1387664781-5828.jpeg.jpg"
+                    ],
+                    "13": [
+                        "name": "",
+                        "description": "",
+                        "coverURL": ""
+                    ],
+                    "14": [
+                        "name": "",
+                        "description": "",
+                        "coverURL": ""
+                    ],
+                    "15": [
+                        "name": "",
+                        "description": "",
+                        "coverURL": ""
+                    ],
+                    "16": [
+                        "name": "",
+                        "description": "",
+                        "coverURL": ""
+                    ],
+                    "17": [
+                        "name": "",
+                        "description": "",
+                        "coverURL": ""
+                    ],
+                    "18": [
+                        "name": "",
+                        "description": "",
+                        "coverURL": ""
                     ]
 
                 ],

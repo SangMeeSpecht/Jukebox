@@ -53,7 +53,7 @@ class MusicServiceSpec: QuickSpec {
                     MusicServiceModel?.fetchCategories(withEndpoint: "category/tag/\(tagID)") { response in
                         categories = response
                     }
-                    expect(categories.count).toEventually(equal(2))
+                    expect(categories.count).toEventually(equal(15))
                 }
             }
         }
@@ -65,7 +65,7 @@ class MusicServiceSpec: QuickSpec {
                     MusicServiceModel?.fetchSongs(withEndpoint: "songs/multi") { response in
                         songs = response
                     }
-                    expect(songs.count).toEventually(equal(12))
+                    expect(songs.count).toEventually(equal(18))
                 }
             }
             
@@ -105,7 +105,7 @@ class MusicServiceSpec: QuickSpec {
                     MusicServiceModel?.fetchSongs(withEndpoint: "songs/multi?id=1234567") { response in
                         songs = response 
                     }
-                    expect(songs.count).toEventually(equal(12))
+                    expect(songs.count).toEventually(equal(18))
                 }
             }
         }

@@ -300,8 +300,8 @@
 				846B1D3A1EE8594200EB8FCD /* MusicServiceSpec.swift */,
 				846B1D4C1EEB49F800EB8FCD /* SongViewModelSpec.swift */,
 				846B1D511EEEEA4E00EB8FCD /* TagViewModelSpec.swift */,
-				846B1D5A1EEEF81400EB8FCD /* TagTableViewControllerSpec.swift */,
 				846B1D5C1EEF1EA200EB8FCD /* CategoryViewModelSpec.swift */,
+				846B1D5A1EEEF81400EB8FCD /* TagTableViewControllerSpec.swift */,
 				846B1D661EEF268B00EB8FCD /* CategoryTableViewControllerSpec.swift */,
 			);
 			path = JukeboxTests;
