@@ -17,7 +17,7 @@ class CategoryTableViewController: UITableViewController {
         if let tagID = tagID {
             categoryViewModel = CategoryViewModel(service: MusicService(), categoryID: tagID)
         }
-        let _ = categoryViewModel.categories.producer.startWithValues { _ in
+        let _ = categoryViewModel?.categories.producer.startWithValues { _ in
             self.tableView.reloadData()
         }
         styleView()
@@ -58,7 +58,7 @@ class CategoryTableViewController: UITableViewController {
     
     private func styleView() {
         setBackgroundImageWithBlur()
-        self.navigationItem.title = categoryViewModel.getNavTitle()
+        self.navigationItem.title = categoryViewModel?.getNavTitle()
     }
     
     private func setBackgroundImageWithBlur() {

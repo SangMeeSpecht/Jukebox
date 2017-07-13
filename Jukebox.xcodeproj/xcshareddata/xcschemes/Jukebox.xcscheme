@@ -38,16 +38,6 @@
                ReferencedContainer = "container:Jukebox.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "84E2180B1EE74CE000B17813"
-               BuildableName = "JukeboxUITests.xctest"
-               BlueprintName = "JukeboxUITests"
-               ReferencedContainer = "container:Jukebox.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
