@@ -247,11 +247,11 @@ private let categoryGenreStub: Parameters = [
                 "body": [
                     "1": [
                         "name": "ROCK",
-                        "songs": [1,3,5,6,7,8]
+                        "songs": [1,3,5,6,7,8,13,14,15]
                     ],
                     "2": [
                         "name": "RAP",
-                        "songs": [2,4,9,10,11,12]
+                        "songs": [2,4,9,10,11,12,16,17,18]
                     ],
                     "3": [
                         "name": "ALL GENRES",
@@ -381,7 +381,7 @@ private let rockSongsStub: Parameters = [
             "equals": [
                 "method": "GET",
                 "path": "/api/1/songs/multi",
-                "query": [ "id": [ "1", "3", "5", "6", "7", "8" ] ]
+                "query": [ "id": [ "1", "3", "5", "6", "7", "8", "13", "14", "15" ] ]
             ]
         ]
     ],
@@ -418,6 +418,21 @@ private let rockSongsStub: Parameters = [
                         "name": "Walk This Way",
                         "description": "Aerosmith",
                         "coverURL": "https://upload.wikimedia.org/wikipedia/en/thumb/9/93/Walkthisway_aero.jpg/220px-Walkthisway_aero.jpg"
+                    ],
+                    "13": [
+                        "name": "Kind of Woman",
+                        "description": "Stevie Nicks",
+                        "coverURL": "https://upload.wikimedia.org/wikipedia/en/4/43/Bella_Donna_%28album%29.jpg"
+                    ],
+                    "14": [
+                        "name": "After the Glitter Fades",
+                        "description": "Stevie Nicks",
+                        "coverURL": "https://upload.wikimedia.org/wikipedia/en/4/43/Bella_Donna_%28album%29.jpg"
+                    ],
+                    "15": [
+                        "name": "Edge of Seventeen",
+                        "description": "Stevie Nicks",
+                        "coverURL": "https://upload.wikimedia.org/wikipedia/en/4/43/Bella_Donna_%28album%29.jpg"
                     ]
                 ],
                 "headers": [ "content-type": "application/json" ]
@@ -432,7 +447,7 @@ private let rapSongsStub: Parameters = [
             "equals": [
                 "method": "GET",
                 "path": "/api/1/songs/multi",
-                "query": [ "id": [ "2", "4", "9", "10", "11", "12" ] ]
+                "query": [ "id": [ "2", "4", "9", "10", "11", "12", "16", "17", "18" ] ]
             ]
         ]
     ],
@@ -469,6 +484,21 @@ private let rapSongsStub: Parameters = [
                         "name": "Gangsta's Paradise",
                         "description": "Coolio",
                         "coverURL": "https://img.discogs.com/f5zg-KTh_oPNysed_3ZU3tpAfVE=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1410402-1387664781-5828.jpeg.jpg"
+                    ],
+                    "16": [
+                        "name": "BirdFlu",
+                        "description": "M.I.A.",
+                        "coverURL": "https://upload.wikimedia.org/wikipedia/en/c/cf/M.I.A._-_Kala.png"
+                    ],
+                    "17": [
+                        "name": "20 Dollar",
+                        "description": "M.I.A.",
+                        "coverURL": "https://upload.wikimedia.org/wikipedia/en/c/cf/M.I.A._-_Kala.png"
+                    ],
+                    "18": [
+                        "name": "Paper Planes",
+                        "description": "M.I.A.",
+                        "coverURL": "https://upload.wikimedia.org/wikipedia/en/c/cf/M.I.A._-_Kala.png"
                     ]
                 ],
                 "headers": [ "content-type": "application/json" ]

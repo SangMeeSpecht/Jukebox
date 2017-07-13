@@ -34,9 +34,6 @@
                             <constraint firstItem="q6q-My-v3D" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.75" id="zfs-sM-YXW"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="launchImage" destination="q6q-My-v3D" id="x2T-W1-Gqr"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
