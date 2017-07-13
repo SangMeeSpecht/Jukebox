@@ -116,7 +116,7 @@
         <!--Song Collection View Controller-->
         <scene sceneID="142-En-Q0C">
             <objects>
-                <collectionViewController modalPresentationStyle="currentContext" id="HEE-zL-Ml1" customClass="SongCollectionViewController" customModule="Jukebox" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="SongCollectionViewController" modalPresentationStyle="currentContext" id="HEE-zL-Ml1" customClass="SongCollectionViewController" customModule="Jukebox" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="xtA-Qk-hjB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

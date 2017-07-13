@@ -48,10 +48,6 @@ class SongCollectionViewController: UICollectionViewController, UICollectionView
     private func setBackgroundImageWithBlur() {
         let backgroundImage = UIImage(named: "glitterLightBlur.jpg")
         let imageView = UIImageView(image: backgroundImage)
-//        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
-//        let blurView = UIVisualEffectView(effect: blurEffect)
-//        blurView.frame = (collectionView?.bounds)!
-//        imageView.addSubview(blurView)
         self.collectionView?.backgroundView = imageView
     }
 }

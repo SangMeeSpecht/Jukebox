@@ -20,7 +20,7 @@ class MusicServiceSpec: QuickSpec {
         }
         
         afterSuite {
-            Alamofire.request("http://localhost:2525/imposters/", method: .delete)
+           let _ = Alamofire.request("http://localhost:2525/imposters/", method: .delete)
         }
         
         describe(".fetchTags") {
