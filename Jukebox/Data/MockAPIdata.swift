@@ -52,7 +52,7 @@ private let tagStub: Parameters = [
                 "body": [
                     "1": "ARTISTS",
                     "2": "ALBUMS",
-                    "3": "GENRE"
+                    "3": "GENRES"
                 ],
                 "headers": [ "content-type": "application/json" ]
             ]
